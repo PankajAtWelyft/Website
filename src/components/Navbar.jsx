@@ -28,7 +28,7 @@ const Navbar = () => {
         <a href="#sustainability"  className="group flex flex-col items-center">Sustainability
           <span className="w-0 h-0.5 bg-yellow-400 mt-1 transition-all duration-300 group-hover:w-full"></span>
         </a>
-        <a href="#team"  className="group flex flex-col items-center">Our Team
+        <a href="#blog"  className="group flex flex-col items-center">Blog
           <span className="w-0 h-0.5 bg-yellow-400 mt-1 transition-all duration-300 group-hover:w-full"></span>
         </a>
         <a href="#contact"  className="group flex flex-col items-center">Contact Us
@@ -40,12 +40,15 @@ const Navbar = () => {
       <FaBars className="text-[#021B44]" />
 
       </div>
-      <button
+      <a href="#quote">
+       <button
         className="hidden md:block bg-yellow-400 font-bold cursor-pointer text-indigo px-7 py-3 rounded-2xl
      shadow-lg shadow-yellow-400/50 mr-10 hover:shadow-yellow-300 transition-all duration-300"
       >
         Get Quote
       </button>
+      </a>
+      
 
       {open && (
         <div className="md:hidden absolute top-25 left-0 w-fulll bg-white/95 gap-6 py-8 text-xl font-semibold shadow-lg
@@ -54,7 +57,7 @@ const Navbar = () => {
             <a href="#about">About</a>
             <a href="#services">Services</a>
             <a href="#home">Sustainability</a>
-            <a href="#team">Our Team</a>
+            <a href="#blog">Blog</a>
             <a href="#contact">Contact Us</a>
         </div>
       )}

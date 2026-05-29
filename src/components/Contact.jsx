@@ -52,7 +52,7 @@ const Contact = () => {
             <li>About Us</li>
             <li>Services</li>
             <li>Sustainability</li>
-            <li>Team</li>
+            <li>Blog</li>
           </ul>
         </div>
         <div>
@@ -60,7 +60,6 @@ const Contact = () => {
           <ul className="mt-8 space-y-3 text-gray-300 text-xl">
             <li>Freight Transport</li>
             <li>Last-Mile Delivery</li>
-            <li>Warehousing</li>
             <li>CO₂ Reporting</li>
           </ul>
         </div>
@@ -68,7 +67,7 @@ const Contact = () => {
           <h2 className="text-yellow-400 text-3xl font-semibold">Contact</h2>
           <ul className="mt-8 space-y-3 text-gray-300 text-xl">
             <li>Singapore</li>
-            <li>hello@welyft.com</li>
+            <li>operations@welyft.com</li>
             <li>+65 8760 1984</li>
           </ul>
         </div>

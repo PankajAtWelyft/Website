@@ -4,17 +4,17 @@ import serv from '../assets/serv.avif'
 const Sustainability = () => {
   return (
     <>
-    <div id='sustainability' className='bg-[#bdd5d0] py-28'>
+    <div id='sustainability' className='bg-[#014631] py-28'>
         <div className='px-10 text-center max-w-7xl mx-auto'>
             <h1 className='bg-yellow-400 text-xl rounded-xl uppercase inline-block text-[#0A1F44] px-5 py-2  border font-bold'
             >Why Welyft</h1>
 
-            <h2 className='text-8xl font-bold text-black mt-8'
+            <h2 className='text-8xl font-bold text-yellow-400 mt-8'
             >Sustainable Logistics</h2>
             <h3 className='text-6xl font-bold text-yellow-400 mt-5 italic'
             >Smarter Future.</h3>
 
-            <p className='text-xl font-semibold text-gray-800 leading-relaxed text-center max-w-4xl mx-auto mt-9'
+            <p className='text-xl font-semibold text-white/90 leading-relaxed text-center max-w-4xl mx-auto mt-9'
             >Helping companies reduce transport emissions and move towards cleaner, greener business operations — one delivery at a time.</p>
         </div>
         <div  className='grid grid-cols-4 gap-7 mt-20'>

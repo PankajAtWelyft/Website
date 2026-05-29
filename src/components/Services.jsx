@@ -1,9 +1,9 @@
 import React from "react";
 import ServicesCard from "./ServicesCard";
-import pack from "../assets/pack.avif";
-import store from "../assets/store.avif";
-import delivery from "../assets/delivery.avif";
+import eco from '../assets/eco.webp';
+import reliable from '../assets/reliable.avif';
 import bike from "../assets/bike.avif";
+import future from '../assets/future.webp';
 
 const Services = () => {
   return (
@@ -25,28 +25,24 @@ const Services = () => {
       </section>
       <div className="grid grid-cols-4 max-w-7.5xl mx-auto mt-5 px-10 gap-10">
           <ServicesCard
-           image={delivery}
-           title="Freight Transport"
-           description="Reliable transport solutions for business delivery needs."
-           buttonTxt="Learn More →"
+           image={eco}
+           title="Eco-Friendly Promise"
+           description="Every delivery we make is powered by a 100% EV fleet, ensuring zero emissions and greener cities."
            />   
             <ServicesCard
-           image={store}
-           title="Supply Chain Management"
-           description="Coordinated operations for seamless goods movement."
-           buttonTxt="Learn More →"
+           image={reliable}
+           title="Reliable, Scalable Operations"
+           description="Our tech-enabled platform delivers real-time tracking and optimized routing at any scale."
            />
             <ServicesCard
            image={bike}
-           title="Customs Brokerage"
-           description="Support for faster, smoother logistics coordination."
-           buttonTxt="Learn More →"
+           title="Zero Compromise on Service"
+           description="We cut costs through fuel-free EV operations, offering competitive rates with a green edge."
            />
             <ServicesCard
-           image={pack}
-           title="Warehousing & Distribution"
-           description="Flexible storage dispatch, and last-mile delivery support."
-           buttonTxt="Learn More →"
+           image={future}
+           title="Future ready and Scalable"
+           description="Stay ahead of regulations and customer expectations with future-ready green logistics."
            /> 
       </div>
       

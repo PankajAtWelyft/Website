@@ -49,7 +49,7 @@ const ContactForm = () => {
                         </h2>
                     </div>
                         <p className='text-gray-600  text-xl mt-4'
-                        >hello@welyft.com</p>
+                        >operations@welyft.com</p>
                     </div>
 
                     <div className='mt-12'>

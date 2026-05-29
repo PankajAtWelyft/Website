@@ -5,8 +5,9 @@ import Home from './components/Home'
 import About from './components/About'
 import Services from './components/Services'
 import Sustainability from './components/Sustainability'
-import Team from './components/Team'
+import Blog from './components/Blog';
 import Contact from './components/Contact'
+import GetQuote from './components/GetQuote'
 
 function App() {
   
@@ -17,8 +18,9 @@ function App() {
    <Home/>
    <About/>
    <Services/>
+   <GetQuote/>
    <Sustainability/>
-   <Team/>
+   <Blog/>
    <Contact/>
    </>
   )
