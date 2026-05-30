@@ -7,14 +7,12 @@ const Home = () => {
       <div
         id="home"
         className="min-h-screen flex items-center bg-cover bg-center px-16"
-       style={{
-  backgroundImage: `
+        style={{
+          backgroundImage: `
     url(${Welyft_banner_Nw})
   `,
-}}
-      >
-      
-      </div>
+        }}
+      ></div>
     </>
   );
 };
