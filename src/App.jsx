@@ -1,29 +1,21 @@
-import { useState } from 'react'
-import './App.css'
-import Navbar from './components/Navbar'
-import Home from './components/Home'
-import About from './components/About'
-import Services from './components/Services'
-import Sustainability from './components/Sustainability'
-import Blog from './components/Blog';
-import Contact from './components/Contact'
-import GetQuote from './components/GetQuote'
+import { Routes, Route } from "react-router-dom";
+
+import HomePage from "./pages/HomePage";
+import Careers from "./pages/Careers";
 
 function App() {
-  
 
   return (
-   <>
-   <Navbar/>
-   <Home/>
-   <About/>
-   <Services/>
-   <GetQuote/>
-   <Sustainability/>
-   <Blog/>
-   <Contact/>
-   </>
-  )
+
+    <Routes>
+
+      <Route path="/" element={<HomePage />} />
+
+      <Route path="/careers" element={<Careers />} />
+
+    </Routes>
+
+  );
 }
 
-export default App
+export default App;
