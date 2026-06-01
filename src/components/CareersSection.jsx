@@ -37,7 +37,7 @@ const CareersSection = () => {
     },
   ];
   const [search, setSearch] = useState("");
-  const [type, setType] = useState("All");
+  const [type, setType] = useState("All Types");
   const [showModal, setShowModal] = useState(false);
   const [country, setCountry] = useState("All");
 
@@ -46,7 +46,7 @@ const CareersSection = () => {
       .toLowerCase()
       .includes(search.toLowerCase());
 
-    const matchesTypes = type === "All" || job.type === type;
+    const matchesTypes = type === "All Types" || job.type === type;
     const matchesCountry =  country === "All" || job.country === country;
 
   return matchesSearch && matchesTypes && matchesCountry;
@@ -78,7 +78,7 @@ const CareersSection = () => {
             onChange={(e) => setType(e.target.value)}
             className="bg-white px-5 py-4 rounded-2xl border border-gray-300 text-lg shadow-sm focus:outline-none"
           >
-            <option>All</option>
+            <option>All Types</option>
             <option>Full-Time</option>
             <option>Part-Time</option>
             <option>Remote</option>
