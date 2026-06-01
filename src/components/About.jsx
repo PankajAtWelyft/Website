@@ -14,7 +14,6 @@ const About = () => {
             This is not just logistics
             <br />
             This is climate action in motion.
-
           </h2>
           <hr className="w-full border-3 rounded-xl border-yellow-400 my-8" />
           <div className="mt-12 rounded-[40px] overflow-hidden  bg-[#021B44] p-4 md:p-6 border border-yellow-400/10 shadow-2xl">

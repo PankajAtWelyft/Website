@@ -4,9 +4,7 @@ import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-
-
- const[open, setopen] = useState(false);
+  const [open, setopen] = useState(false);
 
   return (
     <nav
@@ -18,53 +16,61 @@ const Navbar = () => {
         <h1 className="font-bold text-3xl">Welyft</h1>
       </div>
       <div className=" hidden md:flex font-bold mr-4 text-xl gap-6">
-
-        <Link to="/"  className="group flex flex-col items-center">Home 
-          <span className="w-0 h-0.5 bg-yellow-400 mt-1 transition-all duration-300 group-hover:w-full"></span></Link>
-        <a href="/#about"  className="group flex flex-col items-center">About
+        <Link to="/" className="group flex flex-col items-center">
+          Home
+          <span className="w-0 h-0.5 bg-yellow-400 mt-1 transition-all duration-300 group-hover:w-full"></span>
+        </Link>
+        <a href="/#about" className="group flex flex-col items-center">
+          About
           <span className="w-0 h-0.5 bg-yellow-400 mt-1 transition-all duration-300 group-hover:w-full"></span>
         </a>
-        <a href="/#services"  className="group flex flex-col items-center">Services
+        <a href="/#services" className="group flex flex-col items-center">
+          Services
           <span className="w-0 h-0.5 bg-yellow-400 mt-1 transition-all duration-300 group-hover:w-full"></span>
         </a>
-        <a href="/#sustainability"  className="group flex flex-col items-center">Sustainability
+        <a href="/#sustainability" className="group flex flex-col items-center">
+          Sustainability
           <span className="w-0 h-0.5 bg-yellow-400 mt-1 transition-all duration-300 group-hover:w-full"></span>
         </a>
-        <a href="/#blog"  className="group flex flex-col items-center">Blog
+        <a href="/#blog" className="group flex flex-col items-center">
+          Blog
           <span className="w-0 h-0.5 bg-yellow-400 mt-1 transition-all duration-300 group-hover:w-full"></span>
         </a>
         <Link to="/careers" className="group flex flex-col items-center">
-  Careers
-  <span className="w-0 h-0.5 bg-yellow-400 mt-1 transition-all duration-300 group-hover:w-full"></span>
-</Link>
-        <a href="/#contact"  className="group flex flex-col items-center">Contact Us
+          Careers
+          <span className="w-0 h-0.5 bg-yellow-400 mt-1 transition-all duration-300 group-hover:w-full"></span>
+        </Link>
+        <a href="/#contact" className="group flex flex-col items-center">
+          Contact Us
           <span className="w-0 h-0.5 bg-yellow-400 mt-1 transition-all duration-300 group-hover:w-full"></span>
         </a>
       </div>
-      <div onClick={()=>setopen(!open)}
-      className="md:hidden mr-6 text-3xl cursor-pointer">
-      <FaBars className="text-[#021B44]" />
-
+      <div
+        onClick={() => setopen(!open)}
+        className="md:hidden mr-6 text-3xl cursor-pointer"
+      >
+        <FaBars className="text-[#021B44]" />
       </div>
       <a href="#quote">
-       <button
-        className="hidden md:block bg-yellow-400 font-bold cursor-pointer text-indigo px-7 py-3 rounded-2xl
+        <button
+          className="hidden md:block bg-yellow-400 font-bold cursor-pointer text-indigo px-7 py-3 rounded-2xl
      shadow-lg shadow-yellow-400/50 mr-10 hover:shadow-yellow-300 transition-all duration-300"
-      >
-        Get Quote
-      </button>
+        >
+          Get Quote
+        </button>
       </a>
-      
 
       {open && (
-        <div className="md:hidden absolute top-25 left-0 w-full bg-white/95 gap-6 py-8 text-xl font-semibold shadow-lg
-         flex flex-col items-center backdrop-blur-md ">
-            <a href="/#home">Home</a>
-            <a href="/#about">About</a>
-            <a href="/#services">Services</a>
-            <a href="/#sustainability">Sustainability</a>
-            <a href="/#blog">Blog</a>
-            <a href="/#contact">Contact Us</a>
+        <div
+          className="md:hidden absolute top-25 left-0 w-full bg-white/95 gap-6 py-8 text-xl font-semibold shadow-lg
+         flex flex-col items-center backdrop-blur-md "
+        >
+          <a href="/#home">Home</a>
+          <a href="/#about">About</a>
+          <a href="/#services">Services</a>
+          <a href="/#sustainability">Sustainability</a>
+          <a href="/#blog">Blog</a>
+          <a href="/#contact">Contact Us</a>
         </div>
       )}
     </nav>
