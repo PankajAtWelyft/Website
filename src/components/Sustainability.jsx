@@ -1,7 +1,6 @@
 import React from "react";
 import SustainabilityCard from "./SustainabilityCard";
 import serv from "../assets/serv.avif";
-import CO2Dashboard from "./CO2Savings/CO2Dashboard";
 
 const Sustainability = () => {
   return (
