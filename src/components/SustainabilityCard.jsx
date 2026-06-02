@@ -4,23 +4,22 @@ const SustainabilityCard = ({ icon, title, description }) => {
   return (
     <div
       className="
-      group
-      w-full
-      sm:w-[340px]
-      min-h-[320px]
-      px-5
-      py-8
-      bg-yellow-400
-      text-left
-      mx-auto
-      rounded-2xl
-      shadow-md
-      hover:bg-[#1a3f7f]
-      hover:-translate-y-3
-      transition-all
-      duration-300
-      flex
-      flex-col
+   group
+w-[260px]
+sm:w-[320px]
+h-[320px]
+px-6
+py-8
+bg-yellow-400
+text-left
+rounded-3xl
+shadow-md
+hover:bg-[#1a3f7f]
+hover:-translate-y-3
+transition-all
+duration-300
+flex
+flex-col
     "
     >
 
@@ -43,11 +42,11 @@ const SustainabilityCard = ({ icon, title, description }) => {
       <h1
         className="
         text-black
-        text-2xl sm:text-3xl
+        text-xl sm:text-2xl
         group-hover:text-yellow-400
         font-semibold
-        mt-6
-        leading-snug
+        mt-5
+        leading-relaxed
       "
       >
         {title}

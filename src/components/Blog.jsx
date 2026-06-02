@@ -1,5 +1,5 @@
 import React from "react";
-
+import news from '../assets/news.png'
 const Blog = () => {
   return (
     <section id="blog" className="bg-[#F5F3EE] py-16 sm:py-24 lg:py-28">
@@ -21,10 +21,16 @@ const Blog = () => {
         <div className="mt-12 flex justify-center md:mt-20">
           <div className="max-w-4xl overflow-hidden rounded-2xl bg-white shadow-xl transition-all duration-300 hover:translate-y-2 sm:rounded-3xl">
             <img
-              src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop"
+              src={news}
               alt="Blog"
-              className="h-[220px] w-full object-cover sm:h-[300px]"
+              className="w-full
+h-[250px]
+sm:h-[350px]
+lg:h-[500px]
+object-cover
+object-center"
             />
+
             <div className="p-5 sm:p-8">
               <span className="bg-[#0A1F44] text-yellow-400 px-4 py-2 rounded-lg text-sm font-semibold uppercase tracking-wider">
                 News

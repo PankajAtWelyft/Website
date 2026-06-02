@@ -8,8 +8,16 @@ const Navbar = () => {
 
   return (
     <nav
-      className="max-w-full sticky top-0 z-50 px-4 md:px-8 backdrop-blur-md   bg-white/30
-     h-25 justify-between flex items-center "
+      className="w-full
+fixed
+top-0
+left-0
+z-[999]
+px-4 md:px-8
+bg-white
+shadow-md
+h-20
+flex items-center justify-between"
     >
       <div className="flex items-center">
         <img src={logo} className="w-10 m-5 py-2" alt="" />
@@ -51,12 +59,6 @@ const Navbar = () => {
           <span className="w-0 h-0.5 bg-yellow-400 mt-1 transition-all duration-300 group-hover:w-full"></span>
         </a>
       </div>
-      <div
-        onClick={() => setopen(!open)}
-        className="md:hidden mr-6 text-3xl cursor-pointer"
-      >
-        <FaBars className="text-[#021B44]" />
-      </div>
       <a href="#quote">
         <button
           className="hidden md:block bg-yellow-400 font-bold cursor-pointer text-indigo px-7 py-3 rounded-2xl
@@ -76,7 +78,7 @@ const Navbar = () => {
           text-[#021B44]
         "
         >
-          {open ? <FaTimes /> : <FaBars />}
+        {open ? <FaTimes /> : <FaBars />}
         </div>
       {open && (
         <div

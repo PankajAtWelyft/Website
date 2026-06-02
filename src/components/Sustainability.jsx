@@ -1,5 +1,7 @@
 import React from "react";
 import SustainabilityCard from "./SustainabilityCard";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 const Sustainability = () => {
   return (
@@ -63,33 +65,77 @@ const Sustainability = () => {
           cleaner, greener business operations — one delivery at a time.
         </p>
       </div>
-      <div
-        className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 items-center justify-center gap-50 mt-16 sm:mt-20"
-      >
+   <div className="max-w-7xl mx-auto mt-16 sm:mt-20 px-6">
+
+  {/* MOBILE SLIDER */}
+  <div className="sm:hidden">
+    <Swiper
+      spaceBetween={12}
+      slidesPerView={2}
+    >
+      <SwiperSlide>
         <SustainabilityCard
           icon="🚚"
           title="Lower Emissions"
           description="EV fleet solutions for greener, more sustainable transport."
         />
+      </SwiperSlide>
 
+      <SwiperSlide>
         <SustainabilityCard
           icon="💡"
           title="Smart Innovation"
           description="Technology that powers delivery visibility and dispatch control."
         />
+      </SwiperSlide>
 
+      <SwiperSlide>
         <SustainabilityCard
           icon="📈"
           title="CO₂ Reporting"
           description="Estimated carbon savings tracked for every single delivery."
         />
+      </SwiperSlide>
 
+      <SwiperSlide>
         <SustainabilityCard
           icon="🌏"
           title="Better Planet"
           description="Logistics designed with long-term sustainability at its core."
         />
-      </div>
+      </SwiperSlide>
+    </Swiper>
+  </div>
+
+  {/* DESKTOP GRID */}
+  <div className="hidden sm:grid sm:grid-cols-2 xl:grid-cols-4 gap-8 place-items-center">
+    
+    <SustainabilityCard
+      icon="🚚"
+      title="Lower Emissions"
+      description="EV fleet solutions for greener, more sustainable transport."
+    />
+
+    <SustainabilityCard
+      icon="💡"
+      title="Smart Innovation"
+      description="Technology that powers delivery visibility and dispatch control."
+    />
+
+    <SustainabilityCard
+      icon="📈"
+      title="CO₂ Reporting"
+      description="Estimated carbon savings tracked for every single delivery."
+    />
+
+    <SustainabilityCard
+      icon="🌏"
+      title="Better Planet"
+      description="Logistics designed with long-term sustainability at its core."
+    />
+
+  </div>
+</div>
     </section>
   );
 };
