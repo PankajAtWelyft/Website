@@ -8,7 +8,7 @@ export default function TotalImpactPanel() {
     <aside className="border-2 border-[#4CAF50] rounded-xl bg-white p-4 sm:p-5 w-full lg:w-72 shrink-0">
       <div className="text-center mb-4">
         <h3 className="text-lg font-bold text-[#4CAF50]">Total Impact</h3>
-        <p className="text-sm text-[#4A4A4A]">(Q1 FY23 – Q4 FY25)</p>
+        <p className="text-sm text-[#4A4A4A]">(12 May 2024 - 18 May 2024)</p>
       </div>
       <div className="divide-y divide-gray-200">
         {totalImpact.map((item, idx) => {
