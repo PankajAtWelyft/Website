@@ -12,12 +12,12 @@ const GetQuote = () => {
     const total = baseFare+ distanceFare + stops;
 
   return (
-    <section id='quote' className='bg-[#F5F3EE] py-30'>
-        <div className='max-w-4xl mx-auto bg-white rounded-2xl shadow-xl p-8'>
-            <h1 className='text-4xl font-bold text-[#0A1F44]'>
+    <section id='quote' className='bg-[#F5F3EE] px-5 py-16 sm:px-8 md:py-24 lg:py-30'>
+        <div className='mx-auto max-w-4xl rounded-2xl bg-white p-5 shadow-xl sm:p-8'>
+            <h1 className='text-3xl font-bold text-[#0A1F44] sm:text-4xl'>
                 Calculate Delivery Quote
             </h1>
-            <p className='text-gray-500 text-xl mt-4'>
+            <p className='mt-4 text-base text-gray-500 sm:text-xl'>
                 Get an instant estimate for your delivery needs
             </p>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-5 mt-14'>
@@ -66,12 +66,12 @@ const GetQuote = () => {
             />
                 </div>
             </div>
-            <div className='mt-8 bg-gradient-to-r from-black to-[#0A1F44] rounded-2xl p-6 flex justify-between items-start '>
+            <div className='mt-8 flex flex-col gap-8 rounded-2xl bg-gradient-to-r from-black to-[#0A1F44] p-5 sm:p-6 md:flex-row md:items-start md:justify-between'>
                 <div>
                     <h2 className='text-2xl font-bold text-white'>
                         Estimated Quote</h2>
 
-                        <div className='flex gap-20 mt-8'>
+                        <div className='mt-8 flex flex-col gap-6 sm:flex-row sm:gap-12 lg:gap-20'>
                                    <div>
 
                 <p className="text-gray-400 text-sm">
@@ -93,7 +93,7 @@ const GetQuote = () => {
               </div>
             </div>
                 </div>
-                <h1 className='text-4xl font-bold text-yellow-400'>
+                <h1 className='text-4xl font-bold text-yellow-400 md:text-right'>
                     ${total.toFixed(2)}
                 </h1>
             </div>

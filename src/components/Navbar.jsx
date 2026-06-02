@@ -8,44 +8,14 @@ const Navbar = () => {
 
   return (
     <nav
-      className="
-      w-full
-fixed
-top-0 left-0 z-[999]
-px-4 sm:px-6 lg:px-8
-bg-white
-shadow-lg
-border-b border-gray-300
-h-20
-flex items-center justify-between
-    "
+      className="max-w-full sticky top-0 z-50 px-4 md:px-8 backdrop-blur-md   bg-white/30
+     h-25 justify-between flex items-center "
     >
-
-      {/* LOGO */}
-      <div className="flex items-center gap-3">
-        <img
-          src={logo}
-          className="w-10 sm:w-11"
-          alt="logo"
-        />
-
-        <h1 className="font-bold text-2xl sm:text-3xl">
-          Welyft
-        </h1>
+      <div className="flex items-center">
+        <img src={logo} className="w-10 m-5 py-2" alt="" />
+        <h1 className="font-bold text-3xl">Welyft</h1>
       </div>
-
-      {/* DESKTOP MENU */}
-      <div
-        className="
-        hidden lg:flex
-        font-bold
-        text-lg
-        xl:text-xl
-        gap-6 xl:gap-8
-        items-center
-      "
-      >
-
+      <div className=" hidden md:flex font-bold mr-4 text-xl gap-6">
         <Link to="/" className="group flex flex-col items-center">
           Home
           <span className="w-0 h-0.5 bg-yellow-400 mt-1 transition-all duration-300 group-hover:w-full"></span>
@@ -81,30 +51,20 @@ flex items-center justify-between
           <span className="w-0 h-0.5 bg-yellow-400 mt-1 transition-all duration-300 group-hover:w-full"></span>
         </a>
       </div>
-
-      {/* RIGHT SIDE */}
-      <div className="flex items-center gap-4">
-
-        {/* GET QUOTE BUTTON */}
-        <a href="/#quote">
-          <button
-            className="
-            hidden md:block
-            bg-yellow-400
-            font-bold
-            cursor-pointer
-            px-5 lg:px-7
-            py-3
-            rounded-2xl
-            shadow-lg shadow-yellow-400/40
-            hover:shadow-yellow-300
-            hover:scale-105
-            transition-all duration-300
-          "
-          >
-            Get Quote
-          </button>
-        </a>
+      <div
+        onClick={() => setopen(!open)}
+        className="md:hidden mr-6 text-3xl cursor-pointer"
+      >
+        <FaBars className="text-[#021B44]" />
+      </div>
+      <a href="#quote">
+        <button
+          className="hidden md:block bg-yellow-400 font-bold cursor-pointer text-indigo px-7 py-3 rounded-2xl
+     shadow-lg shadow-yellow-400/50 mr-10 hover:shadow-yellow-300 transition-all duration-300"
+        >
+          Get Quote
+        </button>
+      </a>
 
         {/* MOBILE MENU ICON */}
         <div
@@ -123,20 +83,8 @@ flex items-center justify-between
       {/* MOBILE MENU */}
       {open && (
         <div
-          className="
-          lg:hidden
-          absolute
-          top-20 left-0
-          w-full
-          bg-white/95
-          backdrop-blur-md
-          shadow-xl
-          border-t border-gray-200
-          text-left
-          flex flex-col
-          gap-6
-          py-8
-           text-lg font-semibold"
+          className="md:hidden absolute top-25 left-0 w-full bg-white/95 gap-6 py-8 text-xl font-semibold shadow-lg
+         flex flex-col items-center backdrop-blur-md "
         >
           <Link to="/" onClick={() => setopen(false)}>
             Home

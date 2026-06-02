@@ -3,20 +3,17 @@ import careerBg from "../assets/electric-vehicle-hero.png";
 
 const CareersHero = () => {
   return (
-    <section
-      className="relative min-h-[85vh] flex items-center justify-center bg-cover bg-center"
-      style={{
-        backgroundImage: `
-        linear-gradient(
-          rgba(5,18,35,0.82),
-          rgba(5,18,35,0.72)
-        ),
-        url(${careerBg})
-      `,
-      }}
-    >
-      <div className="max-w-6xl mx-auto px-6 text-center">
-        <p className="inline-block bg-yellow-400/20 text-yellow-300 uppercase tracking-widest px-5 py-2 rounded-full text-sm font-semibold">
+    <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden bg-[#051223]">
+      <img
+        src={careerBg}
+        alt=""
+        className="absolute inset-0 h-full w-full object-contain object-top xl:object-cover xl:object-center"
+      />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(5,18,35,0.82),rgba(5,18,35,0.72))]" />
+
+      <div className="relative z-10 mx-auto max-w-6xl px-6 text-center">
+
+        <p className="inline-block bg-yellow-400/20 text-yellow-300 uppercase tracking-widest mt-5 px-5 py-2 rounded-full text-sm font-semibold">
           Careers at Welyft
         </p>
 
@@ -47,7 +44,12 @@ const CareersHero = () => {
 
         {/* Stats */}
 
+<<<<<<< HEAD
         <div className="grid grid-cols-2 md:grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 mt-20">
+=======
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 mb-5 ">
+
+>>>>>>> e781849d29176788474b6486f87230f39958e358
           <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/10">
             <h2 className="text-4xl font-bold text-yellow-300">20+</h2>
             <p className="text-gray-300 mt-2">Team Members</p>
@@ -64,7 +66,9 @@ const CareersHero = () => {
           </div>
 
           <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/10">
-            <h2 className="text-4xl font-bold text-yellow-300">Singapore</h2>
+            <h2 className="text-2xl font-bold text-yellow-300 sm:text-3xl lg:text-4xl">
+              Singapore
+            </h2>
             <p className="text-gray-300 mt-2">Headquarters</p>
           </div>
         </div>
