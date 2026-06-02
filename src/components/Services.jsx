@@ -47,7 +47,7 @@ const Services = () => {
            /> 
       </div>
 
-    </section>
+    </>
   );
 };
 
