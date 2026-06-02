@@ -1,7 +1,5 @@
 import React from "react";
-
-
-const ServicesCard = ({image, title, description,buttonTxt}) => {
+const ServicesCard = ({ image, title, description, buttonTxt }) => {
   return (
       <div className="flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
         <img src={image} className="h-52 w-full object-cover sm:h-56" alt="" />
@@ -18,5 +16,4 @@ const ServicesCard = ({image, title, description,buttonTxt}) => {
       </div>
   );
 };
-
 export default ServicesCard;

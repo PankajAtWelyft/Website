@@ -28,22 +28,22 @@ const CareersHero = () => {
         </h1>
 
         <p className="text-gray-300 text-lg md:text-2xl mt-8 max-w-3xl mx-auto leading-relaxed">
-          Join Welyft and help transform delivery operations through
-          EV-powered logistics, technology, and sustainability innovation.
+          Join Welyft and help transform delivery operations through EV-powered
+          logistics, technology, and sustainability innovation.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-5">
-
           <a href="#jobs">
             <button className="bg-yellow-400 text-black px-8 py-4 rounded-2xl font-bold hover:scale-105 transition-all duration-300 shadow-lg shadow-yellow-400/30">
               View Open Roles
             </button>
           </a>
 
-          <button className="border border-white text-white px-8 py-4 rounded-2xl font-bold hover:bg-white hover:text-black transition-all duration-300">
-            Learn More
-          </button>
-
+          <a href="/#about">
+            <button className="border border-white text-white px-8 py-4 rounded-2xl font-bold hover:bg-white hover:text-black transition-all duration-300">
+              Learn More
+            </button>
+          </a>
         </div>
 
         {/* Stats */}
@@ -69,7 +69,6 @@ const CareersHero = () => {
             <h2 className="text-4xl font-bold text-yellow-300">Singapore</h2>
             <p className="text-gray-300 mt-2">Headquarters</p>
           </div>
-
         </div>
       </div>
     </section>

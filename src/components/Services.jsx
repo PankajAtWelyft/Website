@@ -1,9 +1,10 @@
 import React from "react";
 import ServicesCard from "./ServicesCard";
-import eco from '../assets/eco.webp';
-import reliable from '../assets/reliable.avif';
+
+import eco from "../assets/eco.webp";
+import reliable from "../assets/reliable.avif";
 import bike from "../assets/bike.avif";
-import future from '../assets/future.webp';
+import future from "../assets/future.webp";
 
 const Services = () => {
   return (
@@ -45,9 +46,8 @@ const Services = () => {
            description="Stay ahead of regulations and customer expectations with future-ready green logistics."
            /> 
       </div>
-      
-     
-    </>
+
+    </section>
   );
 };
 

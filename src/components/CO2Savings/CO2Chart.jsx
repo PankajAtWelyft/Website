@@ -138,42 +138,6 @@ export default function CO2Chart() {
     return (
         <div className="relative w-full h-80 sm:h-100 md:h-115">
             {/* Growth Trend annotation — only on larger screens */}
-            <div className="hidden lg:block absolute left-[18%]  sm:top-3 z-10 pointer-events-none  md:left-[16%]">
-                <div className="relative border-2 border-dashed border-[#4CAF50] rounded-md px-3 py-2 bg-white/70">
-                    <div className="text-[#4CAF50] font-bold text-md">
-                        Growth Trend (Logistic Business)
-                    </div>
-                    <div className="text-[#4A4A4A] text-xs max-w-65">
-                        Higher EV utilisation leads to exponential increase in CO
-                        <sub>2</sub> savings over time.
-                    </div>
-                    {/* Arrow pointing down-right toward the trend line */}
-                    <svg
-                        className="absolute -bottom-14 -right-2"
-                        width="80"
-                        height="60"
-                        viewBox="0 0 80 60"
-                        fill="none"
-                    >
-                        <path
-                            d="M5 5 Q 40 0 60 45"
-                            stroke="#4CAF50"
-                            strokeWidth="1.5"
-                            strokeDasharray="5 4"
-                            fill="none"
-                            strokeLinecap="round"
-                        />
-                        <path
-                            d="M60 45 L59 33 M60 45 L50 38"
-                            stroke="#4CAF50"
-                            strokeWidth="1.5"
-                            fill="none"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                        />
-                    </svg>
-                </div>
-            </div>
             <Chart type="bar" data={data} options={options} />
         </div>
     );
