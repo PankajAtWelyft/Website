@@ -9,13 +9,8 @@ const Contact = () => {
   return (
     <>
       <section id="contact" className="bg-[#001B45]">
-<<<<<<< HEAD
         <div className="text-center py-16 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-10 border-b border-[#18345E]">
           <h1 className="text-3xl sm:text-5xl lg:text-7xl text-white font-bold leading-tight">
-=======
-        <div className="border-b border-[#18345E] px-5 py-16 text-center sm:px-8 md:py-24 lg:px-10 lg:py-28">
-          <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-7xl">
->>>>>>> e781849d29176788474b6486f87230f39958e358
             Ready to Move Your Business
             <br className="hidden md:block" />
             Cleaner and Smarter?

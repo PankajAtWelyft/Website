@@ -78,9 +78,6 @@ const Navbar = () => {
         >
           {open ? <FaTimes /> : <FaBars />}
         </div>
-      </div>
-
-      {/* MOBILE MENU */}
       {open && (
         <div
           className="md:hidden absolute top-25 left-0 w-full bg-white/95 gap-6 py-8 text-xl font-semibold shadow-lg

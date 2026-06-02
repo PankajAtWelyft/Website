@@ -44,12 +44,7 @@ const CareersHero = () => {
 
         {/* Stats */}
 
-<<<<<<< HEAD
         <div className="grid grid-cols-2 md:grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 mt-20">
-=======
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 mb-5 ">
-
->>>>>>> e781849d29176788474b6486f87230f39958e358
           <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/10">
             <h2 className="text-4xl font-bold text-yellow-300">20+</h2>
             <p className="text-gray-300 mt-2">Team Members</p>

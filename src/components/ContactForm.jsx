@@ -3,24 +3,14 @@ import { FaMapMarkerAlt, FaEnvelope, FaWhatsapp } from "react-icons/fa";
 
 const ContactForm = () => {
   return (
-<<<<<<< HEAD
     <section id="contact-form" className="bg-[#F5F1E6] py-30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-=======
-    <section id="contact-form" className="bg-[#F5F1E6] py-16 md:py-24 lg:py-30">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
->>>>>>> e781849d29176788474b6486f87230f39958e358
         <div className="text-center">
           <p className="inline-block bg-indigo-900 uppercase text-amber-300 tracking-widest px-5 py-2 rounded-xl text-sm font-semibold">
             Contact Us
           </p>
-<<<<<<< HEAD
           <h1 className="text-3xl sm:text-5xl lg:text-3xl sm:text-5xl lg:text-6xl font-bold text-black mt-6">Get in Touch</h1>
           <p className="text-gray-500 text-2xl mt-6">
-=======
-          <h1 className="mt-6 text-4xl font-bold text-black sm:text-6xl">Get in Touch</h1>
-          <p className="mt-6 text-lg text-gray-500 sm:text-2xl">
->>>>>>> e781849d29176788474b6486f87230f39958e358
             Have questions or ready to get started? Reach out to our team today.
           </p>
         </div>
