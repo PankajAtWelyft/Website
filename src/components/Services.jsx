@@ -68,17 +68,7 @@ const Services = () => {
 
       {/* CARDS */}
       <div
-        className="
-        grid
-        grid-cols-1
-        sm:grid-cols-2
-        xl:grid-cols-4
-        max-w-7xl
-        mx-auto
-        mt-16
-        px-6 sm:px-10
-        gap-8
-      "
+        className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 max-w-8xl mx-auto mt-16 px-6 sm:px-10 gap-8"
       >
 
         <ServicesCard

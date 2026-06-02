@@ -64,7 +64,7 @@ const Sustainability = () => {
         </p>
       </div>
       <div
-        className="max-w-7xl mx-auto px-6 sm:px-10 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-7 mt-16 sm:mt-20"
+        className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 items-center justify-center gap-50 mt-16 sm:mt-20"
       >
         <SustainabilityCard
           icon="🚚"
