@@ -10,11 +10,11 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="bg-[#F5F3EE] py-20 sm:py-28"
+      className="bg-[#F5F3EE] py-20 sm:py-16 sm:py-24 lg:py-28"
     >
 
       {/* HEADING */}
-      <div className="max-w-7xl px-6 sm:px-10 mx-auto text-center">
+      <div className="max-w-7xl px-6 sm:px-4 sm:px-6 lg:px-10 mx-auto text-center">
 
         <p
           className="
@@ -38,7 +38,7 @@ const Services = () => {
           className="
           text-4xl
           sm:text-5xl
-          lg:text-6xl
+          lg:text-3xl sm:text-5xl lg:text-3xl sm:text-5xl lg:text-6xl
           font-semibold
           text-[#0A1F44]
           mt-6
@@ -68,7 +68,7 @@ const Services = () => {
 
       {/* CARDS */}
       <div
-        className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 max-w-8xl mx-auto mt-16 px-6 sm:px-10 gap-8"
+        className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 max-w-8xl mx-auto mt-16 px-6 sm:px-4 sm:px-6 lg:px-10 gap-8"
       >
 
         <ServicesCard

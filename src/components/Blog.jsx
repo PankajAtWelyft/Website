@@ -2,13 +2,13 @@ import React from "react";
 
 const Blog = () => {
   return (
-    <section id="blog" className="bg-[#F5F3EE] py-28">
+    <section id="blog" className="bg-[#F5F3EE] py-16 sm:py-24 lg:py-28">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center">
           <p className="inline-block bg-[#0A1F44] text-yellow-400 px-5 py-2 rounded-lg uppercase tracking-widest text-sm font-semibold ">
             Latest Blog
           </p>
-          <h2 className="text-4xl md:text-6xl font-bold text-[#0A1F44] mt-6">
+          <h2 className="text-4xl md:text-3xl sm:text-5xl lg:text-3xl sm:text-5xl lg:text-6xl font-bold text-[#0A1F44] mt-6">
             News & Insights
           </h2>
 

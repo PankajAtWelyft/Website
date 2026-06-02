@@ -9,8 +9,8 @@ const Contact = () => {
   return (
     <>
       <section id="contact" className="bg-[#001B45]">
-        <div className="text-center py-28 px-10 border-b border-[#18345E]">
-          <h1 className="text-7xl text-white font-bold leading-tight">
+        <div className="text-center py-16 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-10 border-b border-[#18345E]">
+          <h1 className="text-3xl sm:text-5xl lg:text-7xl text-white font-bold leading-tight">
             Ready to Move Your Business
             <br />
             Cleaner and Smarter?

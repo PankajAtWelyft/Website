@@ -15,7 +15,7 @@ const PrivacyPolicy = () => {
               Legal Information
             </p>
 
-            <h1 className="text-6xl font-bold text-[#0A1F44] mt-5">
+            <h1 className="text-3xl sm:text-5xl lg:text-3xl sm:text-5xl lg:text-6xl font-bold text-[#0A1F44] mt-5">
               Privacy Policy
             </h1>
 
@@ -30,7 +30,7 @@ const PrivacyPolicy = () => {
           <div className="bg-white rounded-[35px] shadow-[0_20px_60px_rgba(0,0,0,0.08)] border border-gray-100 overflow-hidden">
             {/* TOP BAR */}
 
-            <div className="bg-[#021B44] px-10 py-8">
+            <div className="bg-[#021B44] px-4 sm:px-6 lg:px-10 py-8">
               <h2 className="text-4xl font-bold text-white">Privacy Policy</h2>
 
               <p className="text-gray-300 mt-3 text-lg">Last updated: 2026</p>

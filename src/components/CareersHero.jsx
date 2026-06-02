@@ -20,7 +20,7 @@ const CareersHero = () => {
           Careers at Welyft
         </p>
 
-        <h1 className="text-5xl md:text-7xl font-bold text-white mt-8 leading-tight">
+        <h1 className="text-5xl md:text-3xl sm:text-5xl lg:text-7xl font-bold text-white mt-8 leading-tight">
           Build the Future of
           <br />
           Sustainable Logistics
@@ -47,7 +47,7 @@ const CareersHero = () => {
 
         {/* Stats */}
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20">
+        <div className="grid grid-cols-2 md:grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 mt-20">
           <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/10">
             <h2 className="text-4xl font-bold text-yellow-300">20+</h2>
             <p className="text-gray-300 mt-2">Team Members</p>

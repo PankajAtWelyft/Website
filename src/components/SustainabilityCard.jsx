@@ -3,25 +3,70 @@ import React from "react";
 const SustainabilityCard = ({ icon, title, description }) => {
   return (
     <div
-      className="group w-full sm:w-[340px] px-5 py-8 bg-yellow-400 text-left mx-auto rounded-2xl shadow-md hover:bg-[#1a3f7f] hover:-translate-y-3 transition-all duration-300"
+      className="
+      group
+      w-full
+      sm:w-[340px]
+      min-h-[320px]
+      px-5
+      py-8
+      bg-yellow-400
+      text-left
+      mx-auto
+      rounded-2xl
+      shadow-md
+      hover:bg-[#1a3f7f]
+      hover:-translate-y-3
+      transition-all
+      duration-300
+      flex
+      flex-col
+    "
     >
+
       <div
-        className="bg-yellow-100 w-14 h-14 sm:w-16 sm:h-16 rounded-xl
-        flex items-center justify-center text-2xl sm:text-3xl group-hover:bg-indigo-900"
+        className="
+        bg-yellow-100
+        w-14 h-14
+        sm:w-16 sm:h-16
+        rounded-xl
+        flex
+        items-center
+        justify-center
+        text-2xl sm:text-3xl
+        group-hover:bg-indigo-900
+      "
       >
-      {icon}
+        {icon}
       </div>
 
       <h1
-        className="text-black text-2xl sm:text-3xl group-hover:text-yellow-400 font-semibold mt-6"
+        className="
+        text-black
+        text-2xl sm:text-3xl
+        group-hover:text-yellow-400
+        font-semibold
+        mt-6
+        leading-snug
+      "
       >
-      {title}
+        {title}
       </h1>
+
       <p
-        className="text-black text-base sm:text-lg group-hover:text-yellow-400 leading-relaxed mt-4 font-medium"
+        className="
+        text-black
+        text-base sm:text-lg
+        group-hover:text-yellow-400
+        leading-relaxed
+        mt-4
+        font-medium
+        flex-1
+      "
       >
-      {description}
+        {description}
       </p>
+
     </div>
   );
 };

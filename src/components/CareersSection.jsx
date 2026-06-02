@@ -53,13 +53,13 @@ const CareersSection = () => {
   });
 
   return (
-    <section id="jobs" className="bg-[#F5F3EE] py-28">
+    <section id="jobs" className="bg-[#F5F3EE] py-16 sm:py-24 lg:py-28">
       <div className="max-w-5xl mx-auto px-8">
         <div className="text-center">
           <p className="inline-block bg-[#0A1F44] text-yellow-400 uppercase tracking-widest px-5 py-2 rounded-xl text-sm font-semibold">
             Open Positions
           </p>
-          <h1 className="text-5xl md:text-6xl font-bold mt-6 text-[#0A1F44]">
+          <h1 className="text-5xl md:text-3xl sm:text-5xl lg:text-3xl sm:text-5xl lg:text-6xl font-bold mt-6 text-[#0A1F44]">
             Join the Welyft Team
           </h1>
         </div>

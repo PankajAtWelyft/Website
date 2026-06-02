@@ -7,17 +7,17 @@ import team3 from "../assets/team3.avif";
 const Team = () => {
   return (
     <>
-      <section id="team" className="bg-[#F8F5EF] py-28">
-        <div className="max-w-7xl mx-auto text-center px-10">
+      <section id="team" className="bg-[#F8F5EF] py-16 sm:py-24 lg:py-28">
+        <div className="max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-10">
           <p className=" inline-block text-xl bg-indigo-900 text-amber-400  tracking-widest  mb-8 px-5 py-2 rounded-xl font-bold uppercase">
             Our Team
           </p>
 
-          <h1 className="text-6xl italic text-black mt-8 font-semibold">
+          <h1 className="text-3xl sm:text-5xl lg:text-3xl sm:text-5xl lg:text-6xl italic text-black mt-8 font-semibold">
             Meet Our Team of Workplace Experts
           </h1>
 
-          <hr className="w-80 border-4 mx-auto rounded-xl border-yellow-200 my-8" />
+          <hr className="w-full sm:w-80 border-4 mx-auto rounded-xl border-yellow-200 my-8" />
         </div>
         <div className="grid grid-cols-3 gap-8 max-w-6xl mx-auto mt-25">
           <TeamCard

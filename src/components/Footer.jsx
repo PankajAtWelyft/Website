@@ -9,7 +9,7 @@ const Footer = () => {
 
       {/* TOP FOOTER */}
       <div
-        className="max-w-7xl mx-auto px-6 sm:px-10 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-14"
+        className="max-w-7xl mx-auto px-6 sm:px-4 sm:px-6 lg:px-10 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-14"
       >
         <div>
           <div className="flex items-center gap-4">
