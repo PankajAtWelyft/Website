@@ -70,6 +70,7 @@ const Navbar = () => {
           <a href="/#services">Services</a>
           <a href="/#sustainability">Sustainability</a>
           <a href="/#blog">Blog</a>
+          <a href="/careers">Careers</a>
           <a href="/#contact">Contact Us</a>
         </div>
       )}

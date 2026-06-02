@@ -17,7 +17,7 @@ const HomePage = () => {
       <Services />
       <GetQuote />
       <Sustainability />
-      <CO2Dashboard />
+      <CO2Dashboard/>
       <Blog />
       <Contact />
     </>

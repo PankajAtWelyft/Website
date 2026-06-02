@@ -16,7 +16,6 @@ const CareersHero = () => {
       }}
     >
       <div className="max-w-6xl mx-auto px-6 text-center">
-
         <p className="inline-block bg-yellow-400/20 text-yellow-300 uppercase tracking-widest px-5 py-2 rounded-full text-sm font-semibold">
           Careers at Welyft
         </p>
@@ -28,28 +27,27 @@ const CareersHero = () => {
         </h1>
 
         <p className="text-gray-300 text-lg md:text-2xl mt-8 max-w-3xl mx-auto leading-relaxed">
-          Join Welyft and help transform delivery operations through
-          EV-powered logistics, technology, and sustainability innovation.
+          Join Welyft and help transform delivery operations through EV-powered
+          logistics, technology, and sustainability innovation.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-5">
-
           <a href="#jobs">
             <button className="bg-yellow-400 text-black px-8 py-4 rounded-2xl font-bold hover:scale-105 transition-all duration-300 shadow-lg shadow-yellow-400/30">
               View Open Roles
             </button>
           </a>
 
-          <button className="border border-white text-white px-8 py-4 rounded-2xl font-bold hover:bg-white hover:text-black transition-all duration-300">
-            Learn More
-          </button>
-
+          <a href="/#about">
+            <button className="border border-white text-white px-8 py-4 rounded-2xl font-bold hover:bg-white hover:text-black transition-all duration-300">
+              Learn More
+            </button>
+          </a>
         </div>
 
         {/* Stats */}
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20">
-
           <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/10">
             <h2 className="text-4xl font-bold text-yellow-300">20+</h2>
             <p className="text-gray-300 mt-2">Team Members</p>
@@ -69,7 +67,6 @@ const CareersHero = () => {
             <h2 className="text-4xl font-bold text-yellow-300">Singapore</h2>
             <p className="text-gray-300 mt-2">Headquarters</p>
           </div>
-
         </div>
       </div>
     </section>
