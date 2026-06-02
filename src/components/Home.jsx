@@ -7,7 +7,7 @@ const Home = () => {
       <img
         src={Welyft_banner_Nw}
         alt="Welyft Banner"
-        className="block h-[42vh] min-h-[260px] w-full object-cover object-center sm:h-[55vh] md:h-auto md:min-h-0"
+        className="block h-auto w-full object-contain"
       />
     </section>
   );
