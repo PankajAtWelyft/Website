@@ -4,21 +4,21 @@ import about from "../assets/section_page.avif";
 
 const About = () => {
   return (
-    <section id="about" className="bg-[#F5F3EE] py-28">
-      <div className="max-w-7xl mx-auto flex flex-col items-center text-center px-10">
+    <section id="about" className="bg-[#F5F3EE] py-16 md:py-24 lg:py-28">
+      <div className="mx-auto flex max-w-7xl flex-col items-center px-5 text-center sm:px-8 lg:px-10">
         <div className="w-full max-w-5xl">
           <p className="inline-block text-sm  font-semibold uppercase tracking-widest bg-[#0A1F44] text-yellow-400 px-5 py-2 rounded-md mb-8">
             About Welyft
           </p>
-          <h2 className="text-4xl md:text-6xl font-bold leading-tight text-[#0A1F44]">
+          <h2 className="text-3xl font-bold leading-tight text-[#0A1F44] sm:text-4xl md:text-6xl">
             This is not just logistics
-            <br />
+            <br className="hidden sm:block" />
             This is climate action in motion.
           </h2>
           <hr className="w-full border-3 rounded-xl border-yellow-400 my-8" />
-          <div className="mt-12 rounded-[40px] overflow-hidden  bg-[#021B44] p-4 md:p-6 border border-yellow-400/10 shadow-2xl">
+          <div className="mt-10 overflow-hidden rounded-2xl border border-yellow-400/10 bg-[#021B44] p-3 shadow-2xl sm:rounded-[32px] md:p-6">
             <iframe
-              className="w-full h-[300px] md:h-[500px] lg:h-[650px] rounded-3xl"
+              className="h-[220px] w-full rounded-xl sm:h-[340px] md:h-[500px] md:rounded-3xl lg:h-[650px]"
               src="https://www.youtube.com/embed/YwGZerRU0Dc"
               title="Welyft Video"
               allowFullScreen

@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <>
       <footer className="bg-[#00193D]">
-        <div className="max-w-7xl mx-auto px-10 py-20 grid grid-cols-4 gap-16">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-5 py-14 sm:grid-cols-2 sm:px-8 lg:grid-cols-4 lg:gap-16 lg:px-10 lg:py-20">
           <div>
             <div className="flex items-center gap-4">
               <img
@@ -15,9 +15,9 @@ const Footer = () => {
                 src={logo}
                 alt="logo"
               />
-              <h1 className="text-5xl font-bold text-white">Welyft</h1>
+              <h1 className="text-4xl font-bold text-white sm:text-5xl">Welyft</h1>
             </div>
-            <p className="text-gray-300 text-xl mt-8 leading-relaxed">
+            <p className="mt-6 text-lg leading-relaxed text-gray-300 sm:mt-8 sm:text-xl">
               Smart logistics.
               <br />
               Sustainable future.
@@ -49,13 +49,13 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto px-8 py-6 border-t border-[#18345E] flex items-center justify-between">
-          <p className="text-gray-400 text-xl">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 border-t border-[#18345E] px-5 py-6 text-center sm:px-8 lg:flex-row lg:text-left">
+          <p className="text-base text-gray-400 sm:text-xl">
             {" "}
             © 2026 Welyft. All rights reserved.
           </p>
 
-          <div className="flex items-center gap-12 text-2xl text-gray-400">
+          <div className="flex items-center gap-8 text-2xl text-gray-400 sm:gap-12">
             <a href="https://www.facebook.com/youpackWelyft" target="_blank">
               <FaFacebook className="hover:text-yellow-400 transition cursor-pointer" />
             </a>
@@ -70,7 +70,7 @@ const Footer = () => {
             </a>
           </div>
 
-          <div className="flex items-center text-lg text-gray-400 gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-4 text-base text-gray-400 sm:gap-6 sm:text-lg">
             <Link
               to="/privacy-policy"
               className="hover:text-yellow-400 transition-all duration-300"

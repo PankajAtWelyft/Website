@@ -8,14 +8,13 @@ const Navbar = () => {
 
   return (
     <nav
-      className="max-w-full sticky top-0 z-50 px-4 md:px-8 backdrop-blur-md   bg-white/30
-     h-25 justify-between flex items-center "
+      className="sticky top-0 z-50 flex min-h-20 w-full items-center justify-between bg-white/80 px-3 backdrop-blur-md sm:px-5 lg:px-8"
     >
-      <div className="flex items-center">
-        <img src={logo} className="w-10 m-5 py-2" alt="" />
-        <h1 className="font-bold text-3xl">Welyft</h1>
+      <div className="flex items-center gap-3">
+        <img src={logo} className="w-10 shrink-0 py-2" alt="Welyft logo" />
+        <h1 className="text-2xl font-bold sm:text-3xl">Welyft</h1>
       </div>
-      <div className=" hidden md:flex font-bold mr-4 text-xl gap-6">
+      <div className="hidden items-center gap-4 text-base font-bold lg:flex xl:gap-6 xl:text-lg">
         <Link to="/" className="group flex flex-col items-center">
           Home
           <span className="w-0 h-0.5 bg-yellow-400 mt-1 transition-all duration-300 group-hover:w-full"></span>
@@ -47,14 +46,13 @@ const Navbar = () => {
       </div>
       <div
         onClick={() => setopen(!open)}
-        className="md:hidden mr-6 text-3xl cursor-pointer"
+        className="cursor-pointer text-3xl lg:hidden"
       >
         <FaBars className="text-[#021B44]" />
       </div>
       <a href="#quote">
         <button
-          className="hidden md:block bg-yellow-400 font-bold cursor-pointer text-indigo px-7 py-3 rounded-2xl
-     shadow-lg shadow-yellow-400/50 mr-10 hover:shadow-yellow-300 transition-all duration-300"
+          className="hidden cursor-pointer rounded-xl bg-yellow-400 px-5 py-3 font-bold text-indigo shadow-lg shadow-yellow-400/50 transition-all duration-300 hover:shadow-yellow-300 lg:block"
         >
           Get Quote
         </button>
@@ -62,8 +60,7 @@ const Navbar = () => {
 
       {open && (
         <div
-          className="md:hidden absolute top-25 left-0 w-full bg-white/95 gap-6 py-8 text-xl font-semibold shadow-lg
-         flex flex-col items-center backdrop-blur-md "
+          className="absolute left-0 top-20 flex w-full flex-col items-center gap-5 bg-white/95 py-7 text-lg font-semibold shadow-lg backdrop-blur-md lg:hidden"
         >
           <a href="/#home">Home</a>
           <a href="/#about">About</a>

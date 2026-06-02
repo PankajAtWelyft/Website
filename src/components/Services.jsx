@@ -8,22 +8,22 @@ import future from '../assets/future.webp';
 const Services = () => {
   return (
     <>
-      <section id="services" className="bg-[#F5F3EE] py-28">
-        <div className="max-w-7xl px-10 mx-auto text-center">
-          <p className=" inline-block text-xl text-amber-300  bg-[#0A1F44] tracking-widest  mt-4 px-5 py-2 rounded-md font-bold uppercase">
+      <section id="services" className="bg-[#F5F3EE] py-16 md:py-24 lg:py-28">
+        <div className="mx-auto max-w-7xl px-5 text-center sm:px-8 lg:px-10">
+          <p className="mt-4 inline-block rounded-md bg-[#0A1F44] px-5 py-2 text-sm font-bold uppercase tracking-widest text-amber-300 sm:text-lg">
             Our Services
           </p>
-          <h2 className="text-5xl font-semibold text-[#0A1F44] mt-6">
+          <h2 className="mt-6 text-3xl font-semibold text-[#0A1F44] sm:text-4xl md:text-5xl">
             Why Choose Welyft ?
           </h2>
 
-          <p className="text-xl text-gray-600 mt-6 leading-relaxed">
+          <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-gray-600 sm:text-xl">
             Professional B2B logistics services supported by electric vehicles,
             technology, and operational discipline.
           </p>
         </div>
       </section>
-      <div className="grid grid-cols-4 max-w-7.5xl mx-auto mt-5 px-10 gap-10">
+      <div className="mx-auto mt-5 pb-5 grid max-w-7xl grid-cols-1 gap-6 px-5 sm:grid-cols-2 sm:px-8 lg:grid-cols-4 lg:gap-8 lg:px-10">
           <ServicesCard
            image={eco}
            title="Eco-Friendly Promise"
