@@ -1,6 +1,7 @@
 import React from "react";
 import SustainabilityCard from "./SustainabilityCard";
 import serv from "../assets/serv.avif";
+import CO2Dashboard from "./CO2Savings/CO2Dashboard";
 
 const Sustainability = () => {
   return (
@@ -46,6 +47,12 @@ const Sustainability = () => {
           />
         </div>
       </div>
+<<<<<<< HEAD
+=======
+      <div className="bg-[#F5F3EE] py-30">
+        <CO2Dashboard />
+      </div>
+>>>>>>> bf101821db0ab7d2646ad772b759f9cff4d2e94e
     </>
   );
 };

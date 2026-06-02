@@ -35,7 +35,7 @@ export default function CO2Chart() {
         datasets: [
             {
                 type: "line",
-                label: "EV Utilisation (%)",
+                label: "EV Deliveries",
                 data: chartData.map((d) => d.ev),
                 borderColor: "#EAB308",
                 backgroundColor: "#EAB308",
@@ -50,13 +50,13 @@ export default function CO2Chart() {
                     anchor: "end",
                     color: "#4A4A4A",
                     font: { weight: "bold", size: 10 },
-                    formatter: (v) => `${v}%`,
+                    formatter: (v) => `${v}`,
                     offset: 6,
                 },
             },
             {
                 type: "bar",
-                label: "CO2 Saved (Metric Tons)",
+                label: "CO2 Saved (kg)",
                 data: chartData.map((d) => d.co2),
                 backgroundColor: "#4CAF50",
                 borderColor: "#4CAF50",
@@ -96,7 +96,7 @@ export default function CO2Chart() {
                 },
                 title: {
                     display: true,
-                    text: "Time (Quarters)",
+                    text: "Day of Week",
                     color: "#4A4A4A",
                     font: { weight: "bold", size: 12 },
                     padding: { top: 8 },
@@ -105,12 +105,12 @@ export default function CO2Chart() {
             y: {
                 position: "left",
                 beginAtZero: true,
-                max: 2400,
-                ticks: { stepSize: 200, color: "#4CAF50", font: { weight: "bold", size: 10 } },
+                max: 320,
+                ticks: { stepSize: 40, color: "#4CAF50", font: { weight: "bold", size: 10 } },
                 grid: { color: "#E5E7EB" },
                 title: {
                     display: true,
-                    text: "CO\u2082 Saved (Metric Tons)",
+                    text: "CO\u2082 Saved (kg)",
                     color: "#4CAF50",
                     font: { weight: "bold", size: 12 },
                 },
@@ -118,17 +118,16 @@ export default function CO2Chart() {
             y1: {
                 position: "right",
                 beginAtZero: true,
-                max: 100,
+                max: 260,
                 ticks: {
-                    stepSize: 10,
+                    stepSize: 40,
                     color: "#EAB308",
                     font: { weight: "bold", size: 10 },
-                    callback: (v) => `${v}%`,
                 },
                 grid: { drawOnChartArea: false },
                 title: {
                     display: true,
-                    text: "EV Utilisation (%)",
+                    text: "EV Deliveries",
                     color: "#EAB308",
                     font: { weight: "bold", size: 12 },
                 },
