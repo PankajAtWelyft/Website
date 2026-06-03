@@ -68,63 +68,93 @@ flex items-center justify-between"
         </button>
       </a>
 
-        {/* MOBILE MENU ICON */}
-        <div
-          onClick={() => setopen(!open)}
-          className="
+      {/* MOBILE MENU ICON */}
+      <div
+        onClick={() => setopen(!open)}
+        className="
           lg:hidden
           text-2xl sm:text-3xl
           cursor-pointer
           text-[#021B44]
         "
-        >
+      >
         {open ? <FaTimes /> : <FaBars />}
-        </div>
+      </div>
+      {/* MOBILE MENU */}
       {open && (
         <div
-          className="md:hidden absolute top-25 left-0 w-full bg-white/95 gap-6 py-8 text-xl font-semibold shadow-lg
-         flex flex-col items-center backdrop-blur-md "
+          className="
+    fixed
+top-0
+left-0
+h-[75vh]
+w-full
+bg-white
+z-[999]
+px-8
+py-6
+md:hidden
+flex
+flex-col
+animate-slideIn
+rounded-b-3xl
+shadow-xl
+  "
         >
-          <Link to="/" onClick={() => setopen(false)}>
-            Home
-          </Link>
+          {/* TOP */}
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <img src={logo} className="w-10" alt="" />
+              <h1 className="text-3xl font-bold">Welyft</h1>
+            </div>
 
-          <a href="/#about" onClick={() => setopen(false)}>
-            About
-          </a>
+            <FaTimes
+              onClick={() => setopen(false)}
+              className="text-3xl text-[#021B44] cursor-pointer"
+            />
+          </div>
 
-          <a href="/#services" onClick={() => setopen(false)}>
-            Services
-          </a>
+          {/* LINKS */}
+          <div className="flex flex-col gap-8 mt-16 text-3xl font-medium text-[#111]">
+            <a href="/#about" onClick={() => setopen(false)}>
+              About
+            </a>
 
-          <a href="/#sustainability" onClick={() => setopen(false)}>
-            Sustainability
-          </a>
+            <a href="/#services" onClick={() => setopen(false)}>
+              Services
+            </a>
 
-          <a href="/#blog" onClick={() => setopen(false)}>
-            Blog
-          </a>
+            <a href="/#sustainability" onClick={() => setopen(false)}>
+              Sustainability
+            </a>
 
-          <Link to="/careers" onClick={() => setopen(false)}>
-            Careers
-          </Link>
+            <a href="/#blog" onClick={() => setopen(false)}>
+              Blog
+            </a>
 
-          <a href="/#contact" onClick={() => setopen(false)}>
-            Contact Us
-          </a>
+            <Link to="/careers" onClick={() => setopen(false)}>
+              Careers
+            </Link>
 
-          <a href="/#quote" onClick={() => setopen(false)}>
-            <button
-              className="
-              bg-yellow-400
-              px-3 py-3
-              rounded-xl
-              mt-2
-            "
-            >
-              Get Quote
-            </button>
-          </a>
+            <a href="/#contact" onClick={() => setopen(false)}>
+              Contact Us
+            </a>
+          </div>
+
+          {/* BUTTON */}
+          <button
+            className="
+      mt-auto
+      bg-yellow-400
+      py-4
+      rounded-2xl
+      text-xl
+      font-bold
+      shadow-lg
+    "
+          >
+            Get Quote
+          </button>
         </div>
       )}
     </nav>
