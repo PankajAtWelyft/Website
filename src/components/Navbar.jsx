@@ -119,8 +119,9 @@ const Navbar = () => {
           </div>
 
           {/* BUTTON */}
-          <button
-            className="
+          <a href="#quote">
+  <button
+    className="
       mt-auto
       bg-yellow-400
       py-4
@@ -128,10 +129,12 @@ const Navbar = () => {
       text-xl
       font-bold
       shadow-lg
+      w-full
     "
-          >
-            Get Quote
-          </button>
+  >
+    Get Quote
+  </button>
+</a>
         </div>
       )}
     </nav>
