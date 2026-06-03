@@ -47,9 +47,9 @@ const CareersSection = () => {
       .includes(search.toLowerCase());
 
     const matchesTypes = type === "All Types" || job.type === type;
-    const matchesCountry =  country === "All" || job.country === country;
+    const matchesCountry = country === "All" || job.country === country;
 
-  return matchesSearch && matchesTypes && matchesCountry;
+    return matchesSearch && matchesTypes && matchesCountry;
   });
 
   return (
@@ -59,7 +59,7 @@ const CareersSection = () => {
           <p className="inline-block bg-[#0A1F44] text-yellow-400 uppercase tracking-widest px-5 py-2 rounded-xl text-sm font-semibold">
             Open Positions
           </p>
-          <h1 className="text-5xl md:text-3xl sm:text-5xl lg:text-3xl sm:text-5xl lg:text-6xl font-bold mt-6 text-[#0A1F44]">
+          <h1 className="text-5xl md:text-3xl sm:text-5xl lg:text-3xl  lg:text-6xl font-bold mt-6 text-[#0A1F44]">
             Join the Welyft Team
           </h1>
         </div>
@@ -85,14 +85,14 @@ const CareersSection = () => {
           </select>
 
           <select
-  value={country}
-  onChange={(e) => setCountry(e.target.value)}
-  className="bg-white px-5 py-4 rounded-2xl border border-gray-300 text-lg shadow-sm focus:outline-none"
->
-  <option>All</option>
-  <option>India</option>
-  <option>Singapore</option>
-</select>
+            value={country}
+            onChange={(e) => setCountry(e.target.value)}
+            className="bg-white px-5 py-4 rounded-2xl border border-gray-300 text-lg shadow-sm focus:outline-none"
+          >
+            <option>All</option>
+            <option>India</option>
+            <option>Singapore</option>
+          </select>
         </div>
 
         <div className="mt-16 space-y-6 max-h-[700px] overflow-y-auto pr-3">
@@ -131,47 +131,79 @@ const CareersSection = () => {
         </div>
       </div>
       {showModal && (
-        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex justify-center items-center z-50 px-4">
-          <div className="bg-white rounded-3xl p-8 w-full max-w-2xl relative shadow-2xl">
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex justify-center pt-24 items-start sm:items-center z-50 px-4 py-6 overflow-y-auto">
+          <div className="bg-white rounded-3xl p-5 sm:p-8 w-full max-w-2xl relative shadow-2xl max-h-[85vh] overflow-y-auto mt-16 pb-6 sm:mt-0">
             <button
               onClick={() => setShowModal(false)}
               className="absolute top-5 right-5 text-3xl font-bold text-gray-500 hover:text-black"
             >
               ×
             </button>
-            <h2 className="text-4xl font-bold text-[#0A1F44]">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#0A1F44] leading-tight">
               Apply for Position
             </h2>
             <p className="text-gray-500 mt-3 text-lg">
               Fill out the application Form below
             </p>
 
-            <div className="mt-8 space-y-5">
-              <input
-                type="text"
-                placeholder="Full Name"
-                className="w-full border border-gray-300 rounded-xl p-4 text-lg focus:outline-none"
-              />
+            <form
+              className="mt-8 space-y-5"
+              onSubmit={(e) => {
+                e.preventDefault();
+                alert("Application Submitted Successfully!");
+              }}
+            >
+              <div>
+                <label className="block mb-2 font-semibold text-[#0A1F44]">
+                  Full Name <span className="text-red-500">*</span>
+                </label>
 
-              <input
-                type="email"
-                placeholder="Email Address"
-                className="w-full border border-gray-300 rounded-xl p-4 text-lg focus:outline-none"
-              />
+                <input
+                  type="text"
+                  placeholder="Enter your full name"
+                  required
+                  className="w-full border border-gray-300 rounded-xl p-3 sm:p-4 text-base sm:text-lg focus:outline-none"
+                />
+              </div>
+              <div>
+                <label className="block mb-2 font-semibold text-[#0A1F44]">
+                  Email Address <span className="text-red-500">*</span>
+                </label>
 
-              <input
-                type="tel"
-                placeholder="Phone Number"
-                className="w-full border border-gray-300 rounded-xl p-4 text-lg focus:outline-none"
-              />
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  required
+                  className="w-full border border-gray-300 rounded-xl p-3 sm:p-4 text-base sm:text-lg focus:outline-none"
+                />
+              </div>
 
-              <input
-                type="text"
-                placeholder="LinkedIn Profile URL"
-                className="w-full border border-gray-300 rounded-xl p-4 text-lg focus:outline-none"
-              />
+              <div>
+                <label className="block mb-2 font-semibold text-[#0A1F44]">
+                  Phone Number <span className="text-red-500">*</span>
+                </label>
 
-              <div className="border-2 border-dashed border-gray-300 rounded-2xl p-8 text-center hover:border-yellow-400 transition-all duration-300">
+                <input
+                  type="tel"
+                  placeholder="Enter phone number"
+                  required
+                  className="w-full border border-gray-300 rounded-xl p-3 sm:p-4 text-base sm:text-lg focus:outline-none"
+                />
+              </div>
+
+              <div>
+                <label className="block mb-2 font-semibold text-[#0A1F44]">
+                  LinkedIn Profile URL
+                </label>
+
+                <input
+                  type="text"
+                  placeholder="Paste LinkedIn profile link"
+                  className="w-full border border-gray-300 rounded-xl p-3 sm:p-4 text-base sm:text-lg focus:outline-none"
+                />
+              </div>
+
+              <div className="border-2 border-dashed border-gray-300 rounded-2xl p-5 sm:p-8 text-center hover:border-yellow-400 transition-all duration-300">
                 <p className="text-lg font-semibold text-[#0A1F44]">
                   Upload Resume
                 </p>
@@ -182,16 +214,21 @@ const CareersSection = () => {
 
                 <label className="inline-block mt-5 bg-[#0A1F44] text-yellow-400 px-6 py-3 rounded-xl cursor-pointer hover:bg-yellow-400 hover:text-black transition-all duration-300">
                   Choose Resume
-                  <input type="file" className="hidden" />
+                  <input
+                    type="file"
+                    required
+                    accept=".pdf,.doc,.docx"
+                    className="hidden"
+                  />
                 </label>
               </div>
-              <button
+              <button type="submit"
                 className="w-full bg-[#0A1F44] text-yellow-400 py-4 rounded-2xl font-semibold
                     hover:bg-yellow-400 hover:text-black transition-all duration-300"
               >
                 Submit Application
               </button>
-            </div>
+            </form>
           </div>
         </div>
       )}
