@@ -20,6 +20,7 @@ transition-all
 duration-300
 flex
 flex-col
+mx-auto
     "
     >
       <div

@@ -71,6 +71,7 @@ const Sustainability = () => {
     <Swiper
       spaceBetween={14}
       slidesPerView={1}
+      centeredSlides={true}
     >
       <SwiperSlide className="flex justify-center">
         <SustainabilityCard
@@ -80,7 +81,7 @@ const Sustainability = () => {
         />
       </SwiperSlide>
 
-      <SwiperSlide>
+      <SwiperSlide  className="flex justify-center">
         <SustainabilityCard
           icon="💡"
           title="Smart Innovation"
@@ -88,7 +89,7 @@ const Sustainability = () => {
         />
       </SwiperSlide>
 
-      <SwiperSlide>
+      <SwiperSlide className="flex justify-center">
         <SustainabilityCard
           icon="📈"
           title="CO₂ Reporting"
@@ -96,7 +97,7 @@ const Sustainability = () => {
         />
       </SwiperSlide>
 
-      <SwiperSlide>
+      <SwiperSlide className="flex justify-center">
         <SustainabilityCard
           icon="🌏"
           title="Better Planet"

@@ -8,22 +8,14 @@ const Navbar = () => {
 
   return (
     <nav
-      className="w-full
-fixed
-top-0
-left-0
-z-[999]
-px-4 md:px-8
-bg-white
-shadow-md
-h-20
-flex items-center justify-between"
+      className="w-full fixed top-0 left-0 z-[999] px-4 md:px-8 bg-white shadow-md h-20 flex items-center justify-between"
     >
       <div className="flex items-center">
         <img src={logo} className="w-10 m-5 py-2" alt="" />
         <h1 className="font-bold text-3xl">Welyft</h1>
       </div>
-      <div className=" hidden md:flex font-bold mr-4 text-xl gap-6">
+
+      <div className=" hidden lg:flex font-bold mr-4 text-xl gap-6">
         <Link to="/" className="group flex flex-col items-center">
           Home
           <span className="w-0 h-0.5 bg-yellow-400 mt-1 transition-all duration-300 group-hover:w-full"></span>
@@ -61,7 +53,7 @@ flex items-center justify-between"
       </div>
       <a href="#quote">
         <button
-          className="hidden md:block bg-yellow-400 font-bold cursor-pointer text-indigo px-7 py-3 rounded-2xl
+          className="hidden lg:block bg-yellow-400 font-bold cursor-pointer text-indigo px-7 py-3 rounded-2xl
      shadow-lg shadow-yellow-400/50 mr-10 hover:shadow-yellow-300 transition-all duration-300"
         >
           Get Quote
@@ -83,22 +75,7 @@ flex items-center justify-between"
       {/* MOBILE MENU */}
       {open && (
         <div
-          className="
-    fixed
-top-0
-left-0
-h-[75vh]
-w-full
-bg-white
-z-[999]
-px-8
-py-6
-md:hidden
-flex
-flex-col
-animate-slideIn
-rounded-b-3xl
-shadow-xl
+          className=" fixed top-0 left-0 h-[75vh] w-full bg-white z-[999] px-8 py-6 lg:hidden flex flex-col animate-slideIn rounded-b-3xl shadow-xl
   "
         >
           {/* TOP */}
