@@ -9,7 +9,7 @@ const ContactForm = () => {
           <p className="inline-block bg-indigo-900 uppercase text-amber-300 tracking-widest px-5 py-2 rounded-xl text-sm font-semibold">
             Contact Us
           </p>
-          <h1 className="text-3xl sm:text-5xl lg:text-3xl sm:text-5xl lg:text-6xl font-bold text-black mt-6">Get in Touch</h1>
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-black mt-6">Get in Touch</h1>
           <p className="text-gray-500 text-2xl mt-6">
             Have questions or ready to get started? Reach out to our team today.
           </p>

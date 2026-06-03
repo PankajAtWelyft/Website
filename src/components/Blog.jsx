@@ -8,7 +8,7 @@ const Blog = () => {
           <p className="inline-block bg-[#0A1F44] text-yellow-400 px-5 py-2 rounded-lg uppercase tracking-widest text-sm font-semibold ">
             Latest Blog
           </p>
-          <h2 className="text-4xl md:text-3xl sm:text-5xl lg:text-3xl sm:text-5xl lg:text-6xl font-bold text-[#0A1F44] mt-6">
+          <h2 className="text-4xl md:text-3xl sm:text-5xl lg:text-6xl font-bold text-[#0A1F44] mt-6">
             News & Insights
           </h2>
 

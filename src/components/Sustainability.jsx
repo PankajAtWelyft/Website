@@ -7,11 +7,11 @@ const Sustainability = () => {
   return (
     <section
       id="sustainability"
-      className="bg-[#014631] py-20 sm:py-16 sm:py-24 lg:py-28"
+      className="bg-[#014631] py-20 sm:py-16  lg:py-28"
     >
 
       {/* HEADING */}
-      <div className="px-6 sm:px-4 sm:px-6 lg:px-10 text-center max-w-7xl mx-auto">
+      <div className="px-6 sm:px-4  lg:px-10 text-center max-w-7xl mx-auto">
 
         <h1
           className="bg-yellow-400 text-sm sm:text-xl rounded-xl uppercase inline-block text-[#0A1F44] px-4 sm:px-5 py-2 font-bold"
@@ -22,8 +22,7 @@ const Sustainability = () => {
         <h2
           className="
           text-4xl
-          sm:text-3xl sm:text-5xl lg:text-3xl sm:text-5xl lg:text-6xl
-          lg:text-4xl sm:text-3xl sm:text-5xl lg:text-6xl lg:text-8xl
+         sm:text-5xl lg:text-7xl
           font-bold
           text-yellow-400
           mt-8
@@ -37,7 +36,7 @@ const Sustainability = () => {
           className="
           text-3xl
           sm:text-5xl
-          lg:text-3xl sm:text-5xl lg:text-3xl sm:text-5xl lg:text-6xl
+         lg:text-6xl
           font-bold
           text-yellow-400
           mt-4

@@ -10,14 +10,14 @@ import future from "../assets/future.webp";
 const Services = () => {
   return (
     <section
-      id="services" className="bg-[#F5F3EE] py-20 sm:py-16 sm:py-24 lg:py-28">
+      id="services" className="bg-[#F5F3EE] py-20 sm:py-16 lg:py-28">
       {/* HEADING */}
-      <div className="max-w-7xl px-6 sm:px-4 sm:px-6 lg:px-10 mx-auto text-center">
+      <div className="max-w-7xl px-6 sm:px-4 lg:px-10 mx-auto text-center">
         <p className="inline-block text-sm sm:text-xl text-amber-300 bg-[#0A1F44] tracking-widest mt-4 px-4 sm:px-5 py-2 rounded-md font-bold uppercase
         ">
         Our Services
         </p>
-        <h2 className="text-4xl sm:text-5xl lg:text-3xl sm:text-5xl lg:text-3xl sm:text-5xl lg:text-6xl font-semibold text-[#0A1F44] mt-6 leading-tight
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-[#0A1F44] mt-6 leading-tight
         ">
           Why Choose Welyft?
         </h2>

@@ -10,7 +10,7 @@ const About = () => {
           <p className="inline-block text-sm  font-semibold uppercase tracking-widest bg-[#0A1F44] text-yellow-400 px-5 py-2 rounded-md mb-8">
             About Welyft
           </p>
-          <h2 className="text-4xl md:text-3xl sm:text-5xl lg:text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight text-[#0A1F44]">
+          <h2 className="text-4xl md:text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight text-[#0A1F44]">
             This is not just logistics
             <br className="hidden sm:block" />
             This is climate action in motion.
