@@ -3,7 +3,7 @@ import Welyft_banner_Nw from "../assets/Welyft_banner_Nw.png";
 
 const Home = () => {
   return (
-    <section id="home" className="w-full">
+    <section id="home" className="w-full pt-20">
       <img
         src={Welyft_banner_Nw}
         alt="Welyft Banner"
