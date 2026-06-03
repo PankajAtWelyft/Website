@@ -21,18 +21,18 @@ const ContactForm = () => {
               <h2 className="text-3xl font-semibold text-black sm:text-4xl">Address</h2>
             </div>
 
-            <p className="mt-6 text-base leading-relaxed text-gray-600 sm:text-xl">
+            <p className="mt-6 text-base font-bold leading-relaxed text-gray-600 sm:text-xl">
               Welyft Pte. Ltd. (UEN 202440989G)
               <br />
               101 Cecil Street, #18-11 Tong Eng Building
               <br />
               Singapore 069533
             </p>
-            <p className="mt-4 text-base text-gray-700 sm:text-xl">
+            <p className="mt-4 text-base font-semibold text-gray-700 sm:text-xl">
               Registered office address:
             </p>
             <br />
-            <p className="-mt-5 text-base text-gray-600 sm:text-xl">
+            <p className="-mt-5 text-base font-semibold text-gray-600 sm:text-xl">
               160 Robinson Road, #14-04, SBF Center, Singapore
               <br />
               068914
@@ -54,7 +54,7 @@ const ContactForm = () => {
                 <h2 className="text-3xl font-semibold text-black sm:text-4xl">Whatsapp</h2>
               </div>
               <a
-                href="https://web.whatsapp.com/send?phone=6587601984"
+                href="https://wa.me/6587601984?text=Hello%20Welyft"
                 target="_blank"
                 className="text-xl mt-6 text-gray-600 underline hover:text-indigo-900 transition"
               >

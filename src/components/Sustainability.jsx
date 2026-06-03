@@ -67,12 +67,12 @@ const Sustainability = () => {
    <div className="max-w-7xl mx-auto mt-16 sm:mt-20 px-6">
 
   {/* MOBILE SLIDER */}
-  <div className="sm:hidden">
+  <div className="sm:hidden px-2">
     <Swiper
-      spaceBetween={12}
-      slidesPerView={2}
+      spaceBetween={14}
+      slidesPerView={1}
     >
-      <SwiperSlide>
+      <SwiperSlide className="flex justify-center">
         <SustainabilityCard
           icon="🚚"
           title="Lower Emissions"

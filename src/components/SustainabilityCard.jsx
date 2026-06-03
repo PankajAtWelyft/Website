@@ -5,8 +5,8 @@ const SustainabilityCard = ({ icon, title, description }) => {
     <div
       className="
    group
-w-[260px]
-sm:w-[320px]
+w-full
+max-w-[300px]
 h-[320px]
 px-6
 py-8
@@ -22,7 +22,6 @@ flex
 flex-col
     "
     >
-
       <div
         className="
         bg-yellow-100
@@ -65,7 +64,6 @@ flex-col
       >
         {description}
       </p>
-
     </div>
   );
 };
