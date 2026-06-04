@@ -6,11 +6,11 @@ const iconMap = { co2: Cloud, tree: TreePine, fuel: Fuel, car: Car };
 export default function TotalImpactPanel() {
   return (
     <aside className="border-2 rounded-xl bg-white p-4 sm:p-5 w-full" style={{ borderColor: palette.evDeliveries }}>
-      <div className="text-center mb-4">
+      <div className="text-center mb-4 mt-10 lg:mt-0">
         <h3 className="text-lg sm:text-xl md:text-2xl font-bold lg:pt-2" style={{ color: palette.text }}>Total Impact</h3>
         <p className="text-sm" style={{ color: palette.text }}>(Year {apiResponse.year})</p>
       </div>
-      <div className="divide-y divide-gray-200 lg:pt-7">
+      <div className="divide-y divide-gray-200 lg:pt-7 mt-15 ml-10 lg:ml-0 lg:mt-0">
         {totalImpact.map((item, idx) => {
           const Icon = iconMap[item.icon];
           return (

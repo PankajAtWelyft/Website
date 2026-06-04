@@ -141,7 +141,7 @@ export default function CO2Chart() {
 
   return (
     <>
-    <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mt-5 text-xs sm:text-sm">
+    <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mt-10 lg:mt-0 text-xs sm:text-sm">
         <div className="flex items-center gap-2">
           <span className="inline-block w-5 h-3" style={{ background: palette.co2Saved }} />
           <span style={{ color: palette.text }}>
@@ -163,7 +163,7 @@ export default function CO2Chart() {
           <span style={{ color: palette.text }}>EV Deliveries</span>
         </div>
       </div>
-    <div className="relative w-full h-[320px] sm:h-[400px] md:h-[460px]">
+    <div className="relative w-full h-[320px] sm:h-[400px] md:h-[460px] mt-20 lg:mt-0">
       <Chart type="bar" data={data} options={options}/>
     </div>
     </>
