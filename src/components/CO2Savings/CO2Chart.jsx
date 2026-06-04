@@ -55,11 +55,12 @@ export default function CO2Chart() {
         backgroundColor: palette.co2Saved,
         borderColor: palette.co2Saved,
         borderWidth: 0,
-        barPercentage: 0.9,
-        categoryPercentage: 0.7,
+        barPercentage: 0.78,
+        categoryPercentage: 0.66,
         yAxisID: "y",
         order: 1,
         datalabels: {
+          display: (ctx) => ctx.chart.width >= 520,
           align: "top",
           anchor: "end",
           color: palette.co2Saved,
@@ -74,11 +75,12 @@ export default function CO2Chart() {
         backgroundColor: palette.co2Emission,
         borderColor: palette.co2Emission,
         borderWidth: 0,
-        barPercentage: 0.9,
-        categoryPercentage: 0.7,
+        barPercentage: 0.78,
+        categoryPercentage: 0.66,
         yAxisID: "y",
         order: 1,
         datalabels: {
+          display: (ctx) => ctx.chart.width >= 520,
           align: "top",
           anchor: "end",
           color: palette.co2Emission,
@@ -101,7 +103,17 @@ export default function CO2Chart() {
     scales: {
       x: {
         grid: { display: false },
-        ticks: { color: palette.text, font: { size: 10 }, autoSkip: false },
+        ticks: {
+          color: palette.text,
+          font: { size: 10 },
+          autoSkip: false,
+          maxRotation: 45,
+          minRotation: 45,
+          callback: function tickLabel(value, index) {
+            const label = this.getLabelForValue(value);
+            return this.chart.width < 420 && index % 2 === 1 ? "" : label;
+          },
+        },
         title: {
           display: true,
           text: "Month (2024)",
@@ -140,8 +152,8 @@ export default function CO2Chart() {
   };
 
   return (
-    <>
-    <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mt-10 lg:mt-0 text-xs sm:text-sm">
+    <div className="flex h-full flex-col">
+      <div className="flex shrink-0 flex-wrap justify-center gap-x-4 gap-y-3 pt-2 text-xs sm:gap-x-6 sm:text-sm lg:pt-0">
         <div className="flex items-center gap-2">
           <span className="inline-block w-5 h-3" style={{ background: palette.co2Saved }} />
           <span style={{ color: palette.text }}>
@@ -163,9 +175,9 @@ export default function CO2Chart() {
           <span style={{ color: palette.text }}>EV Deliveries</span>
         </div>
       </div>
-    <div className="relative w-full h-[320px] sm:h-[400px] md:h-[460px] mt-20 lg:mt-0">
-      <Chart type="bar" data={data} options={options}/>
+      <div className="relative mt-4 min-h-0 w-full flex-1 lg:h-[400px] lg:flex-none xl:h-[460px]">
+        <Chart type="bar" data={data} options={options}/>
+      </div>
     </div>
-    </>
   );
 }
