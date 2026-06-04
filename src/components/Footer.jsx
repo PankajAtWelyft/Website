@@ -18,12 +18,12 @@ const Footer = () => {
               alt="logo"
             />
 
-            <h1 className="text-4xl font-bold text-white sm:text-5xl">
+            <h1 className="text-2xl font-bold text-white sm:text-5xl">
               Welyft
             </h1>
           </div>
 
-          <p className="mt-6 text-lg leading-relaxed text-gray-300 sm:text-xl">
+          <p className="mt-6 text-base leading-relaxed text-gray-300 sm:text-xl">
             Smart logistics.
             <br />
             Sustainable future.
@@ -31,11 +31,11 @@ const Footer = () => {
         </div>
 
         <div>
-          <h2 className="text-yellow-400 text-3xl font-semibold">
+          <h2 className="text-yellow-400 text-2xl font-semibold">
             Company
           </h2>
 
-          <ul className="mt-8 space-y-3 text-gray-300 text-xl">
+          <ul className="mt-5 space-y-2 text-gray-300 text-base sm:text-xl">
             <li>About Us</li>
             <li>Services</li>
             <li>Sustainability</li>
@@ -44,11 +44,11 @@ const Footer = () => {
         </div>
 
         <div>
-          <h2 className="text-yellow-400 text-3xl font-semibold">
+          <h2 className="text-yellow-400 text-2xl font-semibold">
             Services
           </h2>
 
-          <ul className="mt-8 space-y-3 text-gray-300 text-xl">
+          <ul className="mt-5 space-y-2 text-gray-300 text-base sm:text-xl">
             <li>Freight Transport</li>
             <li>Last-Mile Delivery</li>
             <li>CO₂ Reporting</li>
@@ -56,11 +56,11 @@ const Footer = () => {
         </div>
 
         <div>
-          <h2 className="text-yellow-400 text-3xl font-semibold">
+          <h2 className="text-yellow-400 text-2xl font-semibold">
             Contact
           </h2>
 
-          <ul className="mt-8 space-y-3 text-gray-300 text-xl">
+          <ul className="mt-5 space-y-2 text-gray-300 text-base sm:text-xl">
             <li>Singapore</li>
             <li>operations@welyft.com</li>
             <li>+65 8760 1984</li>

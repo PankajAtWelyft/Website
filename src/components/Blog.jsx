@@ -2,7 +2,7 @@ import React from "react";
 import news from '../assets/news.png'
 const Blog = () => {
   return (
-    <section id="blog" className="bg-[#F5F3EE] py-16 sm:py-24 lg:py-28">
+    <section id="blog" className="bg-[#F5F3EE]  pt-8 pb-16 sm:pt-12 sm:pb-24 lg:pt-16 lg:pb-28">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center">
           <p className="inline-block bg-[#0A1F44] text-yellow-400 px-5 py-2 rounded-lg uppercase tracking-widest text-sm font-semibold ">
@@ -11,7 +11,6 @@ const Blog = () => {
           <h2 className="text-4xl md:text-3xl sm:text-5xl lg:text-6xl font-bold text-[#0A1F44] mt-6">
             News & Insights
           </h2>
-
           <p className="text-gray-600 text-lg md:text-xl mt-6 max-w-3xl mx-auto leading-relaxed">
             Stay updated with the latest insights, news, and updates from
             Welyft.
