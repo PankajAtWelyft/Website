@@ -1,3 +1,4 @@
+import { useRef, useState } from "react";
 import ChartHeader from "./ChartHeader";
 import CO2Chart from "./CO2Chart";
 import TotalImpactPanel from "./TotalImpactPanel";
@@ -9,8 +10,16 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 export default function CO2Dashboard() {
+  const swiperRef = useRef(null);
+  const [activeSlide, setActiveSlide] = useState(0);
   const mobileSlideClass = "flex justify-center !h-auto";
   const mobileCardClass = "h-[640px] sm:h-[620px] md:h-[660px] w-full min-w-0";
+  const slideLabels = [
+    "CO2 chart",
+    "CO2 reduction ratio",
+    "Deliveries replaced",
+    "Total impact",
+  ];
 
   return (
     <div className="w-full bg-white rounded-2xl shadow-sm border border-gray-200 p-4 sm:p-6 md:p-8">
@@ -22,6 +31,12 @@ export default function CO2Dashboard() {
       spaceBetween={14}
       slidesPerView={1}
       centeredSlides={true}
+      onSwiper={(swiper) => {
+        swiperRef.current = swiper;
+      }}
+      onSlideChange={(swiper) => {
+        setActiveSlide(swiper.activeIndex);
+      }}
     >
       <SwiperSlide className={mobileSlideClass}>
         <div className={`${mobileCardClass} rounded-xl border-2 p-4 sm:p-5`} style={{ borderColor: palette.evDeliveries }}>
@@ -47,6 +62,26 @@ export default function CO2Dashboard() {
         </div>
       </SwiperSlide>
     </Swiper>
+
+    <div className="mt-5 flex items-center justify-center gap-3">
+      {slideLabels.map((slideLabel, index) => {
+        const isActive = activeSlide === index;
+
+        return (
+          <button
+            key={slideLabel}
+            type="button"
+            aria-label={`Go to ${slideLabel}`}
+            aria-current={isActive ? "true" : undefined}
+            onClick={() => swiperRef.current?.slideTo(index)}
+            className={`h-3 rounded-full transition-all duration-300 ${
+              isActive ? "w-14 shadow-sm" : "w-3 opacity-35"
+            }`}
+            style={{ backgroundColor: palette.evDeliveries }}
+          />
+        );
+      })}
+    </div>
   </div>
 
 
