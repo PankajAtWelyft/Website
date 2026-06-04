@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-
 import HomePage from "./pages/HomePage";
 import Careers from "./pages/Careers";
 import PrivacyPolicy from "./pages/PrivacyPolicy";

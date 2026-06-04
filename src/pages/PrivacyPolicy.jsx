@@ -9,7 +9,6 @@ const PrivacyPolicy = () => {
       <section className="bg-[#F5F3EE] min-h-screen py-24 px-4">
         <div className="max-w-5xl mx-auto">
           {/* HEADER */}
-
           <div className="text-center mb-16">
             <p className="uppercase tracking-[5px] text-yellow-500 font-semibold text-sm">
               Legal Information
@@ -18,7 +17,6 @@ const PrivacyPolicy = () => {
             <h1 className="text-3xl sm:text-5xl lg:text-3xl sm:text-5xl lg:text-6xl font-bold text-[#0A1F44] mt-5">
               Privacy Policy
             </h1>
-
             <p className="text-gray-500 text-xl mt-6 max-w-3xl mx-auto leading-relaxed">
               Learn how Welyft collects, protects, and manages your information
               while providing secure logistics services.
