@@ -110,9 +110,9 @@ const Footer = () => {
             Privacy Policy
           </Link>
 
-          <p className="cursor-pointer hover:text-yellow-400 transition-all duration-300">
-            Terms of Services
-          </p>
+          <Link to="/terms" className="cursor-pointer hover:text-yellow-400 transition-all duration-300">
+            Terms of Service
+          </Link>
 
         </div>
 
