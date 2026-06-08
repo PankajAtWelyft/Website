@@ -7,7 +7,7 @@ const Sustainability = () => {
   return (
     <section
       id="sustainability"
-      className="bg-[#014631] py-20 sm:py-16  lg:py-28"
+      className="bg-[#014631] py-10 sm:py-12 lg:py-14"
     >
 
       {/* HEADING */}
@@ -64,7 +64,7 @@ const Sustainability = () => {
           cleaner, greener business operations — one delivery at a time.
         </p>
       </div>
-   <div className="max-w-7xl mx-auto mt-16 sm:mt-20 px-6">
+   <div className="max-w-7xl mx-auto mt-10 sm:mt-14 px-2 sm:px-6">
 
   {/* MOBILE SLIDER */}
   <div className="sm:hidden px-2">
@@ -72,6 +72,7 @@ const Sustainability = () => {
       spaceBetween={14}
       slidesPerView={1}
       centeredSlides={true}
+      grabCursor={true}
     >
       <SwiperSlide className="flex justify-center">
         <SustainabilityCard

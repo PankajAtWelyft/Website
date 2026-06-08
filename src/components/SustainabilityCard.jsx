@@ -3,25 +3,8 @@ import React from "react";
 const SustainabilityCard = ({ icon, title, description }) => {
   return (
     <div
-      className="
-   group
-w-full
-max-w-[300px]
-h-[320px]
-px-6
-py-8
-bg-yellow-400
-text-left
-rounded-3xl
-shadow-md
-hover:bg-[#1a3f7f]
-hover:-translate-y-3
-transition-all
-duration-300
-flex
-flex-col
-mx-auto
-    "
+      className="group w-full max-w-[300px] h-[320px] px-6 py-8 bg-yellow-400 text-left rounded-3xl shadow-md
+       hover:bg-[#F5F1E6] hover:-translate-y-3 transition-all duration-300 flex flex-col mx-auto"
     >
       <div
         className="
@@ -33,7 +16,7 @@ mx-auto
         items-center
         justify-center
         text-2xl sm:text-3xl
-        group-hover:bg-indigo-900
+        group-hover:bg-white
       "
       >
         {icon}
@@ -43,7 +26,7 @@ mx-auto
         className="
         text-black
         text-xl sm:text-2xl
-        group-hover:text-yellow-400
+        group-hover:text-[#0A1F44]
         font-semibold
         mt-5
         leading-relaxed
@@ -56,7 +39,7 @@ mx-auto
         className="
         text-black
         text-base sm:text-lg
-        group-hover:text-yellow-400
+        group-hover:text-[#0A1F44]
         leading-relaxed
         mt-4
         font-medium
