@@ -1,9 +1,4 @@
-import {
-  Chart as ChartJS,
-  ArcElement,
-  Tooltip,
-  Legend,
-} from "chart.js";
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import { Pie } from "react-chartjs-2";
 import { pieData, palette } from "./data";
@@ -12,13 +7,13 @@ ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels);
 
 export default function CO2PieChart() {
   const colors = palette.pie;
-  const total = pieData.reduce((s, d) => s + d.value, 0);
+  const total = pieData.reduce((sum, item) => sum + item.value, 0);
 
   const data = {
-    labels: pieData.map((d) => d.category),
+    labels: pieData.map((item) => item.category),
     datasets: [
       {
-        data: pieData.map((d) => d.value),
+        data: pieData.map((item) => item.value),
         backgroundColor: colors,
         borderColor: "#ffffff",
         borderWidth: 2,
@@ -39,29 +34,38 @@ export default function CO2PieChart() {
       datalabels: {
         color: "#fff",
         font: { weight: "bold", size: 12 },
-        formatter: (v) => `${((v / total) * 100).toFixed(1)}%`,
+        formatter: (value) => `${((value / total) * 100).toFixed(1)}%`,
       },
     },
   };
 
   return (
-    <div className="border-2 rounded-xl bg-white p-4 sm:p-5 w-full" style={{ borderColor: palette.evDeliveries }}>
-      <div className="text-center mb-3 mt-10 lg:mt-0 ">
-        <h3 className="text-lg sm:text-xl md:text-2xl font-bold lg:pt-2" style={{ color: palette.text }}>CO₂ Reduction Ratio</h3>
-        <p className="text-xs" style={{ color: palette.text }}>Saved vs Remaining Emission (Tons)</p>
+    <div
+      className="w-full rounded-xl border-2 bg-white p-4 sm:p-5"
+      style={{ borderColor: palette.evDeliveries }}
+    >
+      <div className="mb-3 mt-10 text-center lg:mt-0">
+        <h3 className="text-lg font-bold sm:text-xl md:text-2xl lg:pt-2" style={{ color: palette.text }}>
+          CO2 Reduction Ratio
+        </h3>
+        <p className="text-xs" style={{ color: palette.text }}>
+          Saved vs CO2 Emission (Tons)
+        </p>
       </div>
-      <div className="relative h-[220px] sm:h-[260px] mt-23 lg:mt-9">
+
+      <div className="relative mt-14 h-[260px] sm:mt-16 sm:h-[320px] lg:mt-6 lg:h-[390px] xl:h-[440px]">
         <Pie data={data} options={options} />
       </div>
-      <div className="flex flex-wrap justify-center gap-4 mt-15 lg:mt-9 text-xs sm:text-sm">
-        {pieData.map((d, i) => (
-          <div key={d.category} className="flex items-center gap-2">
+
+      <div className="mt-10 flex flex-wrap justify-center gap-4 text-xs sm:text-sm lg:mt-6">
+        {pieData.map((item, index) => (
+          <div key={item.category} className="flex items-center gap-2">
             <span
-              className="inline-block w-3 h-3 rounded-sm"
-              style={{ backgroundColor: colors[i] }}
+              className="inline-block h-3 w-3 rounded-sm"
+              style={{ backgroundColor: colors[index] }}
             />
             <span style={{ color: palette.text }}>
-              {d.category} — <span className="font-semibold">{d.value} Ton</span>
+              {item.category} - <span className="font-semibold">{item.value} Ton</span>
             </span>
           </div>
         ))}

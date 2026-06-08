@@ -107,8 +107,8 @@ export default function CO2Chart() {
           color: palette.text,
           font: { size: 10 },
           autoSkip: false,
-          maxRotation: 45,
-          minRotation: 45,
+          maxRotation: 0,
+          minRotation: 0,
           callback: function tickLabel(value, index) {
             const label = this.getLabelForValue(value);
             return this.chart.width < 420 && index % 2 === 1 ? "" : label;
@@ -129,7 +129,7 @@ export default function CO2Chart() {
         ticks: { stepSize: 1, color: palette.co2Saved, font: { size: 10 } },
         grid: { color: "#E5E7EB" },
         title: {
-          display: true,
+          display: false,
           text: "CO\u2082 (Metric Tons)",
           color: palette.co2Saved,
           font: { weight: "bold", size: 11 },
@@ -142,7 +142,7 @@ export default function CO2Chart() {
         ticks: { stepSize: 1000, color: palette.evDeliveries, font: { size: 10 } },
         grid: { drawOnChartArea: false },
         title: {
-          display: true,
+          display: false,
           text: "EV Deliveries",
           color: palette.evDeliveries,
           font: { weight: "bold", size: 11 },
@@ -153,7 +153,7 @@ export default function CO2Chart() {
 
   return (
     <div className="flex h-full flex-col">
-      <div className="flex shrink-0 flex-wrap justify-center gap-x-4 gap-y-3 pt-2 text-xs sm:gap-x-6 sm:text-sm lg:pt-0">
+      <div className="flex shrink-0 flex-wrap justify-center gap-x-4 gap-y-3 pt-2 text-xs sm:gap-x-6 sm:text-sm lg:pt-0  mt-0 lg:mt-8">
         <div className="flex items-center gap-2">
           <span className="inline-block w-5 h-3" style={{ background: palette.co2Saved }} />
           <span style={{ color: palette.text }}>
@@ -175,7 +175,7 @@ export default function CO2Chart() {
           <span style={{ color: palette.text }}>EV Deliveries</span>
         </div>
       </div>
-      <div className="relative mt-4 min-h-0 w-full flex-1 lg:h-[400px] lg:flex-none xl:h-[460px]">
+      <div className="relative mt-4 min-h-0 w-full flex-1 lg:mt-15 lg:h-[400px] lg:flex-none xl:h-[460px]">
         <Chart type="bar" data={data} options={options}/>
       </div>
     </div>
