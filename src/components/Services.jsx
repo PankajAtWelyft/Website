@@ -81,7 +81,7 @@ const Services = () => {
 </div>
 
 {/* MOBILE SLIDER */}
-<div className="md:hidden mt-14 px-4">
+<div className="md:hidden mt-10 px-4">
   <Swiper
     spaceBetween={20}
     slidesPerView={1.1}

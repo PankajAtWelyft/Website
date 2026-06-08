@@ -3,7 +3,7 @@ import { FaMapMarkerAlt, FaEnvelope, FaWhatsapp } from "react-icons/fa";
 
 const ContactForm = () => {
   return (
-    <section id="contact-form" className="bg-[#F5F1E6] py-16 sm:py-24">
+    <section id="contact-form" className="bg-[#F5F1E6] py-4 pt-10 sm:py-24 sm:pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="text-center">
           <p className="inline-block bg-indigo-900 uppercase text-amber-300 tracking-widest px-5 py-2 rounded-xl text-sm font-semibold">
@@ -17,18 +17,18 @@ const ContactForm = () => {
             Have questions or ready to get started? Reach out to our team today.
           </p>
         </div>
-        <div className="mt-14 grid grid-cols-1 gap-12 lg:mt-20 lg:grid-cols-2 lg:gap-20">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-4 px-5 py-14 sm:grid-cols-2 sm:px-8 lg:grid-cols-2 lg:gap-20">
           <div>
             <div className="flex items-center gap-4">
               <a href="https://maps.google.com" target="_blank">
                 <FaMapMarkerAlt className="text-yellow-500 text-3xl hover:scale-110 hover:text-red-500 transition-all duration-300" />
               </a>
-              <h2 className="text-2xl font-semibold text-black sm:text-4xl">
+              <h2 className="text-xl font-semibold text-black sm:text-4xl">
                 Address
               </h2>
             </div>
 
-            <p className="mt-6 text-base font-bold leading-relaxed text-gray-600 sm:text-xl">
+            <p className="mt-2 text-base font-bold leading-relaxed text-gray-600 sm:text-xl lg:mt-6">
               Welyft Pte. Ltd. (UEN 202440989G)
             </p>
             <br />
@@ -52,19 +52,19 @@ const ContactForm = () => {
                 <a href="mailto:operations@welyft.com">
                   <FaEnvelope className="text-yellow-500 text-3xl hover:scale-110 hover:text-indigo-900 transition-all duration-300" />
                 </a>
-                <h2 className="text-2xl font-semibold text-black sm:text-4xl">
+                <h2 className="text-xl font-semibold text-black sm:text-4xl">
                   Email
                 </h2>
               </div>
               <a
                 href="mailto:operations@welyft.com"
-                className="mt-4 inline-block break-words text-base text-gray-600 sm:text-xl hover:text-indigo-900 transition-all duration-300"
+                className="mt-2 inline-block break-words text-base text-gray-600 sm:text-xl lg:mt-4 hover:text-indigo-900 transition-all duration-300"
               >
                 operations@welyft.com
               </a>
             </div>
 
-           <div className="mt-12">
+           <div className="mt-4 lg:mt-12">
   <div className="flex items-center gap-4">
 
     <a
@@ -74,7 +74,7 @@ const ContactForm = () => {
     >
       <FaWhatsapp className="text-yellow-500 text-3xl hover:scale-110 hover:text-green-600 transition-all duration-300" />
 
-      <h2 className="text-2xl underline font-semibold text-black sm:text-4xl group-hover:text-green-600 transition">
+      <h2 className="text-xl underline font-semibold text-black sm:text-4xl group-hover:text-green-600 transition">
         Chat with us
       </h2>
     </a>

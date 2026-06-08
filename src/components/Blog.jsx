@@ -11,13 +11,13 @@ const Blog = () => {
           <h2 className="text-4xl md:text-3xl sm:text-5xl lg:text-6xl font-bold text-[#0A1F44] mt-6">
             News & Insights
           </h2>
-          <p className="text-gray-600 text-lg md:text-xl mt-6 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-gray-600 text-lg md:text-xl mt-2 md:mt-6 max-w-3xl mx-auto leading-relaxed">
             Stay updated with the latest insights, news, and updates from
             Welyft.
           </p>
         </div>
 
-        <div className="mt-12 flex justify-center md:mt-20">
+        <div className="mt-6 flex justify-center md:mt-20">
           <div className="max-w-4xl overflow-hidden rounded-2xl bg-white shadow-xl transition-all duration-300 hover:translate-y-2 sm:rounded-3xl">
             <img
               src={news}

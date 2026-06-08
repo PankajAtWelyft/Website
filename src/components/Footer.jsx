@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#00193D]">
       {/* TOP FOOTER */}
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-5 py-14 sm:grid-cols-2 sm:px-8 lg:grid-cols-4 lg:gap-16 lg:px-10 lg:py-20">
+      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-10 px-5 py-14 sm:grid-cols-2 sm:px-8 lg:grid-cols-4 lg:gap-16 lg:px-10 lg:py-20">
         <div>
           <div className="flex items-center gap-4">
             <img className="w-14 h-14 rounded-xl" src={logo} alt="logo" />

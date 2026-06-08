@@ -24,7 +24,7 @@ const GetQuote = () => {
         <p className="mt-4 text-base text-gray-500 sm:text-xl">
           Get an instant estimate for your delivery needs
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-4 mt-8">
           <div>
             <label className="text-lg font-semibold">Vehicle Type</label>
             <select
@@ -65,15 +65,15 @@ const GetQuote = () => {
             />
           </div>
         </div>
-        <div className="mt-8 flex flex-col gap-8 rounded-2xl bg-gradient-to-r from-black to-[#0A1F44] p-4 sm:p-5 md:flex-row md:items-start md:justify-between">
+        <div className="mt-8 flex flex-col gap-5 rounded-2xl bg-gradient-to-r from-black to-[#0A1F44] p-4 sm:p-5 md:gap-8 md:flex-row md:items-start md:justify-between">
           <div>
             <h2 className="text-2xl font-bold text-white">Estimated Quote</h2>
 
             <div className="mt-8 flex flex-col gap-6 sm:flex-row sm:gap-12 lg:gap-20">
               <div>
-                <p className="text-gray-400 text-sm">Base Fare</p>
+                <p className="text-gray-400 text-xl">Base Fare</p>
 
-                <h3 className="text-white text-2xl font-semibold">$15.00</h3>
+                <h3 className="text-white text-3xl font-semibold">$15.00</h3>
               </div>
               <div>
                 <p className="text-gray-400 text-xl">Distance</p>
