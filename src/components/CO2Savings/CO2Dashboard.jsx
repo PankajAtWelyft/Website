@@ -1,20 +1,39 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ChartHeader from "./ChartHeader";
 import CO2Chart from "./CO2Chart";
 import TotalImpactPanel from "./TotalImpactPanel";
 import CO2PieChart from "./CO2PieChart";
 import DeliveriesReplaced from "./DeliveriesReplaced";
 import FooterNote from "./FooterNote";
-import { palette } from "./data";
+import { createCO2SavingsView } from "./data";
+import { fetchCO2SavingsView } from "./co2SavingsService";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 export default function CO2Dashboard() {
   const swiperRef = useRef(null);
   const [activeSlide, setActiveSlide] = useState(0);
+  const [dashboardData, setDashboardData] = useState(() => createCO2SavingsView());
   const slideClass = "flex w-full justify-center !h-auto";
   const cardClass =
     "h-[640px] sm:h-[620px] md:h-[660px] lg:h-[560px] xl:h-[600px] w-full min-w-0";
+
+  useEffect(() => {
+    let isMounted = true;
+
+    const loadDashboardData = async () => {
+      const liveData = await fetchCO2SavingsView();
+      if (isMounted) {
+        setDashboardData(liveData);
+      }
+    };
+
+    loadDashboardData();
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
   const slideLabels = [
     "CO2 chart",
     "CO2 reduction ratio",
@@ -42,27 +61,27 @@ export default function CO2Dashboard() {
           <SwiperSlide className={slideClass}>
             <div
               className={`${cardClass} rounded-xl border-2 p-4 sm:p-5`}
-              style={{ borderColor: palette.evDeliveries }}
+              style={{ borderColor: dashboardData.palette.evDeliveries }}
             >
-              <CO2Chart />
+              <CO2Chart data={dashboardData} />
             </div>
           </SwiperSlide>
 
           <SwiperSlide className={slideClass}>
-            <div className={`${cardClass} [&>*]:h-full`}>
-              <CO2PieChart />
+            <div className={`${cardClass} *:h-full`}>
+              <CO2PieChart data={dashboardData} />
             </div>
           </SwiperSlide>
 
           <SwiperSlide className={slideClass}>
-            <div className={`${cardClass} [&>*]:h-full`}>
-              <DeliveriesReplaced />
+            <div className={`${cardClass} *:h-full`}>
+              <DeliveriesReplaced data={dashboardData} />
             </div>
           </SwiperSlide>
 
           <SwiperSlide className={slideClass}>
-            <div className={`${cardClass} [&>*]:h-full`}>
-              <TotalImpactPanel />
+            <div className={`${cardClass} *:h-full`}>
+              <TotalImpactPanel data={dashboardData} />
             </div>
           </SwiperSlide>
         </Swiper>
@@ -81,7 +100,7 @@ export default function CO2Dashboard() {
                 className={`h-3 rounded-full transition-all duration-300 ${
                   isActive ? "w-14 shadow-sm" : "w-3 opacity-35"
                 }`}
-                style={{ backgroundColor: palette.evDeliveries }}
+                style={{ backgroundColor: dashboardData.palette.evDeliveries }}
               />
             );
           })}

@@ -1,12 +1,14 @@
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import { Pie } from "react-chartjs-2";
-import { pieData, palette } from "./data";
+import { createCO2SavingsView, DEFAULT_CO2_SAVINGS_VIEW } from "./data";
 
 ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels);
 
-export default function CO2PieChart() {
-  const colors = palette.pie;
+export default function CO2PieChart({ data: dashboardData = DEFAULT_CO2_SAVINGS_VIEW }) {
+  const view = dashboardData?.pieData ? dashboardData : createCO2SavingsView();
+  const colors = view.palette.pie;
+  const pieData = view.pieData;
   const total = pieData.reduce((sum, item) => sum + item.value, 0);
 
   const data = {
@@ -42,13 +44,13 @@ export default function CO2PieChart() {
   return (
     <div
       className="w-full rounded-xl border-2 bg-white p-4 sm:p-5"
-      style={{ borderColor: palette.evDeliveries }}
+      style={{ borderColor: view.palette.evDeliveries }}
     >
       <div className="mb-3 mt-10 text-center lg:mt-0">
-        <h3 className="text-lg font-bold sm:text-xl md:text-2xl lg:pt-2" style={{ color: palette.text }}>
+        <h3 className="text-lg font-bold sm:text-xl md:text-2xl lg:pt-2" style={{ color: view.palette.text }}>
           CO2 Reduction Ratio
         </h3>
-        <p className="text-xs" style={{ color: palette.text }}>
+        <p className="text-xs" style={{ color: view.palette.text }}>
           Saved vs CO2 Emission (Tons)
         </p>
       </div>
@@ -64,7 +66,7 @@ export default function CO2PieChart() {
               className="inline-block h-3 w-3 rounded-sm"
               style={{ backgroundColor: colors[index] }}
             />
-            <span style={{ color: palette.text }}>
+            <span style={{ color: view.palette.text }}>
               {item.category} - <span className="font-semibold">{item.value} Ton</span>
             </span>
           </div>

@@ -1,9 +1,14 @@
 import { Cloud, TreePine, Fuel, Car } from "lucide-react";
-import { totalImpact, apiResponse, palette } from "./data";
+import { createCO2SavingsView, DEFAULT_CO2_SAVINGS_VIEW } from "./data";
 
 const iconMap = { co2: Cloud, tree: TreePine, fuel: Fuel, car: Car };
 
-export default function TotalImpactPanel() {
+export default function TotalImpactPanel({ data: dashboardData = DEFAULT_CO2_SAVINGS_VIEW }) {
+  const view = dashboardData?.totalImpact ? dashboardData : createCO2SavingsView();
+  const palette = view.palette;
+  const totalImpact = view.totalImpact;
+  const apiResponse = view.apiResponse;
+
   return (
     <aside className="border-2 rounded-xl bg-white p-4 sm:p-5 w-full" style={{ borderColor: palette.evDeliveries }}>
       <div className="text-center mb-4 mt-10 lg:mt-0">

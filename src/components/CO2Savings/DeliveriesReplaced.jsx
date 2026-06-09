@@ -9,11 +9,16 @@ import {
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import { Bar } from "react-chartjs-2";
 import { Truck, TrendingUp, Fuel } from "lucide-react";
-import { deliveriesReplaced, apiResponse, palette } from "./data";
+import { createCO2SavingsView, DEFAULT_CO2_SAVINGS_VIEW } from "./data";
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend, ChartDataLabels);
 
-export default function DeliveriesReplaced() {
+export default function DeliveriesReplaced({ data: dashboardData = DEFAULT_CO2_SAVINGS_VIEW }) {
+  const view = dashboardData?.deliveriesReplaced ? dashboardData : createCO2SavingsView();
+  const palette = view.palette;
+  const deliveriesReplaced = view.deliveriesReplaced;
+  const apiResponse = view.apiResponse;
+
   const data = {
     labels: deliveriesReplaced.monthly.map((d) => d.month),
     datasets: [

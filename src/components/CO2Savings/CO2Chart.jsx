@@ -12,7 +12,7 @@ import {
 } from "chart.js";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import { Chart } from "react-chartjs-2";
-import { chartData, palette } from "./data";
+import { createCO2SavingsView, DEFAULT_CO2_SAVINGS_VIEW } from "./data";
 
 ChartJS.register(
   CategoryScale,
@@ -27,8 +27,15 @@ ChartJS.register(
   ChartDataLabels
 );
 
-export default function CO2Chart() {
-  const labels = chartData.map((d) => d.month);
+export default function CO2Chart({ data: dashboardData = DEFAULT_CO2_SAVINGS_VIEW }) {
+  const view = dashboardData?.chartData ? dashboardData : createCO2SavingsView();
+  const labels = view.chartData.map((d) => d.month);
+  const palette = view.palette;
+  const co2ScaleMax = Math.max(
+    8,
+    ...view.chartData.flatMap((d) => [d.co2Saved, d.co2Emission])
+  );
+  const deliveryScaleMax = co2ScaleMax * 1000;
 
   const data = {
     labels,
@@ -36,7 +43,7 @@ export default function CO2Chart() {
       {
         type: "line",
         label: "EV Deliveries",
-        data: chartData.map((d) => d.ev),
+        data: view.chartData.map((d) => d.ev),
         borderColor: palette.evDeliveries,
         backgroundColor: palette.evDeliveries,
         borderWidth: 2.5,
@@ -51,9 +58,11 @@ export default function CO2Chart() {
       {
         type: "bar",
         label: "CO2 Saved (Ton)",
-        data: chartData.map((d) => d.co2Saved),
+        data: view.chartData.map((d) => d.co2Saved),
         backgroundColor: palette.co2Saved,
         borderColor: palette.co2Saved,
+        hoverBackgroundColor: "#CCBE23",
+        hoverBorderColor: "#CCBE23",
         borderWidth: 0,
         barPercentage: 0.78,
         categoryPercentage: 0.66,
@@ -71,9 +80,11 @@ export default function CO2Chart() {
       {
         type: "bar",
         label: "CO2 Emission (Ton)",
-        data: chartData.map((d) => d.co2Emission),
+        data: view.chartData.map((d) => d.co2Emission),
         backgroundColor: palette.co2Emission,
         borderColor: palette.co2Emission,
+        hoverBackgroundColor: "#0047AB",
+        hoverBorderColor: "#0047AB",
         borderWidth: 0,
         barPercentage: 0.78,
         categoryPercentage: 0.66,
@@ -125,7 +136,7 @@ export default function CO2Chart() {
       y: {
         position: "left",
         beginAtZero: true,
-        max: 8,
+        max: co2ScaleMax,
         ticks: { stepSize: 1, color: palette.co2Saved, font: { size: 10 } },
         grid: { color: "#E5E7EB" },
         title: {
@@ -138,7 +149,7 @@ export default function CO2Chart() {
       y1: {
         position: "right",
         beginAtZero: true,
-        max: 5000,
+        max: deliveryScaleMax,
         ticks: { stepSize: 1000, color: palette.evDeliveries, font: { size: 10 } },
         grid: { drawOnChartArea: false },
         title: {
