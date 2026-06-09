@@ -52,6 +52,9 @@ const CareersSection = () => {
     return matchesSearch && matchesTypes && matchesCountry;
   });
 
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+
   return (
     <section id="jobs" className="bg-[#F5F3EE] py-16 sm:py-24 lg:py-28">
       <div className="max-w-5xl mx-auto px-8">
@@ -148,9 +151,40 @@ const CareersSection = () => {
 
             <form
               className="mt-8 space-y-5"
-              onSubmit={(e) => {
+              encType="multipart/form-data"
+              onSubmit={async (e) => {
                 e.preventDefault();
-                alert("Application Submitted Successfully!");
+
+                setLoading(true);
+
+                const formData = new FormData(e.target);
+
+                formData.append("access_key", "26ce4d0c-788c-427a-8b66-4196598ce40a");
+
+                formData.append("subject", "New Job Application - Welyft");
+
+                const response = await fetch(
+                  "https://api.web3forms.com/submit",
+                  {
+                    method: "POST",
+                    body: formData,
+                  },
+                );
+
+                const data = await response.json();
+
+                if (data.success) {
+                  setSuccess(true);
+
+                  e.target.reset();
+
+                  setTimeout(() => {
+                    setSuccess(false);
+                    setShowModal(false);
+                  }, 2000);
+                }
+
+                setLoading(false);
               }}
             >
               <div>
@@ -160,6 +194,7 @@ const CareersSection = () => {
 
                 <input
                   type="text"
+                  name="name"
                   placeholder="Enter your full name"
                   required
                   className="w-full border border-gray-300 rounded-xl p-3 sm:p-4 text-base sm:text-lg focus:outline-none"
@@ -172,6 +207,7 @@ const CareersSection = () => {
 
                 <input
                   type="email"
+                  name="email"
                   placeholder="Enter your email"
                   required
                   className="w-full border border-gray-300 rounded-xl p-3 sm:p-4 text-base sm:text-lg focus:outline-none"
@@ -185,6 +221,7 @@ const CareersSection = () => {
 
                 <input
                   type="tel"
+                  name="phone"
                   placeholder="Enter phone number"
                   required
                   className="w-full border border-gray-300 rounded-xl p-3 sm:p-4 text-base sm:text-lg focus:outline-none"
@@ -198,6 +235,7 @@ const CareersSection = () => {
 
                 <input
                   type="text"
+                  name="linkedin"
                   placeholder="Paste LinkedIn profile link"
                   className="w-full border border-gray-300 rounded-xl p-3 sm:p-4 text-base sm:text-lg focus:outline-none"
                 />
@@ -216,17 +254,36 @@ const CareersSection = () => {
                   Choose Resume
                   <input
                     type="file"
+                    name="resume"
                     required
                     accept=".pdf,.doc,.docx"
                     className="hidden"
                   />
                 </label>
               </div>
-              <button type="submit"
-                className="w-full bg-[#0A1F44] text-yellow-400 py-4 rounded-2xl font-semibold
-                    hover:bg-yellow-400 hover:text-black transition-all duration-300"
+
+              <button
+                type="submit"
+                disabled={loading}
+                className="
+    w-full
+    bg-[#0A1F44]
+    text-yellow-400
+    py-4
+    rounded-2xl
+    font-semibold
+    hover:bg-yellow-400
+    hover:text-black
+    transition-all
+    duration-300
+    disabled:opacity-70
+  "
               >
-                Submit Application
+                {loading
+                  ? "Submitting..."
+                  : success
+                    ? "Application Submitted ✓"
+                    : "Submit Application"}
               </button>
             </form>
           </div>
