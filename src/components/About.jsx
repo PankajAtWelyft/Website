@@ -11,7 +11,7 @@ const About = () => {
             About Welyft
           </p>
           <h2 className="text-4xl md:text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight text-[#0A1F44]">
-            This is not just logistics
+            This is not just logistics,
             <span className="block">This is climate action in motion.</span>
           </h2>
           <hr className="w-full border-3 rounded-xl border-yellow-400 my-8" />

@@ -18,6 +18,26 @@
   background: #facc15;
 }
 
+
+.swiper-pagination {
+  margin-top: 10px;
+  position: relative !important;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #d1d5db !important;
+  opacity: 1 !important;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  width: 38px;
+  border-radius: 999px;
+  background: #84cc16 !important;
+}
+
 html,
 body {
   overflow-x: hidden;

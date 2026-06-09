@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const GetQuote = () => {
   const [vehicle, setVehicle] = useState("Car");
@@ -11,13 +12,45 @@ const GetQuote = () => {
 
   const total = baseFare + distanceFare + stops;
 
-  return (
-    <section
-      id="quote"
-      className="bg-[#F5F3EE] px-4 py-10 sm:px-8 md:py-20"
-    >
-      <div className="mx-auto max-w-3xl rounded-2xl bg-white p-4 shadow-xl sm:p-6">
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
 
+  const sendquoteEmail = () => {
+    setLoading(true);
+
+    const templateParams = {
+      vehicle: vehicle,
+      weight: weight,
+      distance: distance,
+      stops: stops,
+      total: total.toFixed(2),
+    };
+
+    emailjs
+      .send(
+        "service_ppuk2g8",
+        "template_x981viw",
+        templateParams,
+        "VlRVDtHgoNljzGKUN",
+      )
+      .then(() => {
+        setSuccess(true);
+        setLoading(false);
+
+        setTimeout(() => {
+          setSuccess(false);
+        }, 2000);
+      })
+      .catch((error) => {
+        console.log(error);
+        setLoading(false);
+        alert("Failed to send email");
+      });
+  };
+
+  return (
+    <section id="quote" className="bg-[#F5F3EE] px-4 py-10 sm:px-8 md:py-20">
+      <div className="mx-auto max-w-3xl rounded-2xl bg-white p-4 shadow-xl sm:p-6">
         <h1 className="text-2xl font-bold text-[#0A1F44] sm:text-4xl">
           Calculate Delivery Quote
         </h1>
@@ -50,8 +83,17 @@ const GetQuote = () => {
             <label className="text-lg font-semibold">Distance (km)</label>
             <input
               type="number"
-              value={distance}
-              onChange={(e) => setDistance(Number(e.target.value))}
+              value={distance === 0 ? "" : distance}
+              onChange={(e) => {
+                const value = e.target.value;
+
+                if (value === "") {
+                  setDistance(0);
+                  return;
+                }
+
+                setDistance(parseInt(value.replace(/^0+/, "")) || 0);
+              }}
               className="w-full mt-4 border border-gray-300 rounded-xl p-3 text-base"
             />
           </div>
@@ -59,8 +101,18 @@ const GetQuote = () => {
             <label className="text-lg font-semibold">Additional Stops</label>
             <input
               type="number"
-              value={stops}
-              onChange={(e) => setStops(Number(e.target.value))}
+              min="1"
+              value={stops === 0 ? "" : stops}
+              onChange={(e) => {
+                const value = e.target.value;
+
+                if (value === "") {
+                  setStops(0);
+                  return;
+                }
+
+                setStops(parseInt(value.replace(/^0+/, "")) || 0);
+              }}
               className="w-full mt-4 border border-gray-300 rounded-xl p-3 text-base"
             />
           </div>
@@ -88,8 +140,16 @@ const GetQuote = () => {
             ${total.toFixed(2)}
           </h1>
         </div>
-        <button className="w-full mt-10 bg-black text-yellow-400 text-base py-2.5 rounded-2xl font-semibold hover:bg-[#0A1F44] transition-all duration-300">
-          Request Detailed Quote via Email
+        <button
+          onClick={sendquoteEmail}
+          disabled={loading}
+          className="w-full mt-10 bg-black text-yellow-400 text-base py-3 rounded-2xl font-semibold hover:bg-[#0A1F44] transition-all duration-300 disabled:opacity-70"
+        >
+          {loading
+            ? "Sending..."
+            : success
+              ? "Quote Sent Successfully ✓"
+              : "Request Detailed Quote via Email"}
         </button>
       </div>
     </section>
