@@ -59,6 +59,8 @@ const CareersSection = () => {
   const [resumeUrl, setResumeUrl] = useState("");
   const [uploading, setUploading] = useState(false);
 
+  const [uploadSuccess, setUploadSuccess] = useState(false);
+
   return (
     <section id="jobs" className="bg-[#F5F3EE] py-16 sm:py-24 lg:py-28">
       <div className="max-w-5xl mx-auto px-8">
@@ -277,6 +279,7 @@ const CareersSection = () => {
                       data.append("file", file);
 
                       data.append("upload_preset", "welyft_resume");
+                      data.append("resource_type", "raw");
 
                       try {
                         const res = await axios.post(
@@ -286,13 +289,12 @@ const CareersSection = () => {
 
                         setResumeUrl(res.data.secure_url);
 
-                        alert("Resume Uploaded ✅");
+                          setUploadSuccess(true);
                       } catch (error) {
                         console.log(error);
 
-                        alert("Upload Failed ❌");
+                        setUploadSuccess(false);
                       }
-
                       setUploading(false);
                     }}
                   />
