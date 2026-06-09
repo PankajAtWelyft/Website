@@ -14,8 +14,14 @@ const GetQuote = () => {
 
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [email, setEmail] = useState("");
+  const [showEmailBox, setShowEmailBox] = useState(false);
 
   const sendquoteEmail = () => {
+    if (!email) {
+      alert("Please enter your email");
+      return;
+    }
     setLoading(true);
 
     const templateParams = {
@@ -24,6 +30,7 @@ const GetQuote = () => {
       distance: distance,
       stops: stops,
       total: total.toFixed(2),
+      email: email,
     };
 
     emailjs
@@ -140,17 +147,40 @@ const GetQuote = () => {
             ${total.toFixed(2)}
           </h1>
         </div>
-        <button
-          onClick={sendquoteEmail}
-          disabled={loading}
-          className="w-full mt-10 bg-black text-yellow-400 text-base py-3 rounded-2xl font-semibold hover:bg-[#0A1F44] transition-all duration-300 disabled:opacity-70"
-        >
-          {loading
-            ? "Sending..."
-            : success
-              ? "Quote Sent Successfully ✓"
-              : "Request Detailed Quote via Email"}
-        </button>
+        {!showEmailBox && (
+          <button
+            onClick={() => setShowEmailBox(true)}
+            className="w-full mt-10 bg-black text-yellow-400 text-base py-3 rounded-2xl font-semibold hover:bg-[#0A1F44] transition-all duration-300"
+          >
+            Request Detailed Quote via Email
+          </button>
+        )}
+
+        {showEmailBox && (
+          <div className="mt-6 bg-[#F8F8F8] p-5 rounded-2xl">
+            <label className="text-lg font-semibold block mb-3">
+              Your Email
+            </label>
+
+            <div className="flex gap-3">
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="your@email.com"
+                className="flex-1 border border-gray-300 rounded-xl px-4 py-3 outline-none"
+              />
+
+              <button
+                onClick={sendquoteEmail}
+                disabled={loading}
+                className="bg-black text-yellow-400 px-6 rounded-xl font-semibold hover:bg-[#0A1F44]"
+              >
+                {loading ? "Sending..." : success ? "Sent ✓" : "Send"}
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
