@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
+import axios from "axios";
 
 const CareersSection = () => {
   const jobs = [
@@ -54,6 +55,9 @@ const CareersSection = () => {
 
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+
+  const [resumeUrl, setResumeUrl] = useState("");
+  const [uploading, setUploading] = useState(false);
 
   return (
     <section id="jobs" className="bg-[#F5F3EE] py-16 sm:py-24 lg:py-28">
@@ -158,9 +162,14 @@ const CareersSection = () => {
 
                 const formData = new FormData(e.target);
 
-                formData.append("access_key", "26ce4d0c-788c-427a-8b66-4196598ce40a");
+                formData.append(
+                  "access_key",
+                  "26ce4d0c-788c-427a-8b66-4196598ce40a",
+                );
 
                 formData.append("subject", "New Job Application - Welyft");
+
+                formData.append("resume_link", resumeUrl);
 
                 const response = await fetch(
                   "https://api.web3forms.com/submit",
@@ -251,19 +260,53 @@ const CareersSection = () => {
 
                 <label className="inline-block mt-5 bg-[#0A1F44] text-yellow-400 px-6 py-3 rounded-xl cursor-pointer hover:bg-yellow-400 hover:text-black transition-all duration-300">
                   Choose Resume
-                  {/* <input
+                  <input
                     type="file"
-                    name="resume"
                     required
                     accept=".pdf,.doc,.docx"
                     className="hidden"
-                  /> */}
+                    onChange={async (e) => {
+                      const file = e.target.files[0];
+
+                      if (!file) return;
+
+                      setUploading(true);
+
+                      const data = new FormData();
+
+                      data.append("file", file);
+
+                      data.append("upload_preset", "welyft_resume");
+
+                      try {
+                        const res = await axios.post(
+                          "https://api.cloudinary.com/v1_1/dd48joo4o/auto/upload",
+                          data,
+                        );
+
+                        setResumeUrl(res.data.secure_url);
+
+                        alert("Resume Uploaded ✅");
+                      } catch (error) {
+                        console.log(error);
+
+                        alert("Upload Failed ❌");
+                      }
+
+                      setUploading(false);
+                    }}
+                  />
                 </label>
+                {resumeUrl && (
+                  <p className="text-green-600 mt-3 font-medium">
+                    Resume Uploaded Successfully ✓
+                  </p>
+                )}
               </div>
 
               <button
                 type="submit"
-                disabled={loading}
+                disabled={loading || uploading || !resumeUrl}
                 className="
     w-full
     bg-[#0A1F44]
@@ -278,11 +321,13 @@ const CareersSection = () => {
     disabled:opacity-70
   "
               >
-                {loading
-                  ? "Submitting..."
-                  : success
-                    ? "Application Submitted ✓"
-                    : "Submit Application"}
+                {uploading
+                  ? "Uploading Resume..."
+                  : loading
+                    ? "Submitting..."
+                    : success
+                      ? "Application Submitted ✓"
+                      : "Submit Application"}
               </button>
             </form>
           </div>

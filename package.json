@@ -10,10 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@cloudinary/url-gen": "^1.22.0",
     "@emailjs/browser": "^4.4.1",
     "@tailwindcss/vite": "^4.3.0",
+    "axios": "^1.17.0",
     "chart.js": "^4.5.1",
     "chartjs-plugin-datalabels": "^2.2.0",
+    "cloudinary": "^2.10.0",
     "lucide-react": "^1.17.0",
     "react": "^19.2.6",
     "react-chartjs-2": "^5.3.1",
