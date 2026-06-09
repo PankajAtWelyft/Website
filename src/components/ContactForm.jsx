@@ -1,9 +1,15 @@
 import React from "react";
 import { FaMapMarkerAlt, FaEnvelope, FaWhatsapp } from "react-icons/fa";
-
+import { useState } from "react";
 const ContactForm = () => {
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+
   return (
-    <section id="contact-form" className="bg-[#F5F1E6] py-4 pt-10 sm:py-24 sm:pb-8">
+    <section
+      id="contact-form"
+      className="bg-[#F5F1E6] py-4 pt-10 sm:py-24 sm:pb-8"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="text-center">
           <p className="inline-block bg-indigo-900 uppercase text-amber-300 tracking-widest px-5 py-2 rounded-xl text-sm font-semibold">
@@ -64,47 +70,93 @@ const ContactForm = () => {
               </a>
             </div>
 
-           <div className="mt-4 lg:mt-12">
-  <div className="flex items-center gap-4">
+            <div className="mt-4 lg:mt-12">
+              <div className="flex items-center gap-4">
+                <a
+                  href="https://wa.me/6587601984?text=Hello%20Welyft"
+                  target="_blank"
+                  className="flex items-center gap-4 group"
+                >
+                  <FaWhatsapp className="text-yellow-500 text-3xl hover:scale-110 hover:text-green-600 transition-all duration-300" />
 
-    <a
-      href="https://wa.me/6587601984?text=Hello%20Welyft"
-      target="_blank"
-      className="flex items-center gap-4 group"
-    >
-      <FaWhatsapp className="text-yellow-500 text-3xl hover:scale-110 hover:text-green-600 transition-all duration-300" />
-
-      <h2 className="text-xl underline font-semibold text-black sm:text-4xl group-hover:text-green-600 transition">
-        Chat with us
-      </h2>
-    </a>
-
-  </div>
-</div>
+                  <h2 className="text-xl underline font-semibold text-black sm:text-4xl group-hover:text-green-600 transition">
+                    Chat with us
+                  </h2>
+                </a>
+              </div>
+            </div>
           </div>
+          
+          <form
+            className="flex flex-col gap-8"
+            onSubmit={async (e) => {
+              e.preventDefault();
 
-          <form className="flex flex-col gap-8">
+              setLoading(true);
+
+              const formData = new FormData(e.target);
+
+              formData.append(
+                "access_key",
+                "3442aeca-762c-439d-a514-5ab764e3d8f8",
+              );
+
+              formData.append("subject", "New Contact Message - Welyft");
+
+              const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData,
+              });
+
+              const data = await response.json();
+
+              if (data.success) {
+                setSuccess(true);
+
+                e.target.reset();
+
+                setTimeout(() => {
+                  setSuccess(false);
+                }, 2000);
+              }
+
+              setLoading(false);
+            }}
+          >
             <input
               type="text"
+              name="name"
               placeholder="Your Name"
+              required
               className="p-4 rounded-xl border border-gray-300 text-lg"
             />
+
             <input
-              type="text"
+              type="email"
+              name="email"
               placeholder="Your Email"
+              required
               className="p-4 rounded-xl border border-gray-300 text-lg"
             />
+
             <textarea
+              name="message"
               placeholder="Your Message"
               rows="6"
+              required
               className="p-4 rounded-xl border border-gray-300 text-lg"
             ></textarea>
 
             <button
-              type="button"
-              className="text-black py-5 text-xl font-semibold rounded-xl bg-yellow-400 hover:bg-[#021B44] hover:text-yellow-400 transition"
+              type="submit"
+              disabled={loading}
+              className="text-black py-5 text-xl font-semibold rounded-xl bg-yellow-400 hover:bg-[#021B44] hover:text-yellow-400 transition disabled:opacity-70"
             >
-              Send Message
+              {loading
+                ? "Sending..."
+                : success
+                  ? "Message Sent ✓"
+                  : "Send Message"}
             </button>
           </form>
         </div>
