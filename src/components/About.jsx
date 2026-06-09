@@ -12,8 +12,7 @@ const About = () => {
           </p>
           <h2 className="text-4xl md:text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight text-[#0A1F44]">
             This is not just logistics
-            <br className="hidden sm:block" />
-            This is climate action in motion.
+            <span className="block">This is climate action in motion.</span>
           </h2>
           <hr className="w-full border-3 rounded-xl border-yellow-400 my-8" />
           <div className="mt-10 overflow-hidden rounded-2xl border border-yellow-400/10 bg-[#021B44] p-3 shadow-2xl sm:rounded-[32px] md:p-6">
