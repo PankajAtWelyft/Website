@@ -17,16 +17,16 @@ const Services = () => {
         ">
         Our Services
         </p>
-        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-[#0A1F44] mt-6 leading-tight
+        <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#0A1F44] mt-6 leading-tight
         ">
           Why Choose Welyft?
         </h2>
 
         <p
           className="
-          text-base
-          sm:text-lg
-          lg:text-xl
+          text-lg
+          sm:text-xl
+          lg:text-2xl
           text-gray-600
           mt-6
           leading-relaxed

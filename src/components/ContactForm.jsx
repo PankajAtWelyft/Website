@@ -12,14 +12,15 @@ const ContactForm = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="text-center">
-          <p className="inline-block bg-indigo-900 uppercase text-amber-300 tracking-widest px-5 py-2 rounded-xl text-sm font-semibold">
+          <p className="inline-block text-sm sm:text-xl text-amber-300 bg-[#0A1F44] tracking-widest mt-4 px-4 sm:px-5 py-2 rounded-md font-bold uppercase
+        ">
             Contact Us
           </p>
-          <h1 className="text-2xl sm:text-4xl lg:text-5xl  font-bold text-black mt-6">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[#0A1F44] mt-6">
             Get in Touch
           </h1>
 
-          <p className="text-gray-500 text-lg sm:text-2xl mt-4 leading-relaxed">
+          <p className="text-gray-500 text-lg sm:text-xl lg:text-2xl mt-4 leading-relaxed">
             Have questions or ready to get started? Reach out to our team today.
           </p>
         </div>

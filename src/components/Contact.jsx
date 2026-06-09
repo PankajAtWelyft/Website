@@ -8,15 +8,15 @@ import Footer from "./Footer";
 const Contact = () => {
   return (
     <>
-      <section id="contact" className="bg-[#001B45]">
+      <section id="contact" className="bg-[#0A1F44]">
         <div className="text-center py-10 sm:py-14 lg:py-16 px-4 sm:px-6 lg:px-10 border-b border-[#18345E]">
 
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight max-w-5xl mx-auto text-white">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-5xl mx-auto text-white">
             Ready to Move Your Business
             <br/>
             Cleaner and Smarter?
           </h1>
-          <p className="mx-auto mt-8 max-w-4xl text-lg font-semibold leading-relaxed text-gray-300 sm:text-2xl lg:mt-10">
+          <p className="mx-auto mt-8 max-w-4xl text-lg  leading-relaxed text-gray-300 sm:text-xl lg:text-2xl lg:mt-10">
             Partner with Welyft for EV-powered B2B logistics, reliable delivery
             operations, and sustainability-focused reporting.
           </p>

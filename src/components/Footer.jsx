@@ -5,27 +5,27 @@ import { FaInstagram, FaLinkedinIn, FaFacebook } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#00193D]">
+    <footer className="bg-[#0A1F44]">
       {/* TOP FOOTER */}
       <div className="mx-auto grid max-w-7xl grid-cols-2 gap-10 px-5 py-14 sm:grid-cols-2 sm:px-8 lg:grid-cols-4 lg:gap-16 lg:px-10 lg:py-20">
         <div>
           <div className="flex items-center gap-4">
             <img className="w-14 h-14 rounded-xl" src={logo} alt="logo" />
 
-            <h1 className="text-2xl font-bold text-white sm:text-5xl">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
               Welyft
             </h1>
           </div>
 
-          <p className="mt-6 text-base leading-relaxed text-gray-300 sm:text-xl">
+          <p className="mt-6 text-lg leading-relaxed text-gray-300 sm:text-xl lg:text-2xl">
             Smart logistics.
             <br />
             Sustainable future.
           </p>
         </div>
 
-        <div>
-          <h2 className="text-yellow-400 text-2xl font-semibold">Company</h2>
+        <div className="mt-4 ml-5">
+          <h2 className="text-yellow-400 text-xl sm:text-2xl lg:text-3xl font-semibold">Company</h2>
 
           <ul className="mt-5 space-y-2 text-gray-300 text-base sm:text-xl">
             <li>
@@ -66,8 +66,8 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div>
-          <h2 className="text-yellow-400 text-2xl font-semibold">Services</h2>
+        <div className="mt-4">
+          <h2 className="text-yellow-400 text-xl sm:text-2xl lg:text-3xl font-semibold">Services</h2>
 
           <ul className="mt-5 space-y-2 text-gray-300 text-base sm:text-xl">
             <li>Freight Transport</li>
@@ -76,8 +76,8 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div>
-          <h2 className="text-yellow-400 text-2xl font-semibold">Contact</h2>
+        <div className="mt-4 ml-5">
+          <h2 className="text-yellow-400 text-xl sm:text-2xl lg:text-3xl font-semibold">Contact</h2>
 
           <ul className="mt-5 space-y-2 text-gray-300 text-base sm:text-xl">
             <li>Singapore</li>

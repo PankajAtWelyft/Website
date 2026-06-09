@@ -58,10 +58,10 @@ const GetQuote = () => {
   return (
     <section id="quote" className="bg-[#F5F3EE] px-4 py-10 sm:px-8 md:py-20">
       <div className="mx-auto max-w-3xl rounded-2xl bg-white p-4 shadow-xl sm:p-6">
-        <h1 className="text-2xl font-bold text-[#0A1F44] sm:text-4xl">
+        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[#0A1F44]">
           Calculate Delivery Quote
         </h1>
-        <p className="mt-4 text-base text-gray-500 sm:text-xl">
+        <p className="mt-4 text-lg text-gray-500 sm:text-xl lg:text-2xl">
           Get an instant estimate for your delivery needs
         </p>
         <div className="grid grid-cols-2 md:grid-cols-2 gap-4 mt-8">
