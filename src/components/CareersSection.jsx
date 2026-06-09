@@ -280,7 +280,7 @@ const CareersSection = () => {
 
                       try {
                         const res = await axios.post(
-                          "https://api.cloudinary.com/v1_1/dd48joo4o/auto/upload",
+                          "https://api.cloudinary.com/v1_1/dd48joo4o/raw/upload",
                           data,
                         );
 
