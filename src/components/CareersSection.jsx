@@ -251,13 +251,13 @@ const CareersSection = () => {
 
                 <label className="inline-block mt-5 bg-[#0A1F44] text-yellow-400 px-6 py-3 rounded-xl cursor-pointer hover:bg-yellow-400 hover:text-black transition-all duration-300">
                   Choose Resume
-                  <input
+                  {/* <input
                     type="file"
                     name="resume"
                     required
                     accept=".pdf,.doc,.docx"
                     className="hidden"
-                  />
+                  /> */}
                 </label>
               </div>
 
