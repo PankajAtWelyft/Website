@@ -260,45 +260,67 @@ const CareersSection = () => {
                   PDF or DOC files only
                 </p>
 
-                <label className="inline-block mt-5 bg-[#0A1F44] text-yellow-400 px-6 py-3 rounded-xl cursor-pointer hover:bg-yellow-400 hover:text-black transition-all duration-300">
+                <label
+                  htmlFor="resumeUpload"
+                  className="inline-block mt-5 bg-[#0A1F44] text-yellow-400 px-6 py-3 rounded-xl cursor-pointer hover:bg-yellow-400 hover:text-black transition-all duration-300"
+                >
                   Choose Resume
-                  <input
-                    type="file"
-                    required
-                    accept=".pdf,.doc,.docx"
-                    className="hidden"
-                    onChange={async (e) => {
-                      const file = e.target.files[0];
-
-                      if (!file) return;
-
-                      setUploading(true);
-
-                      const data = new FormData();
-
-                      data.append("file", file);
-
-                      data.append("upload_preset", "welyft_resume");
-                      data.append("resource_type", "raw");
-
-                      try {
-                        const res = await axios.post(
-                          "https://api.cloudinary.com/v1_1/dd48joo4o/raw/upload",
-                          data,
-                        );
-
-                        setResumeUrl(res.data.secure_url);
-
-                          setUploadSuccess(true);
-                      } catch (error) {
-                        console.log(error);
-
-                        setUploadSuccess(false);
-                      }
-                      setUploading(false);
-                    }}
-                  />
                 </label>
+
+                <input
+                  id="resumeUpload"
+                  type="file"
+                  required
+                  accept=".pdf,.doc,.docx"
+                  className="hidden"
+                  onChange={async (e) => {
+                    const file = e.target.files[0];
+
+                    console.log(file);
+
+                    if (!file) return;
+
+                    setUploading(true);
+
+                    const data = new FormData();
+
+                    data.append("file", file);
+
+                    data.append("upload_preset", "welyft_resume");
+                    data.append("resource_type", "auto");
+
+                    try {
+                      const res = await axios.post(
+                        "https://api.cloudinary.com/v1_1/dd48joo4o/auto/upload",
+                        data,
+                      );
+
+                      console.log(res.data);
+
+                      setResumeUrl(res.data.secure_url);
+                      const link = document.createElement("a");
+
+                      link.href = res.data.secure_url;
+                      link.download = "resume.pdf";
+
+                      document.body.appendChild(link);
+
+                      link.click();
+
+                      document.body.removeChild(link);
+
+                      setUploadSuccess(true);
+
+                      
+                    } catch (error) {
+                      console.log(error);
+
+                      setUploadSuccess(false);
+                    }
+
+                    setUploading(false);
+                  }}
+                />
                 {resumeUrl && (
                   <p className="text-green-600 mt-3 font-medium">
                     Resume Uploaded Successfully ✓
