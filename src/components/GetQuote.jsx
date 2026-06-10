@@ -1,7 +1,7 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+
 
 const vehicleRates = {
   Bike: { base: 8, perKm: 0.8, perStop: 0.5 },
@@ -81,7 +81,7 @@ export default function GetQuote() {
       <Navbar />
 
       {/* Header */}
-      <section className="pt-10 pb-0 px-8">
+      <section  id="quote" className="pt-10 pb-0 px-8">
         <div className="max-w-[1100px] mx-auto">
           <h2
             className="fraunces text-[52px] font-bold tracking-tight leading-tight"
@@ -522,8 +522,6 @@ export default function GetQuote() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }
