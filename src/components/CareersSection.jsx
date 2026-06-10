@@ -1,42 +1,23 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import axios from "axios";
 
 const CareersSection = () => {
-  const jobs = [
-    {
-      title: "Frontend Developer Intern (React.js)",
-      type: "Full-Time",
-      location: "Remote",
-      country: "India",
-      desc: "Build modern logistics dashboards and scalable frontend experiences.",
-    },
+  const [jobs, setJobs] = useState([]);
+  const [jobsLoading, setJobsLoading] = useState(true);
+  const [selectedJob, setSelectedJob] = useState(null);
 
-    {
-      title: "Operations Intern",
-      type: "Full-Time",
-      location: "Singapore",
-      country: "Singapore",
-      desc: "Support logistics operations and fleet coordination.",
-    },
+  useEffect(() => {
+    fetch("https://www.welyft.org/api/careers/jobs")
+      .then((res) => res.json())
+      .then((data) => {
+        setJobs(data);
+        setJobsLoading(false);
+      })
+      .catch(() => setJobsLoading(false));
+  }, []);
 
-    {
-      title: "Business Development Intern",
-      type: "Part-Time",
-      location: "Singapore",
-      country: "Singapore",
-      desc: "Help grow partnerships and expand Welyft services.",
-    },
-
-    {
-      title: "Backend Engineering Intern (.NET)",
-      type: "Full-Time",
-      location: "Jaipur, India",
-      country: "India",
-      desc: "Work on APIs, backend systems, and logistics infrastructure.",
-    },
-  ];
   const [search, setSearch] = useState("");
   const [type, setType] = useState("All Types");
   const [showModal, setShowModal] = useState(false);
@@ -105,39 +86,53 @@ const CareersSection = () => {
         </div>
 
         <div className="mt-16 space-y-6 max-h-[700px] overflow-y-auto pr-3">
-          {filteredJobs.map((job, index) => (
-            <div
-              key={index}
-              className="bg-white  border-l-4 border-yellow-400 rounded-xl p-5 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-            >
-              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
-                <div>
-                  <h2 className="text-2xl font-bold text-[#0A1F44]">
-                    {job.title}
-                  </h2>
-                  <p className="text-gray-500 text-lg mt-3">
-                    {job.type} • {job.location}
-                  </p>
-                  <p className="text-gray-600 text-lg mt-2 leading-relaxed">
-                    {job.desc}
-                  </p>
-                </div>
 
-                <button
-                  type="button"
-                  className="mt-6 bg-[#0A1F44] flex items-center gap-2 text-yellow-400 px-5 py-2 rounded-xl font-semibold hover:bg-yellow-400 hover:text-black transition-all duration-300"
-                  onClick={() => {
-                    console.log("clicked");
-                    setShowModal(true);
-                  }}
-                >
-                  Apply Now
-                  <FaArrowRight className="text-sm" />
-                </button>
-              </div>
-            </div>
-          ))}
+  {jobsLoading ? (
+    <div className="text-center py-16 text-gray-500">
+      Loading jobs...
+    </div>
+  ) : filteredJobs.length === 0 ? (
+    <div className="text-center py-16 text-gray-500">
+      No jobs found.
+    </div>
+  ) : (
+    filteredJobs.map((job, index) => (
+      <div
+        key={index}
+        className="bg-white border-l-4 border-yellow-400 rounded-xl p-5 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+      >
+        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
+          <div>
+            <h2 className="text-2xl font-bold text-[#0A1F44]">
+              {job.title}
+            </h2>
+
+            <p className="text-gray-500 text-lg mt-3">
+              {job.type} • {job.location}
+            </p>
+
+            <p className="text-gray-600 text-lg mt-2 leading-relaxed">
+              {job.desc}
+            </p>
+          </div>
+
+          <button
+            type="button"
+            className="mt-6 bg-[#0A1F44] flex items-center gap-2 text-yellow-400 px-5 py-2 rounded-xl font-semibold hover:bg-yellow-400 hover:text-black transition-all duration-300"
+            onClick={() => {
+              setSelectedJob(job);
+              setShowModal(true);
+            }}
+          >
+            Apply Now
+            <FaArrowRight className="text-sm" />
+          </button>
         </div>
+      </div>
+    ))
+  )}
+
+</div>
       </div>
       {showModal && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex justify-center pt-24 items-start sm:items-center z-50 px-4 py-6 overflow-y-auto">
@@ -159,39 +154,37 @@ const CareersSection = () => {
               className="mt-8 space-y-5"
               onSubmit={async (e) => {
                 e.preventDefault();
-
                 setLoading(true);
 
                 const formData = new FormData(e.target);
+                formData.append("job_id", selectedJob?.id || "");
+                formData.append("resume", e.target.resumeUpload.files[0]);
 
-                formData.append(
-                  "access_key",
-                  "26ce4d0c-788c-427a-8b66-4196598ce40a",
-                );
+                try {
+                  const response = await fetch(
+                    "https://www.welyft.org/api/careers/applications",
+                    {
+                      method: "POST",
+                      body: formData,
+                    },
+                  );
 
-                formData.append("subject", "New Job Application - Welyft");
+                  const data = await response.json();
 
-                formData.append("resume_link", resumeUrl);
-
-                const response = await fetch(
-                  "https://api.web3forms.com/submit",
-                  {
-                    method: "POST",
-                    body: formData,
-                  },
-                );
-
-                const data = await response.json();
-
-                if (data.success) {
-                  setSuccess(true);
-
-                  e.target.reset();
-
-                  setTimeout(() => {
-                    setSuccess(false);
-                    setShowModal(false);
-                  }, 2000);
+                  if (response.ok) {
+                    setSuccess(true);
+                    e.target.reset();
+                    setResumeUrl("");
+                    setUploadSuccess(false);
+                    setTimeout(() => {
+                      setSuccess(false);
+                      setShowModal(false);
+                    }, 2000);
+                  } else {
+                    alert("Error: " + (data.error || "Something went wrong"));
+                  }
+                } catch (err) {
+                  alert("Failed to submit. Please try again.");
                 }
 
                 setLoading(false);
@@ -273,39 +266,15 @@ const CareersSection = () => {
                   required
                   accept=".pdf,.doc,.docx"
                   className="hidden"
-                  onChange={async (e) => {
+                  onChange={(e) => {
                     const file = e.target.files[0];
-
-                    console.log(file);
-
                     if (!file) return;
-
-                    setUploading(true);
-
-                    const data = new FormData();
-
-                    data.append("file", file);
-
-                    data.append("upload_preset", "welyft_resume");
-                    data.append("resource_type", "auto");
-
-                    try {
-                      const res = await axios.post(
-                        "https://api.cloudinary.com/v1_1/dd48joo4o/raw/upload",
-                        data,
-                      );
-
-                      console.log(res.data);
-
-                      setResumeUrl(res.data.secure_url);
-                      setUploadSuccess(true);
-                    } catch (error) {
-                      console.log(error);
-
-                      setUploadSuccess(false);
+                    if (file.size > 5 * 1024 * 1024) {
+                      alert("File must be under 5MB");
+                      return;
                     }
-
-                    setUploading(false);
+                    setResumeUrl(file.name); // sirf naam track karo
+                    setUploadSuccess(true);
                   }}
                 />
                 {uploading && (
@@ -323,7 +292,7 @@ const CareersSection = () => {
 
               <button
                 type="submit"
-                disabled={loading || uploading || !resumeUrl}
+                disabled={loading || !resumeUrl}
                 className="
     w-full
     bg-[#0A1F44]
