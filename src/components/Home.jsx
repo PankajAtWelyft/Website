@@ -28,14 +28,14 @@ const Home = () => {
           spaceBetween={0}
           slidesPerView={1}
           loop={true}
-          autoplay={{ delay: 300000, disableOnInteraction: false }}
+          autoplay={{ delay: 2000, disableOnInteraction: false }}
           pagination={{ clickable: true }}
           className="home-slider bg-transparent"
           style={{ background: "transparent" }}
         >
           {homeSlides.map((slide) => (
             <SwiperSlide key={slide.alt} className="bg-transparent">
-              <div className="flex h-[28vh] max-h-[900px] items-center justify-center overflow-hidden bg-transparent sm:h-[84vh] lg:h-[88vh]">
+              <div className="flex h-[28vh] max-h-[900px] items-center justify-center overflow-hidden bg-transparent sm:h-[84vh] lg:h-[92vh]">
                 <img
                   src={slide.image}
                   alt={slide.alt}
