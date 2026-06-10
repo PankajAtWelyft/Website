@@ -35,7 +35,21 @@
 .swiper-pagination-bullet-active {
   width: 38px;
   border-radius: 999px;
-  background: #e8ec0e !important;
+  background: #facc15 !important;
+}
+
+.home-slider .swiper-pagination-bullet {
+  background: green !important;
+}
+
+.home-slider .swiper-pagination-bullet-active {
+  background: #facc15 !important;
+}
+
+.home-slider,
+.home-slider .swiper-wrapper,
+.home-slider .swiper-slide {
+  background: transparent !important;
 }
 
 html,
