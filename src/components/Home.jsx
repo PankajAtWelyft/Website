@@ -5,13 +5,15 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import Hero_page from "../assets/welyft-home-banner-img.png";
-import delivery from "../assets/welyft-C2C-banner-img.png";
-import section_page from "../assets/welyft-logistics+technology-img.png";
+import B2B_banner from "../assets/welyft-B2B-banner-img.png";
+import C2C_banner from "../assets/welyft-C2C-banner-img.png";
+import Logistics_Technology from "../assets/welyft-logistics+technology-img.png";
 
 const homeSlides = [
   { image: Hero_page, alt: "Welyft hero banner" },
-  { image: delivery, alt: "Delivery logistics image" },
-  { image: section_page, alt: "Service section image" },
+  { image: B2B_banner, alt: "Welyft B2B banner" },
+  { image: C2C_banner, alt: "Welyft C2C banner" },
+  { image: Logistics_Technology, alt: "Logistics and technology image" },
 ];
 
 const Home = () => {
@@ -35,11 +37,11 @@ const Home = () => {
         >
           {homeSlides.map((slide) => (
             <SwiperSlide key={slide.alt} className="bg-transparent">
-              <div className="flex h-[28vh] max-h-[900px] items-center justify-center overflow-hidden bg-transparent sm:h-[38vh] lg:h-[92vh]">
+              <div className="flex h-[28vh] max-h-[56rem] items-center justify-center overflow-hidden bg-transparent sm:h-[38vh] lg:h-[92vh]">
                 <img
                   src={slide.image}
                   alt={slide.alt}
-                  className="h-full w-full object-fill"
+                  className="h-full w-full object-cover"
                   loading="eager"
                 />
               </div>
