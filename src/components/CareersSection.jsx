@@ -291,27 +291,14 @@ const CareersSection = () => {
 
                     try {
                       const res = await axios.post(
-                        "https://api.cloudinary.com/v1_1/dd48joo4o/auto/upload",
+                        "https://api.cloudinary.com/v1_1/dd48joo4o/raw/upload",
                         data,
                       );
 
                       console.log(res.data);
 
                       setResumeUrl(res.data.secure_url);
-                      const link = document.createElement("a");
-
-                      link.href = res.data.secure_url;
-                      link.download = "resume.pdf";
-
-                      document.body.appendChild(link);
-
-                      link.click();
-
-                      document.body.removeChild(link);
-
                       setUploadSuccess(true);
-
-                      
                     } catch (error) {
                       console.log(error);
 
@@ -321,7 +308,13 @@ const CareersSection = () => {
                     setUploading(false);
                   }}
                 />
-                {resumeUrl && (
+                {uploading && (
+                  <p className="text-blue-600 mt-3 font-medium">
+                    Uploading Resume...
+                  </p>
+                )}
+
+                {uploadSuccess && (
                   <p className="text-green-600 mt-3 font-medium">
                     Resume Uploaded Successfully ✓
                   </p>
