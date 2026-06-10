@@ -18,7 +18,7 @@ const Home = () => {
   const swiperRef = React.useRef(null);
 
   return (
-    <section id="home" className="w-full pt-20">
+    <section id="home" className="w-full pt-17">
       <div className="relative mx-auto w-full overflow-hidden rounded-none bg-[#F5F3EE]">
         <Swiper
           onSwiper={(swiper) => {
@@ -35,7 +35,7 @@ const Home = () => {
         >
           {homeSlides.map((slide) => (
             <SwiperSlide key={slide.alt} className="bg-transparent">
-              <div className="flex h-[28vh] max-h-[900px] items-center justify-center overflow-hidden bg-transparent sm:h-[84vh] lg:h-[92vh]">
+              <div className="flex h-[28vh] max-h-[900px] items-center justify-center overflow-hidden bg-transparent sm:h-[38vh] lg:h-[92vh]">
                 <img
                   src={slide.image}
                   alt={slide.alt}
