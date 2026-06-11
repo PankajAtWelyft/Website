@@ -24,7 +24,7 @@ const Home = () => {
   const swiperRef = React.useRef(null);
 
   return (
-    <section id="home" className="w-full pt-15 sm:pt-8 lg:pt-17">
+    <section id="home" className="w-full pt-16 sm:pt-8 lg:pt-17">
       <div className="relative  w-full overflow-hidden rounded-none bg-[#F5F3EE]">
         <Swiper
           onSwiper={(swiper) => {
@@ -47,7 +47,7 @@ const Home = () => {
                   <img
                     src={slide.image}
                     alt={slide.alt}
-                    className="h-full w-full object-contain"
+                    className="h-full w-full object-contain lg:object-fill"
                     loading="eager"
                   />
                 </picture>
