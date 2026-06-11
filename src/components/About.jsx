@@ -74,7 +74,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative overflow-hidden pt-12 pb-24 lg:pb-32"
+      className="relative overflow-hidden pt-10 pb-16 lg:pb-32"
       style={{ background: "#F6F5F0" }}
     >
       {/* Background blobs */}
@@ -117,11 +117,11 @@ const About = () => {
         </div>
 
         {/* MAIN GRID */}
-        <div className="grid lg:grid-cols-12 gap-10 items-stretch">
+        <div className="grid lg:grid-cols-12 gap-10 items-start">
           {/* LEFT — CARD */}
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-6">
             <div
-              className={`relative rounded-[40px] p-10 sm:p-14 min-h-[620px] flex flex-col justify-between bg-gradient-to-br overflow-hidden transition-opacity duration-300 ${card.bg} ${animating ? "opacity-0" : "opacity-100"}`}
+              className={`relative rounded-[40px] p-10 sm:p-14 min-h-[620px] flex flex-col justify-center bg-gradient-to-br overflow-hidden transition-opacity duration-300 ${card.bg} ${animating ? "opacity-0" : "opacity-100"}`}
               style={{ boxShadow: "0 30px 80px rgba(0,0,0,0.12)" }}
             >
               {/* Decorative circle */}
@@ -145,19 +145,19 @@ const About = () => {
               </div>
 
               {/* Content */}
-              <div className="mt-12">
+              <div className="mt-8">
                 <h3
                   className={`text-4xl sm:text-5xl font-black tracking-tight mb-2 ${isDark ? "text-white" : isYellow ? "text-[#0A1F44]" : "text-[#0A1F44]"}`}
                 >
                   {card.title}
                 </h3>
                 <p
-                  className={`text-base italic mb-5 font-medium ${isDark ? "text-white/60" : isYellow ? "text-[#0A1F44]/60" : "text-gray-400"}`}
+                  className={`text-lg italic mb-5 font-medium ${isDark ? "text-white/60" : isYellow ? "text-[#0A1F44]/60" : "text-gray-400"}`}
                 >
                   "{card.subtitle}"
                 </p>
                 <p
-                  className={`text-sm leading-8 max-w-xl ${isDark ? "text-white/75" : isYellow ? "text-[#0A1F44]/75" : "text-gray-500"}`}
+                  className={`text-xl leading-9 max-w-xl ${isDark ? "text-white/75" : isYellow ? "text-[#0A1F44]/75" : "text-gray-500"}`}
                 >
                   {card.desc}
                 </p>
@@ -199,7 +199,7 @@ const About = () => {
           </div>
 
           {/* RIGHT — INFO CARD */}
-          <div className="lg:col-span-5 flex flex-col gap-6">
+          <div className="lg:col-span-6 flex flex-col gap-6">
             {/* Video */}
             <div
               className="rounded-[32px] overflow-hidden flex-1"
