@@ -96,9 +96,9 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="relative overflow-hidden bg-[#F5F3EE] py-5 sm:py-8 lg:pt-12"
+      className="relative overflow-hidden bg-[#F6F5F0] pt-0"
     >
-      <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-white/70 to-transparent" />
+      <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#F6F5F0] to-transparent" />
 
       {/* HEADING */}
       <div className="relative z-10 mx-auto max-w-7xl px-6 text-center sm:px-4 lg:px-10">
