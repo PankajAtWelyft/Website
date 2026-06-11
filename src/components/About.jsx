@@ -74,7 +74,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative overflow-hidden py-24 lg:py-32"
+      className="relative overflow-hidden pt-12 pb-24 lg:pb-32"
       style={{ background: "#F6F5F0" }}
     >
       {/* Background blobs */}
