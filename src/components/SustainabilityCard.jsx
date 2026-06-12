@@ -3,7 +3,7 @@ import React from "react";
 const SustainabilityCard = ({ icon, title, description }) => {
   return (
     <div
-      className="group w-full max-w-[300px] h-[320px] px-6 py-8 bg-[#F5F1E6] text-left rounded-3xl shadow-md
+      className="group w-full max-w-[500px] h-[300px] px-6 py-8 bg-[#F5F1E6] text-left rounded-3xl shadow-md
        hover:bg-yellow-400 hover:-translate-y-3 transition-all duration-300 flex flex-col mx-auto"
     >
       <div

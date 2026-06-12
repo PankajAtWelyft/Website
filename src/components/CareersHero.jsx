@@ -3,7 +3,9 @@ import careerBg from "../assets/electric-vehicle-hero.png";
 
 const CareersHero = () => {
   return (
-    <section className="relative pt-20 flex min-h-screen sm:min-h-[85vh] items-center justify-center overflow-hidden bg-[#051223]">
+    <section
+     id="careers"
+     className="relative pt-20 flex min-h-screen sm:min-h-[85vh] items-center justify-center overflow-hidden bg-[#051223]">
       <img
         src={careerBg}
         alt=""

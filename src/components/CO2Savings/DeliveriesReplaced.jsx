@@ -77,7 +77,7 @@ export default function DeliveriesReplaced({ data: dashboardData = DEFAULT_CO2_S
   ];
 
   return (
-    <section className="w-full bg-white rounded-2xl shadow-sm border-2 p-4 sm:p-6 md:p-8" style={{ borderColor: palette.evDeliveries }}>
+    <section className="w-full bg-[#F6F5F0] rounded-2xl shadow-sm border-2 p-4 sm:p-6 md:p-8" style={{ borderColor: palette.evDeliveries }}>
       <div className="text-center mb-6">
         <h2 className="text-lg sm:text-xl md:text-2xl font-bold" style={{ color: palette.text }}>
           Deliveries Replaced — Diesel to EV
@@ -93,10 +93,11 @@ export default function DeliveriesReplaced({ data: dashboardData = DEFAULT_CO2_S
           return (
             <div
               key={i}
-              className="flex items-center gap-3 border rounded-xl p-3 sm:p-4"
-              style={{ borderColor: `${palette.evDeliveries}66`, background: "#F1F8E9" }}
+              className="flex items-center gap-3 border-2 rounded-2xl p-3 sm:p-4"
+              style={{ borderColor: `${palette.evDeliveries}` }}
             >
-              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white flex items-center justify-center shrink-0">
+              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full  flex items-center justify-center shrink-0"
+                style={{ background: `${palette.evDeliveries}33` }}>
                 <Icon className="w-5 h-5" style={{ color: palette.evDeliveries }} strokeWidth={2} />
               </div>
               <div className="min-w-0">

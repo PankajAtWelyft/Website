@@ -11,7 +11,7 @@ const ServicesCard = ({
   ctaLabel,
 }) => {
   return (
-    <article className="group flex h-[60vh] sm:h-[50vh]  lg:h-[80vh] flex-col rounded-[28px] border border-slate-200 bg-[#0a1f44] p-6 shadow-[0_18px_45px_-25px_rgba(10,31,68,0.25)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_-18px_rgba(10,31,68,0.45)] sm:p-7">
+    <article className="group flex h-[45vh] sm:h-[40vh]  lg:h-[60vh] flex-col rounded-[28px] border border-slate-200 bg-[#0a1f44] p-6 shadow-[0_18px_45px_-25px_rgba(10,31,68,0.25)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_-18px_rgba(10,31,68,0.45)] sm:p-7">
       {/* Top row: tag + icon */}
       <div className="flex items-start justify-between">
         <span className="rounded-md bg-blue-50 px-3 py-1 text-xs font-semibold text-[#0A1F44]">
@@ -28,9 +28,7 @@ const ServicesCard = ({
           {title}
         </h3>
         
-        <p className="mt-6 lg:mt-2 text-[15px] leading-relaxed text-white">
-          {description}
-        </p>
+        
       
 
       <hr className="my-4 border-slate-200" />
@@ -46,7 +44,7 @@ const ServicesCard = ({
       </ul>
 
       {/* Spacer pushes footer to bottom */}
-      <div className="flex-1" />
+      <div className="flex-3" />
 
       {/* Highlight pill */}
       {highlight && (
@@ -56,15 +54,7 @@ const ServicesCard = ({
         </div>
       )}
 
-      {/* CTA */}
-      {ctaLabel && (
-        <button
-          type="button"
-          className="mt-4 w-full rounded-xl border border-blue-300 bg-white py-3 text-sm font-semibold text-[#0A1F44] transition-colors hover:bg-blue-50"
-        >
-          {ctaLabel}
-        </button>
-      )}
+      
     </article>
   );
 };

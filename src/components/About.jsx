@@ -86,9 +86,8 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
 
         {/* HEADER */}
-        <div className="text-center max-w-3xl mx-auto mb-10">
-          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full mb-4 text-sm font-bold uppercase tracking-widest"
-            style={{ background: "#0A1F44", color: "#FFD600" }}>
+        <div className="text-center max-w-3xl mx-auto">
+          <div className=" inline-block rounded-md bg-[#0A1F44] px-4 py-2 text-sm font-bold uppercase tracking-[0.25em] text-amber-300 sm:px-5 sm:text-xl">
             About Welyft
           </div>
         </div>
@@ -97,9 +96,9 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-8 items-start">
 
           {/* LEFT — CARD */}
-          <div>
+          <div className="mt-12">
             <div
-              className={`relative rounded-[32px] p-8 sm:p-10 min-h-[480px] flex flex-col justify-center bg-gradient-to-br overflow-hidden transition-opacity duration-300 ${card.bg} ${animating ? "opacity-0" : "opacity-100"}`}
+              className={`relative rounded-[32px] p-8 sm:p-10 h-[65vh] flex flex-col justify-center bg-gradient-to-br overflow-hidden transition-opacity duration-300 ${card.bg} ${animating ? "opacity-0" : "opacity-100"}`}
               style={{ boxShadow: "0 20px 60px rgba(0,0,0,0.12)" }}>
 
               {/* Decorative circle */}
@@ -158,8 +157,8 @@ const About = () => {
           </div>
 
           {/* RIGHT — VIDEO ONLY */}
-          <div>
-            <div className="rounded-[32px] overflow-hidden"
+          <div className="mt-12">
+            <div className="relative rounded-[32px] p-8 sm:p-10 h-[65vh] flex flex-col justify-center overflow-hidden"
               style={{ background: "#0A1F44", boxShadow: "0 20px 60px rgba(10,31,68,0.18)" }}>
               <div className="p-7">
                 <h4 className="text-white text-xl font-black leading-tight tracking-tight mb-2">

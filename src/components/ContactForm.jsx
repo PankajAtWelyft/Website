@@ -16,13 +16,11 @@ const ContactForm = () => {
         ">
             Contact Us
           </p>
-          <h1 className="serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[#0A1F44] mt-6">
+          <h1 className="serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-[#0A1F44] mt-6">
             Get in Touch
           </h1>
 
-          <p className="text-gray-500 text-base sm:text-lg lg:text-xl mt-4 leading-relaxed">
-            Have questions or ready to get started? Reach out to our team today.
-          </p>
+          
         </div>
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-4 px-5 py-14 sm:grid-cols-2 sm:px-8 lg:grid-cols-2 lg:gap-20">
           <div>

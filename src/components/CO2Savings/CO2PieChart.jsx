@@ -43,7 +43,7 @@ export default function CO2PieChart({ data: dashboardData = DEFAULT_CO2_SAVINGS_
 
   return (
     <div
-      className="w-full rounded-xl border-2 bg-white p-4 sm:p-5"
+      className="w-full rounded-xl border-2 bg-[#F6F5F0] p-4 sm:p-5"
       style={{ borderColor: view.palette.evDeliveries }}
     >
       <div className="mb-3 mt-10 text-center lg:mt-0">

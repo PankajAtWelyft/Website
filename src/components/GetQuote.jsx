@@ -77,21 +77,19 @@ export default function GetQuote() {
   };
 
   return (
-    <div style={{ background: "var(--cream)" }}>
+    <div className="bg-[#F6F5F0]">
       <Navbar />
 
       {/* Header */}
       <section  id="quote" className="pt-10 pb-0 px-8">
         <div className="max-w-[1100px] mx-auto">
           <h2
-            className="serif text-[52px] font-bold tracking-tight leading-tight"
+            className="serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold  leading-tight"
             style={{ color: "var(--navy)" }}
           >
             Calculate Delivery Quote
           </h2>
-          <p className="text-sm mt-2" style={{ color: "var(--slate)" }}>
-            Get an instant estimate for your delivery needs
-          </p>
+          
         </div>
       </section>
 
@@ -99,7 +97,7 @@ export default function GetQuote() {
       <section className="py-10 px-6">
         <div className="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           {/* Left — Form */}
-          <div className="bg-white rounded-3xl p-8 border border-black/8 shadow-sm">
+          <div className="bg-white h-full rounded-3xl p-8 border border-black/8 shadow-sm">
             <h2
               className="font-bold text-lg mb-6"
               style={{ color: "var(--navy)" }}
@@ -331,13 +329,13 @@ export default function GetQuote() {
           </div>
 
           {/* Right — Estimated Bill */}
-          <div className="flex flex-col gap-5 sticky top-24">
+          <div className="flex flex-col gap-5 sticky top-24 bg-[#F6F5F0] ">
             {/* Bill Card */}
             <div className="rounded-3xl overflow-hidden border border-black/8 shadow-sm">
               {/* Top */}
               <div
-                className="px-8 py-5 flex justify-between items-center"
-                style={{ background: "var(--navy)" }}
+                className="px-8 py-5 flex justify-between items-center bg-white"
+                
               >
                 <h2
                   className="font-bold text-lg"
@@ -383,16 +381,13 @@ export default function GetQuote() {
 
               {/* Total */}
               <div
-                className="px-8 py-6 flex justify-between items-center"
-                style={{
-                  background:
-                    "linear-gradient(135deg, var(--navy-deep), var(--navy))",
-                }}
+                className="px-8 py-6 flex justify-between items-center bg-white"
+                
               >
                 <div>
                   <p
-                    className="text-sm font-semibold uppercase tracking-widest mb-1"
-                    style={{ color: "rgba(250,247,242,0.6)" }}
+                    className="text-base font-bold uppercase tracking-widest mb-1"
+                    style={{ color: "var(--navy)" }}
                   >
                     Total Estimate
                   </p>
@@ -459,11 +454,11 @@ export default function GetQuote() {
             {!showEmailBox ? (
               <button
                 onClick={() => setShowEmailBox(true)}
-                className="w-full py-4 rounded-2xl text-base font-bold transition-all hover:-translate-y-0.5 hover:shadow-lg border-2"
+                className="w-full py-4 rounded-2xl text-base font-bold transition-all hover:-translate-y-0.5 hover:shadow-lg "
                 style={{
-                  background: "var(--yellow)",
+                  background: "white",
                   color: "var(--navy)",
-                  borderColor: "var(--yellow)",
+                 
                 }}
               >
                 📧 Request Detailed Quote via Email →
