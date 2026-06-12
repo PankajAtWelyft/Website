@@ -17,7 +17,7 @@ const Contact = () => {
             Cleaner and Smarter?
           </h1>
           <p className="mx-auto mt-8 max-w-4xl text-lg  leading-relaxed text-gray-300 sm:text-xl lg:text-2xl lg:mt-10">
-            Partner with Welyft for EV-powered B2B logistics, reliable delivery
+            Partner with Welyft for EV-powered logistics, reliable delivery
             operations, and sustainability-focused reporting.
           </p>
           <a href="#contact-form">

@@ -9,27 +9,21 @@ const Blog = () => {
         ">
             Latest Blog
           </p>
-          <h2 className="serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[#0A1F44] mt-6">
+          <h2 className="serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-[#0A1F44] mt-6">
             News & Insights
           </h2>
-          <p className="text-gray-600 text-lg sm:text-xl lg:text-2xl mt-2 md:mt-6 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-gray-600 text-base sm:text-lg lg:text-2xl mt-2 md:mt-6 max-w-3xl mx-auto leading-relaxed">
             Stay updated with the latest insights, news, and updates from
             Welyft.
           </p>
         </div>
 
-        <div className="mt-6 flex justify-center md:mt-20">
+        <div className="mt-6 flex justify-center md:mt-10">
           <div className="max-w-4xl overflow-hidden rounded-2xl bg-white shadow-xl transition-all duration-300 hover:translate-y-2 sm:rounded-3xl">
             <img
               src={news}
               alt="Blog"
-              className="w-full
-h-[250px]
-sm:h-[350px]
-lg:h-[500px]
-object-cover
-object-center"
-            />
+              className="w-full h-[250px] sm:h-[350px] lg:h-[500px] object-cover object-center"/>
 
             <div className="p-5 sm:p-8">
               <span className="bg-[#0A1F44] text-yellow-400 px-4 py-2 rounded-lg text-sm font-semibold uppercase tracking-wider">

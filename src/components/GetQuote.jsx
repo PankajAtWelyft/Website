@@ -89,7 +89,7 @@ export default function GetQuote() {
           >
             Calculate Delivery Quote
           </h2>
-          <p className="text-base mt-2" style={{ color: "var(--slate)" }}>
+          <p className="text-sm mt-2" style={{ color: "var(--slate)" }}>
             Get an instant estimate for your delivery needs
           </p>
         </div>
@@ -101,7 +101,7 @@ export default function GetQuote() {
           {/* Left — Form */}
           <div className="bg-white rounded-3xl p-8 border border-black/8 shadow-sm">
             <h2
-              className="fraunces text-2xl font-normal mb-6"
+              className="font-bold text-lg mb-6"
               style={{ color: "var(--navy)" }}
             >
               Delivery Details
@@ -364,7 +364,7 @@ export default function GetQuote() {
                     className={`flex justify-between items-center py-4 ${i !== breakdown.length - 1 ? "border-b border-black/6" : ""}`}
                   >
                     <span
-                      className="text-base"
+                      className="font-bold text-sm"
                       style={{ color: "var(--slate)" }}
                     >
                       {item.label}
@@ -404,7 +404,7 @@ export default function GetQuote() {
                   </p>
                 </div>
                 <span
-                  className="fraunces text-5xl font-medium"
+                  className="text-4xl font-medium"
                   style={{ color: "var(--yellow)" }}
                 >
                   ${total.toFixed(2)}

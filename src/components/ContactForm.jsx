@@ -20,7 +20,7 @@ const ContactForm = () => {
             Get in Touch
           </h1>
 
-          <p className="text-gray-500 text-lg sm:text-xl lg:text-2xl mt-4 leading-relaxed">
+          <p className="text-gray-500 text-base sm:text-lg lg:text-xl mt-4 leading-relaxed">
             Have questions or ready to get started? Reach out to our team today.
           </p>
         </div>

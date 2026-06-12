@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../assets/logo.png";
+import logo from "../assets/new_logo.png";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -7,12 +7,10 @@ const Navbar = () => {
   const [open, setopen] = useState(false);
 
   return (
-    <nav
-      className="w-full fixed top-0 left-0 z-[999] px-4 md:px-8 bg-white shadow-md h-17 flex items-center justify-between"
-    >
+    <nav className="w-full fixed top-0 left-0 z-[999] px-4 md:px-8 bg-white shadow-md h-17 flex items-center justify-between">
       <div className="flex items-center">
-        <img src={logo} className="w-10 m-5 py-2" alt="" />
-        <h1 className="serif font-bold text-3xl">Welyft</h1>
+        <img src={logo} className="w-14 md:w-16" alt="welyft_logo" />
+        <h1 className="font-bold text-3xl">Welyft</h1>
       </div>
 
       <div className=" hidden lg:flex font-bold mr-4 text-xl gap-6">
@@ -75,14 +73,12 @@ const Navbar = () => {
       {/* MOBILE MENU */}
       {open && (
         <div
-          className=" fixed top-0 left-0 h-[75vh] w-full bg-white z-[999] px-8 py-6 lg:hidden flex flex-col animate-slideIn rounded-b-3xl shadow-xl
-  "
-        >
+          className="fixed top-0 left-0 h-auto min-h-[60vh] w-full bg-white z-[999] px-8 py-6 lg:hidden flex flex-col animate-slideIn rounded-b-3xl shadow-xl">
           {/* TOP */}
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <img src={logo} className="w-10" alt="" />
-              <h1 className="text-3xl font-bold">Welyft</h1>
+            <div className="flex items-center gap-2">
+              <img src={logo} className="w-8" alt="" />
+              <h1 className="text-2xl font-bold">Welyft</h1>
             </div>
 
             <FaTimes
@@ -92,7 +88,7 @@ const Navbar = () => {
           </div>
 
           {/* LINKS */}
-          <div className="flex flex-col gap-8 mt-16 text-3xl font-medium text-[#111]">
+          <div className="flex flex-col gap-5 mt-10 text-2xl font-medium text-[#111]">
             <a href="/#about" onClick={() => setopen(false)}>
               About
             </a>
@@ -120,21 +116,10 @@ const Navbar = () => {
 
           {/* BUTTON */}
           <a href="#quote">
-  <button
-    className="
-      mt-auto
-      bg-yellow-400
-      py-4
-      rounded-2xl
-      text-xl
-      font-bold
-      shadow-lg
-      w-full
-    "
-  >
-    Get Quote
-  </button>
-</a>
+            <button className="mt-6 bg-yellow-400 py-3 rounded-2xl text-lg font-bold shadow-lg w-full">
+              Get Quote
+            </button>
+          </a>
         </div>
       )}
     </nav>

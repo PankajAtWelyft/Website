@@ -74,150 +74,102 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative overflow-hidden pt-10 pb-15"
+      className="scroll-mt-24  relative overflow-hidden py-20 pb-24"
       style={{ background: "#F6F5F0" }}
     >
       {/* Background blobs */}
-      <div
-        className="absolute top-0 left-0 w-[600px] h-[600px] rounded-full pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(circle, rgba(255,214,0,0.06) 0%, transparent 70%)",
-        }}
-      />
-      <div
-        className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(circle, rgba(10,31,68,0.06) 0%, transparent 70%)",
-        }}
-      />
+      <div className="absolute top-0 left-0 w-[600px] h-[600px] rounded-full pointer-events-none"
+        style={{ background: "radial-gradient(circle, rgba(255,214,0,0.06) 0%, transparent 70%)" }} />
+      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full pointer-events-none"
+        style={{ background: "radial-gradient(circle, rgba(10,31,68,0.06) 0%, transparent 70%)" }} />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
+
         {/* HEADER */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <div
-            className="inline-flex items-center gap-2 px-5 py-2 rounded-full mb-6 text-sm font-bold uppercase tracking-widest"
-            style={{ background: "#0A1F44", color: "#FFD600" }}
-          >
+        <div className="text-center max-w-3xl mx-auto mb-10">
+          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full mb-4 text-sm font-bold uppercase tracking-widest"
+            style={{ background: "#0A1F44", color: "#FFD600" }}>
             About Welyft
           </div>
-          <h2
-            className="serif text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight mb-6"
-            style={{ color: "#0A1F44" }}
-          >
-            Four Engines.
-            <br />
-            <span style={{ color: "#D89B00" }}>One Competitive Edge.</span>
-          </h2>
-          <p className="text-gray-500 text-lg leading-relaxed">
-            Intelligent technology, sustainability, and scalable logistics
-            infrastructure — powering the next generation of urban delivery.
-          </p>
         </div>
 
         {/* MAIN GRID */}
-        <div className="grid lg:grid-cols-12 gap-10 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 items-start">
+
           {/* LEFT — CARD */}
-          <div className="lg:col-span-6">
+          <div>
             <div
-              className={`relative rounded-[40px] p-10 sm:p-14 min-h-[620px] flex flex-col justify-center bg-gradient-to-br overflow-hidden transition-opacity duration-300 ${card.bg} ${animating ? "opacity-0" : "opacity-100"}`}
-              style={{ boxShadow: "0 30px 80px rgba(0,0,0,0.12)" }}
-            >
+              className={`relative rounded-[32px] p-8 sm:p-10 min-h-[480px] flex flex-col justify-center bg-gradient-to-br overflow-hidden transition-opacity duration-300 ${card.bg} ${animating ? "opacity-0" : "opacity-100"}`}
+              style={{ boxShadow: "0 20px 60px rgba(0,0,0,0.12)" }}>
+
               {/* Decorative circle */}
-              <div
-                className="absolute -top-20 -right-20 w-72 h-72 rounded-full opacity-10"
-                style={{ background: "white" }}
-              />
+              <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full opacity-10"
+                style={{ background: "white" }} />
 
               {/* Top */}
               <div className="flex items-start justify-between">
-                <div
-                  className={`w-16 h-16 rounded-2xl flex items-center justify-center backdrop-blur-xl border ${isDark ? "bg-white/10 border-white/10" : isYellow ? "bg-[#0A1F44]/10 border-[#0A1F44]/10" : "bg-gray-100 border-gray-200"}`}
-                >
+                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center backdrop-blur-xl border ${isDark ? "bg-white/10 border-white/10" : isYellow ? "bg-[#0A1F44]/10 border-[#0A1F44]/10" : "bg-gray-100 border-gray-200"}`}>
                   {card.icon}
                 </div>
-                <span
-                  className={`text-[11px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full ${card.tagBg}`}
-                >
+                <span className={`text-[11px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full ${card.tagBg}`}>
                   {card.tag}
                 </span>
               </div>
 
               {/* Content */}
               <div className="mt-8">
-                <h3
-                  className={`text-4xl sm:text-5xl font-black tracking-tight mb-2 ${isDark ? "text-white" : isYellow ? "text-[#0A1F44]" : "text-[#0A1F44]"}`}
-                >
+                <h3 className={`text-4xl sm:text-5xl font-black tracking-tight mb-2 ${isDark ? "text-white" : isYellow ? "text-[#0A1F44]" : "text-[#0A1F44]"}`}>
                   {card.title}
                 </h3>
-                <p
-                  className={`text-lg italic mb-5 font-medium ${isDark ? "text-white/60" : isYellow ? "text-[#0A1F44]/60" : "text-gray-400"}`}
-                >
+                <p className={`text-base italic mb-4 font-medium ${isDark ? "text-white/60" : isYellow ? "text-[#0A1F44]/60" : "text-gray-400"}`}>
                   "{card.subtitle}"
                 </p>
-                <p
-                  className={`text-xl leading-9 max-w-xl ${isDark ? "text-white/75" : isYellow ? "text-[#0A1F44]/75" : "text-gray-500"}`}
-                >
+                <p className={`text-base leading-8 max-w-xl ${isDark ? "text-white/75" : isYellow ? "text-[#0A1F44]/75" : "text-gray-500"}`}>
                   {card.desc}
                 </p>
               </div>
             </div>
 
             {/* DOTS + ARROWS */}
-            <div className="flex items-center gap-4 mt-6 px-2">
+            <div className="flex items-center gap-4 mt-5 px-2">
               <button
-                onClick={() =>
-                  handleDot((active - 1 + cards.length) % cards.length)
-                }
-                className="w-10 h-10 rounded-full border-2 flex items-center justify-center transition-all hover:bg-[#0A1F44] hover:border-[#0A1F44] hover:text-white font-bold text-lg"
-                style={{ borderColor: "rgba(10,31,68,0.2)", color: "#0A1F44" }}
-              >
+                onClick={() => handleDot((active - 1 + cards.length) % cards.length)}
+                className="w-9 h-9 rounded-full border-2 flex items-center justify-center transition-all hover:bg-[#0A1F44] hover:border-[#0A1F44] hover:text-white font-bold"
+                style={{ borderColor: "rgba(10,31,68,0.2)", color: "#0A1F44" }}>
                 ←
               </button>
               <div className="flex items-center gap-2">
                 {cards.map((_, i) => (
-                  <button
-                    key={i}
-                    onClick={() => handleDot(i)}
-                    className={`h-2 rounded-full transition-all duration-300 ${active === i ? "w-10 bg-[#D89B00]" : "w-2 bg-gray-300 hover:bg-gray-400"}`}
+                  <button key={i} onClick={() => handleDot(i)}
+                    className={`h-2 rounded-full transition-all duration-300 ${active === i ? "w-8 bg-[#D89B00]" : "w-2 bg-gray-300 hover:bg-gray-400"}`}
                   />
                 ))}
               </div>
               <button
                 onClick={() => handleDot((active + 1) % cards.length)}
-                className="w-10 h-10 rounded-full border-2 flex items-center justify-center transition-all hover:bg-[#0A1F44] hover:border-[#0A1F44] hover:text-white font-bold text-lg"
-                style={{ borderColor: "rgba(10,31,68,0.2)", color: "#0A1F44" }}
-              >
+                className="w-9 h-9 rounded-full border-2 flex items-center justify-center transition-all hover:bg-[#0A1F44] hover:border-[#0A1F44] hover:text-white font-bold"
+                style={{ borderColor: "rgba(10,31,68,0.2)", color: "#0A1F44" }}>
                 →
               </button>
               <span className="ml-2 text-sm font-semibold text-gray-400">
-                {String(active + 1).padStart(2, "0")} /{" "}
-                {String(cards.length).padStart(2, "0")}
+                {String(active + 1).padStart(2, "0")} / {String(cards.length).padStart(2, "0")}
               </span>
             </div>
           </div>
 
-          {/* RIGHT — INFO CARD */}
-          <div className="lg:col-span-6 flex flex-col gap-6">
-            {/* Video */}
-            <div
-              className="rounded-[32px] overflow-hidden flex-1"
-              style={{
-                background: "#0A1F44",
-                boxShadow: "0 25px 70px rgba(10,31,68,0.18)",
-              }}
-            >
-              <div className="p-8">
-                <h4 className="text-white text-2xl font-black leading-tight tracking-tight mb-3">
+          {/* RIGHT — VIDEO ONLY */}
+          <div>
+            <div className="rounded-[32px] overflow-hidden"
+              style={{ background: "#0A1F44", boxShadow: "0 20px 60px rgba(10,31,68,0.18)" }}>
+              <div className="p-7">
+                <h4 className="text-white text-xl font-black leading-tight tracking-tight mb-2">
                   Transforming Urban Logistics Across Singapore
                 </h4>
-                <p className="text-gray-400 text-sm leading-7">
-                  Zero-emission workflows tailored for modern commerce — powered
-                  by smart tech.
+                <p className="text-gray-400 text-sm leading-6">
+                  Zero-emission workflows tailored for modern commerce — powered by smart tech.
                 </p>
               </div>
-              <div className="mx-6 mb-6 rounded-2xl overflow-hidden border border-white/10 aspect-video">
+              <div className="mx-5 mb-5 rounded-2xl overflow-hidden border border-white/10 aspect-video">
                 <iframe
                   className="w-full h-full"
                   src="https://www.youtube.com/embed/YwGZerRU0Dc"
@@ -226,35 +178,8 @@ const About = () => {
                 />
               </div>
             </div>
-
-            {/* Stats row */}
-            <div className="grid grid-cols-3 gap-4">
-              {[
-                {
-                  val: "100%",
-                  label: "Electric Fleet",
-                  color: "text-yellow-500",
-                },
-                {
-                  val: "99%",
-                  label: "On-Time Rate",
-                  color: "text-emerald-500",
-                },
-                { val: "SG", label: "Based", color: "text-blue-500" },
-              ].map((s, i) => (
-                <div
-                  key={i}
-                  className="bg-white rounded-2xl p-5 border border-black/6 text-center"
-                  style={{ boxShadow: "0 4px 20px rgba(0,0,0,0.04)" }}
-                >
-                  <p className={`text-2xl font-black ${s.color}`}>{s.val}</p>
-                  <p className="text-[10px] uppercase tracking-widest text-gray-400 mt-1 font-semibold">
-                    {s.label}
-                  </p>
-                </div>
-              ))}
-            </div>
           </div>
+
         </div>
       </div>
     </section>
