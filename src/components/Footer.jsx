@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="flex items-center gap-4">
             <img className="w-14 h-14 rounded-xl" src={logo} alt="logo" />
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
+            <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-6xl font-bold leading-tight text-white">
               Welyft
             </h1>
           </div>

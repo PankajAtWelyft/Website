@@ -84,7 +84,7 @@ export default function GetQuote() {
       <section  id="quote" className="pt-10 pb-0 px-8">
         <div className="max-w-[1100px] mx-auto">
           <h2
-            className="fraunces text-[52px] font-bold tracking-tight leading-tight"
+            className="serif text-[52px] font-bold tracking-tight leading-tight"
             style={{ color: "var(--navy)" }}
           >
             Calculate Delivery Quote

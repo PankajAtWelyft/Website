@@ -9,7 +9,7 @@ const Blog = () => {
         ">
             Latest Blog
           </p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[#0A1F44] mt-6">
+          <h2 className="serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[#0A1F44] mt-6">
             News & Insights
           </h2>
           <p className="text-gray-600 text-lg sm:text-xl lg:text-2xl mt-2 md:mt-6 max-w-3xl mx-auto leading-relaxed">

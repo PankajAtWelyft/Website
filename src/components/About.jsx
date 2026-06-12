@@ -103,7 +103,7 @@ const About = () => {
             About Welyft
           </div>
           <h2
-            className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight mb-6"
+            className="serif text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight mb-6"
             style={{ color: "#0A1F44" }}
           >
             Four Engines.

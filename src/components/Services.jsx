@@ -105,7 +105,7 @@ const Services = () => {
         <p className="mt-4 inline-block rounded-md bg-[#0A1F44] px-4 py-2 text-sm font-bold uppercase tracking-[0.25em] text-amber-300 sm:px-5 sm:text-xl">
           Our Services
         </p>
-        <h2 className="mt-6 text-2xl font-bold leading-tight text-[#0A1F44] sm:text-4xl md:text-5xl lg:text-6xl">
+        <h2 className="serif mt-6 text-2xl font-bold leading-tight text-[#0A1F44] sm:text-4xl md:text-5xl lg:text-6xl">
           Why Choose Welyft?
         </h2>
         <p className="mx-auto  max-w-4xl text-lg leading-relaxed text-gray-600 sm:text-xl lg:text-2xl">

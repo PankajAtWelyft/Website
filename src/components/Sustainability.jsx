@@ -18,17 +18,14 @@ const Sustainability = () => {
         </h1>
 
         <h2
-          className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-yellow-400 mt-6
+          className="serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-yellow-400 mt-6
         "
         >
           Sustainable Logistics
         </h2>
 
         <h3
-          className="
-          text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-yellow-400
-          italic
-        "
+          className="serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-yellow-400 italic"
         >
           Smarter Future
         </h3>

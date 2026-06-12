@@ -16,7 +16,7 @@ const ContactForm = () => {
         ">
             Contact Us
           </p>
-          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[#0A1F44] mt-6">
+          <h1 className="serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[#0A1F44] mt-6">
             Get in Touch
           </h1>
 
