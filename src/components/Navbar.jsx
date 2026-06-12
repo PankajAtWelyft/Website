@@ -14,7 +14,8 @@ const Navbar = () => {
       </div>
 
       <div className=" hidden lg:flex font-bold mr-4 text-xl gap-6">
-        <Link to="/" className="group flex flex-col items-center">
+        <Link to="/"  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+         className="group flex flex-col items-center">
           Home
           <span className="w-0 h-0.5 bg-yellow-400 mt-1 transition-all duration-300 group-hover:w-full"></span>
         </Link>
