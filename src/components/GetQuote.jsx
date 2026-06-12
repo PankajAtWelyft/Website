@@ -89,7 +89,9 @@ export default function GetQuote() {
           >
             Calculate Delivery Quote
           </h2>
-          
+           <p className="text-sm mt-2" style={{ color: "var(--slate)" }}>
+            Get an instant estimate for your delivery needs
+          </p>
         </div>
       </section>
 
