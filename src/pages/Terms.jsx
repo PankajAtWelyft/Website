@@ -10,7 +10,7 @@ const Terms = () => {
 
       <div className="max-w-5xl mx-auto">
 
-        <h1 className="text-4xl sm:text-5xl font-bold text-[#0A1F44]">
+        <h1 className="serif text-4xl sm:text-5xl font-bold text-[#0A1F44]">
           Terms of Service
         </h1>
 
