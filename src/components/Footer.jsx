@@ -12,22 +12,23 @@ const Footer = () => {
           <div className="flex items-center gap-1">
             <img className="w-15 h-15 rounded-xl" src={logo} alt="logo" />
 
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-white">
+            <h1 className="text-2xl font-bold leading-tight text-white">
               welyft
             </h1>
           </div>
 
-          <p className="mt-6 text-lg leading-relaxed text-gray-300 sm:text-xl lg:text-2xl">
+          <p className="mt-4 text-base leading-relaxed text-gray-300 ">
             Smart logistics.
             <br />
             Sustainable future.
+
           </p>
         </div>
 
         <div className="mt-4 ml-1">
-          <h2 className="text-yellow-400 text-lg sm:text-xl lg:text-2xl font-semibold">Company</h2>
+          <h2 className="text-yellow-400 text-lg font-semibold">Company</h2>
 
-          <ul className="mt-5 space-y-2 text-gray-300 text-base sm:text-xl">
+          <ul className="mt-5 space-y-2 text-gray-300 text-sm md:text-base">
             <li>
               <a
                 href="/#about"
@@ -67,9 +68,9 @@ const Footer = () => {
         </div>
 
         <div className="mt-4">
-          <h2 className="text-yellow-400 text-lg sm:text-xl lg:text-2xl font-semibold">Services</h2>
+          <h2 className="text-yellow-400 text-lg font-semibold">Services</h2>
 
-          <ul className="mt-5 space-y-2 text-gray-300 text-base sm:text-xl">
+          <ul className="mt-5 space-y-2 text-gray-300 text-sm md:text-base">
             <li>Freight Transport</li>
             <li>Last-Mile Delivery</li>
             <li>CO₂ Reporting</li>
@@ -77,15 +78,15 @@ const Footer = () => {
         </div>
 
         <div className="mt-4 ml-1">
-          <h2 className="text-yellow-400 text-lg sm:text-xl lg:text-2xl font-semibold">Contact</h2>
+          <h2 className="text-yellow-400 text-lg font-semibold">Contact</h2>
 
-          <ul className="mt-5 space-y-2 text-gray-300 text-base sm:text-xl">
+          <ul className="mt-5 space-y-2 text-gray-300 text-sm md:text-base">
             <li>Singapore</li>
 
             <li>
               <a
                 href="mailto:operations@welyft.com"
-                className="hover:text-yellow-400 transition-all duration-300"
+                className="hover:text-yellow-400 transition-all duration-300 break-all"
               >
                 operations@welyft.com
               </a>
@@ -105,11 +106,11 @@ const Footer = () => {
 
       {/* BOTTOM FOOTER */}
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 border-t border-[#18345E] px-5 py-6 text-center sm:px-8 lg:flex-row">
-        <p className="text-base text-gray-400 sm:text-lg">
-          © 2026 Welyft. All rights reserved.
+        <p className="text-sm text-gray-400">
+          © 2026 welyft. All rights reserved.
         </p>
 
-        <div className="flex items-center gap-8 text-2xl text-gray-400">
+        <div className="flex items-center gap-8 text-xl text-gray-400">
           <a href="https://www.facebook.com/youpackWelyft" target="_blank">
             <FaFacebook className="hover:text-yellow-400 transition" />
           </a>
@@ -126,7 +127,7 @@ const Footer = () => {
           </a>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-4 text-gray-400">
+        <div className="flex flex-wrap items-center justify-center text-sm gap-4 text-gray-400">
           <Link
             to="/privacy-policy"
             className="hover:text-yellow-400 transition-all duration-300"

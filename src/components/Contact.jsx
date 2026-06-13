@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <>
       <section id="contact" className="scroll-mt-24 bg-[#F6F5F0] h-auto relative overflow-hidden">
-        <div className="mx-4 lg:mx-7  h-[45vh] sm:h-[40vh]  lg:h-[70vh] flex-col text-center py-10 sm:py-14 lg:py-16 px-4 sm:px-6 lg:px-10  rounded-[28px] bg-[#0A1F44]">
+        <div className="mx-4 lg:mx-7  min-h-[420px] sm:min-h-[500px] lg:min-h-[600px] flex-col text-center py-10 sm:py-14 lg:py-16 px-4 sm:px-6 lg:px-10  rounded-[28px] bg-[#0A1F44]">
        
 
           <h1 className="serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-5xl mx-auto text-white">

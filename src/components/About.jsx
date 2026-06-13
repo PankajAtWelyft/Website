@@ -83,7 +83,7 @@ const About = () => {
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full pointer-events-none"
         style={{ background: "radial-gradient(circle, rgba(10,31,68,0.06) 0%, transparent 70%)" }} />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
+      <div className="max-w-7xl mx-auto px-3 sm:px-5  lg:px-10 relative z-10">
 
         {/* HEADER */}
         <div className="text-center max-w-3xl mx-auto">
@@ -158,9 +158,9 @@ const About = () => {
 
           {/* RIGHT — VIDEO ONLY */}
           <div className="mt-12">
-            <div className="relative rounded-[32px] p-8 sm:p-10 h-[65vh] flex flex-col justify-center overflow-hidden"
+            <div className="relative rounded-[32px] p-4 sm:p-6  sm:min-h-[420px] lg:h-[65vh] flex flex-col justify-center overflow-hidden"
               style={{ background: "#0A1F44", boxShadow: "0 20px 60px rgba(10,31,68,0.18)" }}>
-              <div className="p-7">
+              <div className="p-2 sm:p-3 lg:p-4 mb-3">
                 <h4 className="text-white text-xl font-black leading-tight tracking-tight mb-2">
                   Transforming Urban Logistics Across Singapore
                 </h4>
@@ -168,7 +168,7 @@ const About = () => {
                   Zero-emission workflows tailored for modern commerce — powered by smart tech.
                 </p>
               </div>
-              <div className="mx-5 mb-5 rounded-2xl overflow-hidden border border-white/10 aspect-video">
+              <div className="w-full mt-2 rounded-2xl overflow-hidden border border-white/10 aspect-video">
                 <iframe
                   className="w-full h-full"
                   src="https://www.youtube.com/embed/YwGZerRU0Dc"
