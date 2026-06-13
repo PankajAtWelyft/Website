@@ -5,7 +5,7 @@ const Blog = () => {
     <section id="blog" className="bg-[#F5F3EE]  pt-8 pb-16 sm:pt-12 sm:pb-24 lg:pt-16 lg:pb-28">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center">
-          <p className="inline-block text-sm sm:text-xl text-amber-300 bg-[#0A1F44] tracking-widest mt-4 px-4 sm:px-5 py-2 rounded-md font-bold uppercase
+          <p className="inline-block text-sm sm:text-xl text-amber-300 bg-[#0A1F44] tracking-[0.03em] mt-4 px-4 sm:px-5 py-2 rounded-md font-bold uppercase
         ">
             Latest Blog
           </p>

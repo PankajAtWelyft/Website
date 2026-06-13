@@ -24,7 +24,7 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className="mt-4 ml-5">
+        <div className="mt-4 ml-1">
           <h2 className="text-yellow-400 text-lg sm:text-xl lg:text-2xl font-semibold">Company</h2>
 
           <ul className="mt-5 space-y-2 text-gray-300 text-base sm:text-xl">
@@ -76,7 +76,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="mt-4 ml-5">
+        <div className="mt-4 ml-1">
           <h2 className="text-yellow-400 text-lg sm:text-xl lg:text-2xl font-semibold">Contact</h2>
 
           <ul className="mt-5 space-y-2 text-gray-300 text-base sm:text-xl">

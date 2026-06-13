@@ -56,6 +56,10 @@ body {
   background: green !important;
 }
 
+.service-slider .swiper-pagination-bullet-active {
+  background: #0A1F44 !important;
+}
+
 .home-slider .swiper-pagination-bullet-active {
   background: #facc15 !important;
 }

@@ -11,7 +11,7 @@ const ServicesCard = ({
   ctaLabel,
 }) => {
   return (
-    <article className="group flex h-[45vh] sm:h-[40vh]  lg:h-[60vh] flex-col rounded-[28px] border border-slate-200 bg-[#0a1f44] p-6 shadow-[0_18px_45px_-25px_rgba(10,31,68,0.25)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_-18px_rgba(10,31,68,0.45)] sm:p-7">
+    <article className="group flex h-[55vh] sm:h-[40vh]  lg:h-[60vh] flex-col rounded-[28px] border border-slate-200 bg-[#0a1f44] p-6 shadow-[0_18px_45px_-25px_rgba(10,31,68,0.25)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_-18px_rgba(10,31,68,0.45)] sm:p-7">
       {/* Top row: tag + icon */}
       <div className="flex items-start justify-between">
         <span className="rounded-md bg-blue-50 px-3 py-1 text-xs font-semibold text-[#0A1F44]">

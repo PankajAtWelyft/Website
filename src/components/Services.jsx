@@ -1,7 +1,9 @@
 import React from "react";
 import ServicesCard from "./ServicesCard";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/pagination";
 import {
   Building2,
   Package,
@@ -102,7 +104,7 @@ const Services = () => {
 
       {/* HEADING */}
       <div className="relative z-10 mx-auto max-w-7xl px-6 text-center sm:px-4 lg:px-10">
-        <p className="mt-4 inline-block rounded-md bg-[#0A1F44] px-4 py-2 text-sm font-bold uppercase tracking-[0.25em] text-amber-300 sm:px-5 sm:text-xl">
+        <p className="mt-4 inline-block rounded-md bg-[#0A1F44] px-4 py-2 text-sm font-bold uppercase  text-amber-300 sm:px-5 sm:text-xl tracking-[0.03em]">
           Our Services
         </p>
       </div>
@@ -117,13 +119,14 @@ const Services = () => {
       {/* TABLET + MOBILE SLIDER */}
       <div className="relative z-10 mt-10 px-4 md:px-6 lg:hidden">
         <Swiper
-          spaceBetween={18}
-          slidesPerView={1.05}
-          breakpoints={{
-            640: { slidesPerView: 1.1 },
-            768: { slidesPerView: 1.8 },
-            1024: { slidesPerView: 2.2 },
-          }}
+          modules={[Autoplay, Pagination]}
+          spaceBetween={0}
+          slidesPerView={1}
+          loop={true}
+          autoplay={{ delay: 2000, disableOnInteraction: false }}
+          pagination={{ clickable: true }}
+          className="service-slider bg-transparent"
+          style={{ background: "transparent" }}
         >
           {services.map((s, i) => (
             <SwiperSlide key={i} className="h-auto">

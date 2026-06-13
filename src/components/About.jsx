@@ -87,9 +87,9 @@ const About = () => {
 
         {/* HEADER */}
         <div className="text-center max-w-3xl mx-auto">
-          <div className=" inline-block rounded-md bg-[#0A1F44] px-4 py-2 text-sm font-bold uppercase tracking-[0.25em] text-amber-300 sm:px-5 sm:text-xl">
+          <p className="mt-4 inline-block rounded-md bg-[#0A1F44] px-4 py-2 text-sm font-bold uppercase  text-amber-300 sm:px-5 sm:text-xl tracking-[0.03em]">
             About Welyft
-          </div>
+          </p>
         </div>
 
         {/* MAIN GRID */}

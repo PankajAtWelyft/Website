@@ -12,7 +12,7 @@ const ContactForm = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="text-center">
-          <p className="inline-block text-sm sm:text-xl text-amber-300 bg-[#0A1F44] tracking-widest mt-4 px-4 sm:px-5 py-2 rounded-md font-bold uppercase
+          <p className="inline-block text-sm sm:text-xl text-amber-300 bg-[#0A1F44] tracking-[0.03em] mt-4 px-4 sm:px-5 py-2 rounded-md font-bold uppercase
         ">
             Contact Us
           </p>

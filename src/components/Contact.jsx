@@ -8,8 +8,9 @@ import Footer from "./Footer";
 const Contact = () => {
   return (
     <>
-      <section id="contact" className="scroll-mt-24  bg-[#0A1F44]">
-        <div className="text-center py-10 sm:py-14 lg:py-16 px-4 sm:px-6 lg:px-10 border-b border-[#18345E]">
+      <section id="contact" className="scroll-mt-24 bg-[#F6F5F0] h-auto relative overflow-hidden">
+        <div className="mx-4 lg:mx-7  h-[45vh] sm:h-[40vh]  lg:h-[70vh] flex-col text-center py-10 sm:py-14 lg:py-16 px-4 sm:px-6 lg:px-10  rounded-[28px] bg-[#0A1F44]">
+       
 
           <h1 className="serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-5xl mx-auto text-white">
             Ready to Move Your Business
@@ -22,12 +23,13 @@ const Contact = () => {
           </p>
           <a href="#contact-form">
             <button
-              className="mt-10 cursor-pointer rounded-2xl bg-yellow-400 px-8 sm:px-10 py-4 text-lg sm:text-xl font-bold text-[#001B45] shadow-lg shadow-yellow-400/40 transition-all duration-300 hover:scale-105 hover:shadow-yellow-200"
+              className="mt-12 cursor-pointer rounded-2xl bg-yellow-400 px-8 sm:px-10 py-4 text-lg sm:text-xl font-bold text-[#001B45] shadow-lg shadow-yellow-400/40 transition-all duration-300 hover:scale-105 hover:shadow-yellow-200"
             >
               Contact Welyft
             </button>
           </a>
-        </div>
+        
+      </div>
       </section>
       <ContactForm />
     <Footer/>
