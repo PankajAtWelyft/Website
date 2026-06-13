@@ -13,7 +13,7 @@ const Footer = () => {
             <img className="w-15 h-15 rounded-xl" src={logo} alt="logo" />
 
             <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-white">
-              Welyft
+              welyft
             </h1>
           </div>
 

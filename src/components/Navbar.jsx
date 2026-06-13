@@ -10,7 +10,7 @@ const Navbar = () => {
     <nav className="w-full fixed top-0 left-0 z-[999] px-4 md:px-8 bg-white shadow-md h-17 flex items-center justify-between">
       <div className="flex items-center">
         <img src={logo} className="w-14 md:w-16" alt="welyft_logo" />
-        <h1 className="font-bold text-3xl">Welyft</h1>
+        <h1 className="font-bold text-3xl">welyft</h1>
       </div>
 
       <div className=" hidden lg:flex font-bold mr-4 text-xl gap-6">
