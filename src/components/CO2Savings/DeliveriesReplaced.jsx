@@ -114,7 +114,7 @@ export default function DeliveriesReplaced({ data: dashboardData = DEFAULT_CO2_S
         })}
       </div>
 
-      <div className="relative mt-6 h-45.5 sm:mt-8 sm:h-75 md:h-38 lg:mt-6 lg:h-51.5 xl:h-63.5">
+      <div className="relative mt-6 h-45.5 sm:mt-8 sm:h-75 md:h-38 lg:mt-6 lg:h-48 xl:h-63.5">
         <Bar data={data} options={options} />
       </div>
     </section>
