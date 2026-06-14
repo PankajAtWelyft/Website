@@ -13,8 +13,7 @@ const Blog = () => {
             News & Insights
           </h2>
           <p className="text-gray-600 text-base sm:text-lg lg:text-2xl mt-2 md:mt-6 max-w-3xl mx-auto leading-relaxed">
-            Stay updated with the latest insights, news, and updates from
-            Welyft.
+            Stay updated with the latest insights, news, and updates from welyft
           </p>
         </div>
 

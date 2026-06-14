@@ -98,33 +98,37 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="scroll-mt-24 relative overflow-hidden bg-[#F6F5F0] pt-0"
+      className="scroll-mt-26 relative overflow-hidden bg-[#F6F5F0] pt-0"
     >
-      <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#F6F5F0] to-transparent" />
+      <div className="absolute inset-x-0 top-0 h-32 bg-linear-to-b from-[#F6F5F0] to-transparent" />
 
       {/* HEADING */}
-      <div className="relative z-10 mx-auto max-w-7xl px-6 text-center sm:px-4 lg:px-10">
-        <p className="mt-4 inline-block rounded-md bg-[#0A1F44] px-4 py-2 text-sm font-bold uppercase  text-amber-300 sm:px-5 sm:text-xl tracking-[0.03em]">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-10">
+        <p className="mt-4 inline-block rounded-md bg-[#0A1F44] px-4 py-2 text-sm font-bold uppercase text-amber-300 tracking-[0.03em] sm:px-5 sm:text-xl">
           Our Services
         </p>
       </div>
 
       {/* DESKTOP / LARGE-SCREEN GRID */}
-      <div className="relative z-10 mx-auto mt-12 hidden h-[70vh] gap-6 px-6 lg:grid lg:grid-cols-3 lg:px-10 xl:grid-cols-5">
+      <div className="relative z-10 mx-auto mt-12 hidden items-stretch gap-6 px-4 md:px-6 xl:grid xl:grid-cols-5">
         {services.map((s, i) => (
           <ServicesCard key={i} {...s} />
         ))}
       </div>
 
       {/* TABLET + MOBILE SLIDER */}
-      <div className="relative z-10 mt-10 px-4 md:px-6 lg:hidden">
+      <div className="relative z-10 mt-10 px-4 md:px-6 xl:hidden">
         <Swiper
           modules={[Autoplay, Pagination]}
-          spaceBetween={0}
+          spaceBetween={18}
           slidesPerView={1}
           loop={true}
           autoplay={{ delay: 2000, disableOnInteraction: false }}
           pagination={{ clickable: true }}
+          breakpoints={{
+            640: { slidesPerView: 1.05 },
+            768: { slidesPerView: 1.6 },
+          }}
           className="service-slider bg-transparent"
           style={{ background: "transparent" }}
         >

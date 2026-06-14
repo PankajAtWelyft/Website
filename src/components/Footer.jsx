@@ -9,7 +9,7 @@ const Footer = () => {
       {/* TOP FOOTER */}
       <div className="mx-auto grid max-w-7xl grid-cols-2 gap-10 px-5 py-10 sm:grid-cols-2 sm:px-8 lg:grid-cols-4 lg:gap-16 lg:px-10 lg:py-12">
         <div>
-          <div className="flex items-center gap-1">
+          <div className="flex items-center ">
             <img className="w-15 h-15 rounded-xl" src={logo} alt="logo" />
 
             <h1 className="text-2xl font-bold leading-tight text-white">
@@ -17,10 +17,12 @@ const Footer = () => {
             </h1>
           </div>
 
-          <p className="mt-4 text-base leading-relaxed text-gray-300 ">
+          <p className="mt-2 ml-2 text-base leading-relaxed text-gray-300 ">
             Smart logistics.
             <br />
+            <p className="mt-2  text-base leading-relaxed text-gray-300 ">
             Sustainable future.
+            </p>
 
           </p>
         </div>

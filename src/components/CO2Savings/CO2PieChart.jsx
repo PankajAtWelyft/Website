@@ -43,7 +43,7 @@ export default function CO2PieChart({ data: dashboardData = DEFAULT_CO2_SAVINGS_
 
   return (
     <div
-      className="w-full rounded-xl border-2 bg-[#F6F5F0] p-4 sm:p-5"
+      className="w-full h-full rounded-xl  bg-[#F6F5F0] p-4 sm:p-5 md:p-6"
       style={{ borderColor: view.palette.evDeliveries }}
     >
       <div className="mb-3 mt-10 text-center lg:mt-0">
@@ -55,11 +55,11 @@ export default function CO2PieChart({ data: dashboardData = DEFAULT_CO2_SAVINGS_
         </p>
       </div>
 
-      <div className="relative mt-14 h-[260px] sm:mt-16 sm:h-[320px] lg:mt-6 lg:h-[390px] xl:h-[440px]">
+      <div className="relative mt-6 h-69.5 sm:mt-8 sm:h-75 md:h-49.5 lg:mt-6 lg:h-71.5 xl:h-87">
         <Pie data={data} options={options} />
       </div>
 
-      <div className="mt-10 flex flex-wrap justify-center gap-4 text-xs sm:text-sm lg:mt-6">
+      <div className="mt-6 flex flex-wrap justify-center gap-3 text-xs sm:gap-4 sm:text-sm lg:mt-6">
         {pieData.map((item, index) => (
           <div key={item.category} className="flex items-center gap-2">
             <span

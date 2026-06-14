@@ -22,72 +22,79 @@ const ContactForm = () => {
 
           
         </div>
-        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-4 px-5 py-14 sm:grid-cols-2 sm:px-8 lg:grid-cols-2 lg:gap-20">
-          <div>
-            <div className="flex items-center gap-4">
-              <a href="https://maps.google.com" target="_blank">
-                <FaMapMarkerAlt className="text-yellow-500 text-3xl hover:scale-110 hover:text-red-500 transition-all duration-300" />
+        <div className="mx-auto mt-10 grid max-w-7xl grid-cols-1 gap-8 px-5 py-6 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:py-10">
+          <article className="rounded-3xl h-[450px] sm:h-[520px] bg-white/90 p-6 shadow-sm ring-1 ring-black/5 sm:p-8 lg:sticky lg:top-6">
+            <div className="flex items-center gap-3">
+              <a href="https://maps.google.com" target="_blank" rel="noreferrer" className="shrink-0">
+                <FaMapMarkerAlt className="text-3xl text-yellow-500 transition-all duration-300 hover:scale-110 hover:text-red-500" />
               </a>
-              <h2 className="text-xl font-semibold text-black sm:text-4xl">
+              <h2 className="text-xl font-semibold text-black sm:text-2xl lg:text-3xl">
                 Address
               </h2>
             </div>
 
-            <p className="mt-2 text-base font-bold leading-relaxed text-gray-600 sm:text-xl lg:mt-6">
-              Welyft Pte. Ltd. (UEN 202440989G)
-            </p>
-            <br />
-            <p className=" -mt-5 text-lg text-gray-500 sm:text-xl">
-              101 Cecil Street, #18-11 Tong Eng Building
-              <br />
-              Singapore 069533
-            </p>
-            <p className="mt-4 text-base font-bold text-gray-600 sm:text-xl">
-              Registered office address:
-            </p>
-            <br />
-            <p className="-mt-5 text-lg text-gray-500 sm:text-xl">
-              160 Robinson Road, #14-04, SBF Center,
-              <br />
-              Singapore 068914
-            </p>
-
-            <div className="mt-10">
-              <div className="flex items-center gap-4">
-                <a href="mailto:operations@welyft.com">
-                  <FaEnvelope className="text-yellow-500 text-3xl hover:scale-110 hover:text-indigo-900 transition-all duration-300" />
-                </a>
-                <h2 className="text-xl font-semibold text-black sm:text-4xl">
-                  Email
-                </h2>
+            <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-1">
+              <div>
+                <p className="text-base font-bold leading-relaxed text-gray-700 sm:text-lg">
+                  Welyft Pte. Ltd. (UEN 202440989G)
+                </p>
+                <p className="mt-3 text-base text-gray-600 sm:text-lg">
+                  101 Cecil Street, #18-11 Tong Eng Building
+                  <br />
+                  Singapore 069533
+                </p>
               </div>
-              <a
-                href="mailto:operations@welyft.com"
-                className="mt-2 inline-block break-words text-base text-gray-600 sm:text-xl lg:mt-4 hover:text-indigo-900 transition-all duration-300"
-              >
-                operations@welyft.com
-              </a>
+
+              <div>
+                <p className="text-base font-bold text-gray-700 sm:text-lg">
+                  Registered office address:
+                </p>
+                <p className="mt-3 text-base text-gray-600 sm:text-lg">
+                  160 Robinson Road, #14-04, SBF Center,
+                  <br />
+                  Singapore 068914
+                </p>
+              </div>
             </div>
 
-            <div className="mt-4 lg:mt-12">
-              <div className="flex items-center gap-4">
-                <a
-                  href="https://wa.me/6587601984?text=Hello%20Welyft"
-                  target="_blank"
-                  className="flex items-center gap-4 group"
-                >
-                  <FaWhatsapp className="text-yellow-500 text-3xl hover:scale-110 hover:text-green-600 transition-all duration-300" />
-
-                  <h2 className="text-xl underline font-semibold text-black sm:text-4xl group-hover:text-green-600 transition">
-                    Chat with us
+            <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-1">
+              <div>
+                <div className="flex items-center gap-3">
+                  <a href="mailto:operations@welyft.com" className="shrink-0">
+                    <FaEnvelope className="text-3xl text-yellow-500 transition-all duration-300 hover:scale-110 hover:text-indigo-900" />
+                  </a>
+                  <h2 className="text-xl font-semibold text-black sm:text-2xl">
+                    Email
                   </h2>
+                </div>
+                <a
+                  href="mailto:operations@welyft.com"
+                  className="mt-3 inline-block break-words text-base text-gray-600 transition-all duration-300 hover:text-indigo-900 sm:text-lg"
+                >
+                  operations@welyft.com
                 </a>
               </div>
+
+              <div>
+                <div className="flex items-center gap-3">
+                  <a
+                    href="https://wa.me/6587601984?text=Hello%20Welyft"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center gap-3 group"
+                  >
+                    <FaWhatsapp className="text-3xl text-yellow-500 transition-all duration-300 hover:scale-110 hover:text-green-600" />
+                    <h2 className="text-xl font-semibold text-black underline transition group-hover:text-green-600 sm:text-2xl">
+                      Chat with us
+                    </h2>
+                  </a>
+                </div>
+              </div>
             </div>
-          </div>
-          
+          </article>
+
           <form
-            className="flex flex-col gap-8"
+            className="rounded-3xl h-[450px] sm:h-[520px] bg-white/90 p-6 shadow-sm ring-1 ring-black/5 sm:p-8"
             onSubmit={async (e) => {
               e.preventDefault();
 
@@ -95,11 +102,7 @@ const ContactForm = () => {
 
               const formData = new FormData(e.target);
 
-              formData.append(
-                "access_key",
-                "3442aeca-762c-439d-a514-5ab764e3d8f8",
-              );
-
+              formData.append("access_key", "3442aeca-762c-439d-a514-5ab764e3d8f8");
               formData.append("subject", "New Contact Message - Welyft");
 
               const response = await fetch("https://api.web3forms.com/submit", {
@@ -111,52 +114,50 @@ const ContactForm = () => {
 
               if (data.success) {
                 setSuccess(true);
-
                 e.target.reset();
-
-                setTimeout(() => {
-                  setSuccess(false);
-                }, 2000);
+                setTimeout(() => setSuccess(false), 2000);
               }
 
               setLoading(false);
             }}
           >
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              required
-              className="p-4 rounded-xl border border-gray-300 text-lg"
-            />
+            <div className="grid gap-5 sm:gap-6">
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required
+                className="w-full rounded-xl border border-gray-300 bg-white p-4 text-base text-gray-900 outline-none transition focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 sm:text-lg"
+              />
 
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              required
-              className="p-4 rounded-xl border border-gray-300 text-lg"
-            />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+                className="w-full rounded-xl border border-gray-300 bg-white p-4 text-base text-gray-900 outline-none transition focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 sm:text-lg"
+              />
 
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              rows="6"
-              required
-              className="p-4 rounded-xl border border-gray-300 text-lg"
-            ></textarea>
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                rows="6"
+                required
+                className="w-full rounded-xl border border-gray-300 bg-white p-4 text-base text-gray-900 outline-none transition focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 sm:text-lg"
+              ></textarea>
 
-            <button
-              type="submit"
-              disabled={loading}
-              className="text-black py-5 text-xl font-semibold rounded-xl bg-yellow-400 hover:bg-[#021B44] hover:text-yellow-400 transition disabled:opacity-70"
-            >
-              {loading
-                ? "Sending..."
-                : success
-                  ? "Message Sent ✓"
-                  : "Send Message"}
-            </button>
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full rounded-xl bg-yellow-400 py-4 text-lg font-semibold text-black transition hover:bg-[#021B44] hover:text-yellow-400 disabled:cursor-not-allowed disabled:opacity-70 sm:py-5 sm:text-xl"
+              >
+                {loading
+                  ? "Sending..."
+                  : success
+                    ? "Message Sent ✓"
+                    : "Send Message"}
+              </button>
+            </div>
           </form>
         </div>
       </div>

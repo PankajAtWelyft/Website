@@ -74,16 +74,16 @@ const About = () => {
   return (
     <section
       id="about"
-      className="scroll-mt-24  relative overflow-hidden py-20 pb-24"
+      className="scroll-mt-20 relative overflow-hidden py-16 pb-20"
       style={{ background: "#F6F5F0" }}
     >
       {/* Background blobs */}
-      <div className="absolute top-0 left-0 w-[600px] h-[600px] rounded-full pointer-events-none"
+      <div className="absolute top-0 left-0 h-150 w-150 rounded-full pointer-events-none"
         style={{ background: "radial-gradient(circle, rgba(255,214,0,0.06) 0%, transparent 70%)" }} />
-      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full pointer-events-none"
+      <div className="absolute bottom-0 right-0 h-100 w-100 rounded-full pointer-events-none"
         style={{ background: "radial-gradient(circle, rgba(10,31,68,0.06) 0%, transparent 70%)" }} />
 
-      <div className="max-w-7xl mx-auto px-3 sm:px-5  lg:px-10 relative z-10">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-5 lg:px-10">
 
         {/* HEADER */}
         <div className="text-center max-w-3xl mx-auto">
@@ -93,12 +93,12 @@ const About = () => {
         </div>
 
         {/* MAIN GRID */}
-        <div className="grid lg:grid-cols-2 gap-8 items-start">
+        <div className="grid grid-cols-1 gap-8 items-start lg:grid-cols-2">
 
           {/* LEFT — CARD */}
-          <div className="mt-12">
+          <div className="mt-8 sm:mt-10 lg:mt-12">
             <div
-              className={`relative rounded-[32px] p-8 sm:p-10 h-[65vh] flex flex-col justify-center bg-gradient-to-br overflow-hidden transition-opacity duration-300 ${card.bg} ${animating ? "opacity-0" : "opacity-100"}`}
+              className={`relative flex min-h-85 flex-col justify-start overflow-hidden rounded-4xl bg-linear-to-br p-6 pt-8 transition-opacity duration-300 sm:min-h-95 sm:p-8 lg:min-h-125 lg:p-10 ${card.bg} ${animating ? "opacity-0" : "opacity-100"}`}
               style={{ boxShadow: "0 20px 60px rgba(0,0,0,0.12)" }}>
 
               {/* Decorative circle */}
@@ -130,7 +130,7 @@ const About = () => {
             </div>
 
             {/* DOTS + ARROWS */}
-            <div className="flex items-center gap-4 mt-5 px-2">
+            <div className="mt-5 flex flex-wrap items-center gap-4 px-2">
               <button
                 onClick={() => handleDot((active - 1 + cards.length) % cards.length)}
                 className="w-9 h-9 rounded-full border-2 flex items-center justify-center transition-all hover:bg-[#0A1F44] hover:border-[#0A1F44] hover:text-white font-bold"
@@ -157,8 +157,8 @@ const About = () => {
           </div>
 
           {/* RIGHT — VIDEO ONLY */}
-          <div className="mt-12">
-            <div className="relative rounded-[32px] p-4 sm:p-6  sm:min-h-[420px] lg:h-[65vh] flex flex-col justify-center overflow-hidden"
+          <div className="mt-8 sm:mt-10 lg:mt-12">
+            <div className="relative flex min-h-85 flex-col justify-center overflow-hidden rounded-4xl p-4 sm:min-h-95 sm:p-6 lg:min-h-125 lg:p-6"
               style={{ background: "#0A1F44", boxShadow: "0 20px 60px rgba(10,31,68,0.18)" }}>
               <div className="p-2 sm:p-3 lg:p-4 mb-3">
                 <h4 className="text-white text-xl font-black leading-tight tracking-tight mb-2">

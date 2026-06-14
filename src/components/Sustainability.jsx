@@ -7,12 +7,10 @@ import { Pagination } from "swiper/modules";
 
 const Sustainability = () => {
   return (
-    <section
-      className="bg-[#F6F5F0] h-auto relative overflow-hidden py-20"
-    >
-      <div className="mx-4 lg:mx-7  h-[60vh] sm:h-[50vh]  lg:h-[80vh] flex-col rounded-[28px] bg-[#014631]">
+    <section className="relative overflow-hidden bg-[#F6F5F0] py-14 sm:py-16 lg:py-20">
+      <div className="mx-3 flex flex-col rounded-[28px] bg-[#014631] px-2 pb-10 sm:mx-5 sm:px-4 md:mx-7 md:px-5 lg:mx-7 lg:px-6">
       {/* HEADING */}
-      <div className="px-6 sm:px-4  lg:px-10 pt-4 text-center max-w-7xl mx-auto">
+      <div className="mx-auto max-w-7xl px-4 pt-4 text-center sm:px-6 lg:px-10">
         
 
         <h2
@@ -30,16 +28,20 @@ const Sustainability = () => {
 
         
       </div>
-      <div className="max-w-7xl mx-auto mt-10 sm:mt-14 px-2 sm:px-6">
+      <div className="mx-auto mt-10 w-full max-w-7xl px-2 sm:mt-14 sm:px-4 lg:px-6">
         {/* MOBILE SLIDER */}
-        <div className="lg:hidden px-2">
+        <div className="px-1 md:px-2 xl:hidden">
           <Swiper
             modules={[Pagination]}
-            spaceBetween={18}
-            slidesPerView={1.1}
-            centeredSlides={true}
+            spaceBetween={16}
+            slidesPerView={1}
+            centeredSlides={false}
             pagination={{ clickable: true }}
             grabCursor={true}
+            breakpoints={{
+              640: { slidesPerView: 1.05 },
+              768: { slidesPerView: 1.6 },
+            }}
           >
             <SwiperSlide className="flex justify-center pb-12">
               <SustainabilityCard
@@ -75,8 +77,8 @@ const Sustainability = () => {
           </Swiper>
         </div>
 
-        {/* DESKTOP GRID */}
-        <div className="hidden lg:grid lg:grid-cols-4 gap-8 place-items-center">
+        {/* DESKTOP / TABLET GRID */}
+        <div className="hidden gap-6 place-items-stretch xl:grid xl:grid-cols-4 xl:gap-8">
           <SustainabilityCard
             icon="🚚"
             title="Lower Emissions"

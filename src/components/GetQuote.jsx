@@ -99,7 +99,7 @@ export default function GetQuote() {
       <section className="py-10 px-6">
         <div className="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           {/* Left — Form */}
-          <div className="bg-white h-full rounded-3xl p-8 border border-black/8 shadow-sm">
+          <div className="bg-white h-full rounded-3xl p-4 pl-6 border border-black/8 shadow-sm">
             <h2
               className="font-bold text-lg mb-6"
               style={{ color: "var(--navy)" }}

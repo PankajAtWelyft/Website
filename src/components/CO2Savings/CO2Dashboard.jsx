@@ -14,9 +14,9 @@ export default function CO2Dashboard() {
   const swiperRef = useRef(null);
   const [activeSlide, setActiveSlide] = useState(0);
   const [dashboardData, setDashboardData] = useState(() => createCO2SavingsView());
-  const slideClass = "flex w-full justify-center !h-auto";
+  const slideClass = "flex w-full justify-center !h-auto pb-2";
   const cardClass =
-    "h-[640px] sm:h-[620px] md:h-[660px] lg:h-[560px] xl:h-[600px] w-full min-w-0";
+    "w-full min-w-0 rounded-xl border-2 p-3 sm:p-5 md:p-6 lg:p-5 xl:p-6 min-h-[380px] sm:min-h-[420px] md:min-h-[460px] lg:min-h-[500px] xl:min-h-[560px]";
 
   useEffect(() => {
     let isMounted = true;
@@ -54,6 +54,11 @@ export default function CO2Dashboard() {
           spaceBetween={14}
           slidesPerView={1}
           centeredSlides={false}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 1 },
+            1024: { slidesPerView: 1 },
+          }}
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
           }}
@@ -62,10 +67,7 @@ export default function CO2Dashboard() {
           }}
         >
           <SwiperSlide className={slideClass}>
-            <div
-              className={`${cardClass} rounded-xl border-2 p-4 sm:p-5`}
-              style={{ borderColor: dashboardData.palette.evDeliveries }}
-            >
+            <div className={`${cardClass} *:h-full`}>
               <CO2Chart data={dashboardData} />
             </div>
           </SwiperSlide>

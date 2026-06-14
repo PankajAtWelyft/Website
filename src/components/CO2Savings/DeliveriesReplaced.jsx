@@ -77,7 +77,7 @@ export default function DeliveriesReplaced({ data: dashboardData = DEFAULT_CO2_S
   ];
 
   return (
-    <section className="w-full bg-[#F6F5F0] rounded-2xl shadow-sm border-2 p-4 sm:p-6 md:p-8" style={{ borderColor: palette.evDeliveries }}>
+    <section className="w-full h-full rounded-2xl  bg-[#F6F5F0] p-4 shadow-sm sm:p-5 md:p-6 lg:p-8" style={{ borderColor: palette.evDeliveries }}>
       <div className="text-center mb-6">
         <h2 className="text-lg sm:text-xl md:text-2xl font-bold" style={{ color: palette.text }}>
           Deliveries Replaced — Diesel to EV
@@ -87,34 +87,34 @@ export default function DeliveriesReplaced({ data: dashboardData = DEFAULT_CO2_S
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-6">
+      <div className="relative mb-6 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
         {stats.map((s, i) => {
           const Icon = s.icon;
           return (
             <div
               key={i}
-              className="flex items-center gap-3 border-2 rounded-2xl p-3 sm:p-4"
+              className="flex items-center h-15 sm:h-25 gap-3 border-2 rounded-2xl p-3 sm:p-4"
               style={{ borderColor: `${palette.evDeliveries}` }}
             >
-              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full  flex items-center justify-center shrink-0"
+              <div className="w-8 h-8 sm:w-11 sm:h-11 rounded-full  flex items-center justify-center shrink-0"
                 style={{ background: `${palette.evDeliveries}33` }}>
                 <Icon className="w-5 h-5" style={{ color: palette.evDeliveries }} strokeWidth={2} />
               </div>
               <div className="min-w-0">
-                <div className="text-[11px] sm:text-xs leading-tight" style={{ color: palette.text }}>
+                <div className="text-[9px] sm:text-xs leading-tight" style={{ color: palette.text }}>
                   {s.label}
                 </div>
-                <div className="text-base sm:text-lg font-bold leading-tight" style={{ color: palette.text }}>
+                <div className="text-[10px] sm:text-lg font-bold leading-tight" style={{ color: palette.text }}>
                   {s.value}
                 </div>
-                <div className="text-[11px] leading-tight" style={{ color: palette.text }}>{s.sub}</div>
+                <div className="text-[9px] sm:text-xs leading-tight" style={{ color: palette.text }}>{s.sub}</div>
               </div>
             </div>
           );
         })}
       </div>
 
-      <div className="w-full h-[260px] sm:h-[320px]">
+      <div className="relative mt-6 h-45.5 sm:mt-8 sm:h-75 md:h-38 lg:mt-6 lg:h-51.5 xl:h-63.5">
         <Bar data={data} options={options} />
       </div>
     </section>

@@ -163,8 +163,10 @@ export default function CO2Chart({ data: dashboardData = DEFAULT_CO2_SAVINGS_VIE
   };
 
   return (
-    <div className="flex h-full flex-col">
-      <div className="flex shrink-0 flex-wrap justify-center gap-x-4 gap-y-3 pt-2 text-xs sm:gap-x-6 sm:text-sm lg:pt-0  mt-0 lg:mt-8">
+    <div 
+      className="w-full h-full rounded-xl  bg-[#F6F5F0] p-4 sm:p-5 md:p-6"
+      style={{ borderColor: view.palette.evDeliveries }}>
+      <div className="flex shrink-0 flex-wrap justify-center gap-x-4 gap-y-3 pt-2 text-xs sm:gap-x-6 sm:text-sm lg:pt-0  mt-0 lg:mt-6">
         <div className="flex items-center gap-2">
           <span className="inline-block w-5 h-3" style={{ background: palette.co2Saved }} />
           <span style={{ color: palette.text }}>
@@ -186,7 +188,7 @@ export default function CO2Chart({ data: dashboardData = DEFAULT_CO2_SAVINGS_VIE
           <span style={{ color: palette.text }}>EV Deliveries</span>
         </div>
       </div>
-      <div className="relative mt-4 min-h-0 w-full flex-1 lg:mt-15 lg:h-[400px] lg:flex-none xl:h-[460px]">
+      <div className="relative mt-6 h-87.5 sm:mt-8 sm:h-75 md:h-73.5 lg:mt-6 lg:h-85.5 xl:h-100.5">
         <Chart type="bar" data={data} options={options}/>
       </div>
     </div>
