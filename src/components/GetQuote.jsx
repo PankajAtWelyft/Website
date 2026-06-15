@@ -99,7 +99,7 @@ export default function GetQuote() {
       <section className="py-10 px-6">
         <div className="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           {/* Left — Form */}
-          <div className="bg-white h-full rounded-3xl p-4 pl-6 border border-black/8 shadow-sm">
+          <div className="bg-white h-[590px] lg:h-[672px] rounded-3xl p-4 pl-6 border border-black/8 shadow-sm">
             <h2
               className="font-bold text-lg mb-6"
               style={{ color: "var(--navy)" }}
@@ -111,7 +111,7 @@ export default function GetQuote() {
               {/* Vehicle Type */}
               <div>
                 <label
-                  className="text-sm font-bold mb-2 block"
+                  className="text-sm font-bold lg:my-2 block"
                   style={{ color: "var(--navy)" }}
                 >
                   Vehicle Type
@@ -139,7 +139,7 @@ export default function GetQuote() {
               {/* Weight */}
               <div>
                 <label
-                  className="text-sm font-bold mb-2 block"
+                  className="text-sm font-bold my-2 block"
                   style={{ color: "var(--navy)" }}
                 >
                   Parcel Weight (kg)
@@ -180,7 +180,7 @@ export default function GetQuote() {
               {/* Distance */}
               <div>
                 <label
-                  className="text-sm font-bold mb-2 block"
+                  className="text-sm font-bold lg:my-2 block"
                   style={{ color: "var(--navy)" }}
                 >
                   Distance (km)
@@ -221,7 +221,7 @@ export default function GetQuote() {
               {/* Additional Stops */}
               <div>
                 <label
-                  className="text-sm font-bold mb-2 block"
+                  className="text-sm font-bold mb-2 lg:my-2 block"
                   style={{ color: "var(--navy)" }}
                 >
                   Additional Stops
@@ -262,7 +262,7 @@ export default function GetQuote() {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label
-                    className="text-sm font-bold mb-2 block"
+                    className="text-sm font-bold lg:my-2 block"
                     style={{ color: "var(--navy)" }}
                   >
                     Pick Up Time
@@ -295,7 +295,7 @@ export default function GetQuote() {
                 </div>
                 <div>
                   <label
-                    className="text-sm font-bold mb-2 block"
+                    className="text-sm font-bold lg:my-2 block"
                     style={{ color: "var(--navy)" }}
                   >
                     Drop Off Time
@@ -331,7 +331,7 @@ export default function GetQuote() {
           </div>
 
           {/* Right — Estimated Bill */}
-          <div className="flex flex-col gap-5 sticky top-24 bg-[#F6F5F0] ">
+          <div className="flex flex-col h-[672px] lg:h-[672px] gap-5 sticky top-24 bg-[#F6F5F0] ">
             {/* Bill Card */}
             <div className="rounded-3xl overflow-hidden border border-black/8 shadow-sm">
               {/* Top */}
