@@ -23,7 +23,7 @@ const ContactForm = () => {
           
         </div>
         <div className="mx-auto mt-10 grid max-w-7xl grid-cols-1 gap-8 px-5 py-6 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:py-10">
-          <article className="rounded-3xl h-[495px] md:h-[420px] lg:h-[520px] bg-white/90 p-6 shadow-sm ring-1 ring-black/5 sm:p-8 lg:sticky lg:top-6">
+          <article className="rounded-3xl h-[505px] md:h-[420px] lg:h-[520px] bg-white/90 p-6 shadow-sm ring-1 ring-black/5 sm:p-8 lg:sticky lg:top-6">
             <div className="flex items-center gap-3">
               <a href="https://maps.google.com" target="_blank" rel="noreferrer" className="shrink-0">
                 <FaMapMarkerAlt className="text-3xl text-yellow-500 transition-all duration-300 hover:scale-110 hover:text-red-500" />

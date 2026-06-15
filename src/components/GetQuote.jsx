@@ -331,7 +331,7 @@ export default function GetQuote() {
           </div>
 
           {/* Right — Estimated Bill */}
-          <div className="flex flex-col h-[692px] lg:h-[672px] gap-5 sticky top-24 bg-[#F6F5F0] ">
+          <div className="flex flex-col h-[700px] lg:h-[672px] gap-5 sticky top-24 bg-[#F6F5F0] ">
             {/* Bill Card */}
             <div className="rounded-3xl overflow-hidden border border-black/8 shadow-sm">
               {/* Top */}
