@@ -15,10 +15,10 @@ import {
 const services = [
   {
     tag: "B2B",
+    slug: "b2b",
     Icon: Building2,
     title: "Enterprise Logistics",
-    description:
-      "Reliable enterprise-grade logistics powered by a 100% electric fleet and real-time carbon visibility.",
+    description: "Reliable enterprise-grade logistics powered by a 100% electric fleet and real-time carbon visibility.",
     features: [
       "Dedicated fleet capacity",
       "SLA-backed delivery",
@@ -31,10 +31,10 @@ const services = [
   },
   {
     tag: "B2C",
+    slug: "b2c",
     Icon: Package,
     title: "Last-Mile Fulfilment",
-    description:
-      "Fast, reliable last-mile delivery with full visibility for customers and operators.",
+    description: "Fast, reliable last-mile delivery with full visibility for customers and operators.",
     features: [
       "Multi-stop routing",
       "Customer notifications",
@@ -47,10 +47,10 @@ const services = [
   },
   {
     tag: "C2C",
+    slug: "c2c",
     Icon: Smartphone,
     title: "WeMove - by Welyft",
-    description:
-      "Instant peer-to-peer parcel delivery with transparent pricing and verified security.",
+    description: "Instant peer-to-peer parcel delivery with transparent pricing and verified security.",
     features: [
       "Instant booking system",
       "Live parcel tracking",
@@ -62,10 +62,10 @@ const services = [
   },
   {
     tag: "Platform",
+    slug: "platform",
     Icon: LayoutDashboard,
     title: "Welyft OS Platform",
-    description:
-      "An operating system for modern logistics — fleet, dispatch, routing and analytics in one place.",
+    description: "An operating system for modern logistics — fleet, dispatch, routing and analytics in one place.",
     features: [
       "Fleet asset management",
       "Dispatch automation",
@@ -78,10 +78,10 @@ const services = [
   },
   {
     tag: "Rental",
+    slug: "rental",
     Icon: BusFront,
     title: "EV Van Rental Service",
-    description:
-      "Flexible electric van hire with predictable pricing and on-call driver support.",
+    description: "Flexible electric van hire with predictable pricing and on-call driver support.",
     features: [
       "Half-day vehicle hire",
       "Full-day vehicle hire",
@@ -109,14 +109,14 @@ const Services = () => {
         </p>
       </div>
 
-      {/* DESKTOP / LARGE-SCREEN GRID */}
+      {/* DESKTOP GRID */}
       <div className="relative z-10 mx-auto mt-12 hidden items-stretch gap-6 px-4 md:px-6 xl:grid xl:grid-cols-5">
         {services.map((s, i) => (
           <ServicesCard key={i} {...s} />
         ))}
       </div>
 
-      {/* TABLET + MOBILE SLIDER */}
+      {/* MOBILE SLIDER */}
       <div className="relative z-10 mt-10 px-4 md:px-6 xl:hidden">
         <Swiper
           modules={[Autoplay, Pagination]}

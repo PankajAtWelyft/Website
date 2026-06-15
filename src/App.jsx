@@ -3,6 +3,8 @@ import HomePage from "./pages/HomePage";
 import Careers from "./pages/Careers";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
+import ServicePage from "./pages/ServicePage";
+
 
 function App() {
 
@@ -17,6 +19,8 @@ function App() {
       <Route path="/privacy-policy" element={<PrivacyPolicy/>}/>
 
       <Route path="/terms" element={<Terms/>}/>
+
+      <Route path="/services/:slug" element={<ServicePage />} />
 
     </Routes>
 

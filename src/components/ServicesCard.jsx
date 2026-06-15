@@ -1,5 +1,6 @@
 import React from "react";
 import { Check, CheckCircle2 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ServicesCard = ({
   tag,
@@ -9,9 +10,11 @@ const ServicesCard = ({
   features = [],
   highlight,
   ctaLabel,
+  slug,
 }) => {
   return (
-    <article className="group flex h-full min-h-[420px] flex-col rounded-[28px] border border-slate-200 bg-[#0a1f44] p-6 shadow-[0_18px_45px_-25px_rgba(10,31,68,0.25)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_-18px_rgba(10,31,68,0.45)] sm:min-h-[420px] sm:p-7 lg:min-h-[460px]">
+    <article className="group flex h-full min-h-[420px] flex-col rounded-[28px] border border-slate-200 bg-[#0a1f44] p-6 shadow-[0_18px_45px_-25px_rgba(10,31,68,0.25)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_-18px_rgba(10,31,68,0.45)] sm:min-h-[450px] sm:p-7 lg:min-h-[500px]">
+
       {/* Top row: tag + icon */}
       <div className="flex items-start justify-between">
         <span className="rounded-md bg-blue-50 px-3 py-1 text-xs font-semibold text-[#0A1F44]">
@@ -22,29 +25,24 @@ const ServicesCard = ({
         </div>
       </div>
 
-      {/* Title + description */}
-      
-        <h3 className="mt-6 lg:mt-2 text-2xl font-bold leading-tight text-white">
-          {title}
-        </h3>
-        
-        
-      
+      {/* Title */}
+      <h3 className="mt-6 lg:mt-2 text-2xl font-bold leading-tight text-white">
+        {title}
+      </h3>
 
-      <hr className="my-4 border-slate-200" />
+      <hr className="my-4 border-slate-200/30" />
 
       {/* Feature list */}
       <ul className="space-y-4 lg:space-y-2">
         {features.map((f, i) => (
           <li key={i} className="flex items-center gap-3 text-[15px] text-white">
-            <Check className="h-4 w-4 shrink-0 text-emerald-600" strokeWidth={3} />
+            <Check className="h-4 w-4 shrink-0 text-emerald-400" strokeWidth={3} />
             <span>{f}</span>
           </li>
         ))}
       </ul>
 
-      {/* Spacer pushes footer to bottom */}
-      <div className="flex-3" />
+      <div className="flex-1" />
 
       {/* Highlight pill */}
       {highlight && (
@@ -54,7 +52,15 @@ const ServicesCard = ({
         </div>
       )}
 
-      
+      {/* CTA Button */}
+      {slug && (
+        <Link to={`/services/${slug}`}
+          className="mt-4 flex items-center justify-center gap-2 w-full py-3 rounded-2xl font-bold text-sm transition-all hover:-translate-y-0.5"
+          style={{ background: '#FFD600', color: '#0A1F44' }}>
+          {ctaLabel} →
+        </Link>
+      )}
+
     </article>
   );
 };
