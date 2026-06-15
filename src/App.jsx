@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 import HomePage from "./pages/HomePage";
 import Careers from "./pages/Careers";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -9,7 +10,8 @@ import ServicePage from "./pages/ServicePage";
 function App() {
 
   return (
-
+    <>
+   <ScrollToTop />
     <Routes>
 
       <Route path="/" element={<HomePage />} />
@@ -23,7 +25,7 @@ function App() {
       <Route path="/services/:slug" element={<ServicePage />} />
 
     </Routes>
-
+</>
   );
 }
 

@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import logo from "../assets/new_logo.png";
+import logo from "../assets/welyft_logo.png";
 import { FaBars, FaTimes, FaChevronDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -33,8 +33,7 @@ const Navbar = () => {
       
       {/* LOGO */}
       <div className="flex items-center">
-        <img src={logo} className="w-14 md:w-16" alt="welyft_logo" />
-        <h1 className="font-bold text-3xl">welyft</h1>
+        <img src={logo} className="h-16 w-auto object-contain" alt="welyft_logo" />
       </div>
 
       {/* DESKTOP LINKS */}
@@ -148,8 +147,7 @@ const Navbar = () => {
         <div className="fixed top-0 left-0 h-auto min-h-[60vh] w-full bg-white z-[999] px-8 py-6 lg:hidden flex flex-col animate-slideIn rounded-b-3xl shadow-xl overflow-y-auto">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <img src={logo} className="w-8" alt="" />
-              <h1 className="text-2xl font-bold">Welyft</h1>
+              <img src={logo} className="h-12 w-auto object-contain" alt="" />
             </div>
             <FaTimes onClick={() => setOpen(false)}
               className="text-3xl text-[#021B44] cursor-pointer" />

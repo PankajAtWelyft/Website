@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/new_log.png";
+import logo from "../assets/welyft_logo.png";
 import { Link } from "react-router-dom";
 import { FaInstagram, FaLinkedinIn, FaFacebook } from "react-icons/fa";
 
@@ -7,30 +7,27 @@ const Footer = () => {
   return (
     <footer className="bg-[#0A1F44]">
       {/* TOP FOOTER */}
-      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-10 px-5 py-10 sm:grid-cols-2 sm:px-8 lg:grid-cols-4 lg:gap-16 lg:px-10 lg:py-12">
-        <div>
-          <div className="flex items-center ">
-            <img className="w-15 h-15 rounded-xl" src={logo} alt="logo" />
+      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-5 py-8 sm:grid-cols-2 sm:px-8 lg:grid-cols-4 lg:gap-12 lg:px-10 lg:py-8">
+        <div className="flex flex-col items-start">
+          <img
+            src={logo}
+            alt="Welyft Logo"
+            className="w-[150px] h-auto -ml-2 object-contain"
+          />
 
-            <h1 className="text-2xl font-bold leading-tight text-white">
-              welyft
-            </h1>
-          </div>
+          <div className="mt-3">
+            <p className="text-sm text-gray-300 leading-6">Smart logistics.</p>
 
-          <p className="mt-2 ml-2 text-base leading-relaxed text-gray-300 ">
-            Smart logistics.
-            <br />
-            <p className="mt-2  text-base leading-relaxed text-gray-300 ">
-            Sustainable future.
+            <p className="text-sm text-gray-300 leading-6">
+              Sustainable future.
             </p>
-
-          </p>
+          </div>
         </div>
 
         <div className="mt-4 ml-1">
-          <h2 className="text-yellow-400 text-lg font-semibold">Company</h2>
+          <h2 className="text-yellow-400 text-base font-semibold">Company</h2>
 
-          <ul className="mt-5 space-y-2 text-gray-300 text-sm md:text-base">
+          <ul className="mt-4 space-y-2 text-gray-300 text-sm">
             <li>
               <a
                 href="/#about"
@@ -70,9 +67,9 @@ const Footer = () => {
         </div>
 
         <div className="mt-4">
-          <h2 className="text-yellow-400 text-lg font-semibold">Services</h2>
+          <h2 className="text-yellow-400 text-base font-semibold">Services</h2>
 
-          <ul className="mt-5 space-y-2 text-gray-300 text-sm md:text-base">
+          <ul className="mt-4 space-y-2 text-gray-300 text-sm">
             <li>Freight Transport</li>
             <li>Last-Mile Delivery</li>
             <li>CO₂ Reporting</li>
@@ -80,9 +77,9 @@ const Footer = () => {
         </div>
 
         <div className="mt-4 ml-1">
-          <h2 className="text-yellow-400 text-lg font-semibold">Contact</h2>
+          <h2 className="text-yellow-400 text-base font-semibold">Contact</h2>
 
-          <ul className="mt-5 space-y-2 text-gray-300 text-sm md:text-base">
+          <ul className="mt-4 space-y-2 text-gray-300 text-sm">
             <li>Singapore</li>
 
             <li>
@@ -107,12 +104,12 @@ const Footer = () => {
       </div>
 
       {/* BOTTOM FOOTER */}
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 border-t border-[#18345E] px-5 py-6 text-center sm:px-8 lg:flex-row">
-        <p className="text-sm text-gray-400">
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 border-t border-[#18345E] px-5 py-4 text-center sm:px-8 lg:flex-row">
+        <p className="text-xs text-gray-400">
           © 2026 welyft. All rights reserved.
         </p>
 
-        <div className="flex items-center gap-8 text-xl text-gray-400">
+        <div className="flex items-center gap-8 text-base text-gray-400">
           <a href="https://www.facebook.com/youpackWelyft" target="_blank">
             <FaFacebook className="hover:text-yellow-400 transition" />
           </a>
@@ -129,7 +126,7 @@ const Footer = () => {
           </a>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center text-sm gap-4 text-gray-400">
+        <div className="flex flex-wrap items-center justify-center text-xs gap-4 text-gray-400">
           <Link
             to="/privacy-policy"
             className="hover:text-yellow-400 transition-all duration-300"
