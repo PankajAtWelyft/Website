@@ -74,7 +74,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="scroll-mt-20 relative overflow-hidden pt-16 pb-12"
+      className="scroll-mt-20 relative overflow-hidden pt-16"
       style={{ background: "#F6F5F0" }}
     >
       {/* Background blobs */}
@@ -83,7 +83,7 @@ const About = () => {
       <div className="absolute bottom-0 right-0 h-100 w-100 rounded-full pointer-events-none"
         style={{ background: "radial-gradient(circle, rgba(10,31,68,0.06) 0%, transparent 70%)" }} />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-5 lg:px-10">
+      <div className="relative z-10 flex flex-col mx-auto  max-w-8xl px-4 sm:px-5 lg:px-10">
 
         {/* HEADER */}
         <div className="text-center max-w-3xl mx-auto">
@@ -93,10 +93,10 @@ const About = () => {
         </div>
 
         {/* MAIN GRID */}
-        <div className="grid grid-cols-1 gap-8 items-start lg:grid-cols-2">
+        <div className="grid grid-cols-1 max-w-9xl gap-20 items-start lg:grid-cols-2">
 
           {/* LEFT — CARD */}
-          <div className="mt-8 sm:mt-10 lg:mt-12">
+          <div className="mt-8  sm:mt-10 lg:mt-12">
             <div
               className={`relative flex h-[400px] flex-col justify-start overflow-hidden rounded-4xl bg-linear-to-br p-6 pt-8 transition-opacity duration-300  sm:p-8  lg:p-10 ${card.bg} ${animating ? "opacity-0" : "opacity-100"}`}
               style={{ boxShadow: "0 20px 60px rgba(0,0,0,0.12)" }}>
@@ -130,11 +130,11 @@ const About = () => {
             </div>
 
             {/* DOTS + ARROWS */}
-            <div className="mt-5 flex flex-wrap items-center gap-4 px-2">
+            <div className="mt-5 flex flex-wrap justify-center items-center gap-4 px-2">
               <button
                 onClick={() => handleDot((active - 1 + cards.length) % cards.length)}
                 className="w-9 h-9 rounded-full border-2 flex items-center justify-center transition-all hover:bg-[#0A1F44] hover:border-[#0A1F44] hover:text-white font-bold"
-                style={{ borderColor: "rgba(10,31,68,0.2)", color: "#0A1F44" }}>
+                style={{ borderColor: "rgba(10,31,68,0.2)"}}>
                 ←
               </button>
               <div className="flex items-center gap-2">
@@ -147,12 +147,9 @@ const About = () => {
               <button
                 onClick={() => handleDot((active + 1) % cards.length)}
                 className="w-9 h-9 rounded-full border-2 flex items-center justify-center transition-all hover:bg-[#0A1F44] hover:border-[#0A1F44] hover:text-white font-bold"
-                style={{ borderColor: "rgba(10,31,68,0.2)", color: "#0A1F44" }}>
+                style={{ borderColor: "rgba(10,31,68,0.2)"}}>
                 →
               </button>
-              <span className="ml-2 text-sm font-semibold text-gray-400">
-                {String(active + 1).padStart(2, "0")} / {String(cards.length).padStart(2, "0")}
-              </span>
             </div>
           </div>
 

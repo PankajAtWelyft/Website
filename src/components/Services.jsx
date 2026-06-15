@@ -98,8 +98,9 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="scroll-mt-26 relative overflow-hidden bg-[#F6F5F0] pt-0"
+      className="scroll-mt-26 relative overflow-hidden bg-[#F6F5F0] pt-16"
     >
+      <div className="relative z-10 flex flex-col mx-auto  max-w-8xl px-4 sm:px-5 lg:px-10 ">
       <div className="absolute inset-x-0 top-0 h-32 bg-linear-to-b from-[#F6F5F0] to-transparent" />
 
       {/* HEADING */}
@@ -110,14 +111,14 @@ const Services = () => {
       </div>
 
       {/* DESKTOP GRID */}
-      <div className="relative z-10 mx-auto mt-12 hidden items-stretch gap-6 px-4 md:px-6 xl:grid xl:grid-cols-5">
+      <div className="relative z-10 mx-auto mt-12 hidden items-stretch gap-6 px-4 md:px-0 xl:grid xl:grid-cols-5">
         {services.map((s, i) => (
           <ServicesCard key={i} {...s} />
         ))}
       </div>
 
       {/* MOBILE SLIDER */}
-      <div className="relative z-10 mt-10 px-4 md:px-6 xl:hidden">
+      <div className="relative z-10 mt-10  xl:hidden">
         <Swiper
           modules={[Autoplay, Pagination]}
           spaceBetween={18}
@@ -138,6 +139,7 @@ const Services = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+      </div>
       </div>
     </section>
   );

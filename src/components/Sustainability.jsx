@@ -7,10 +7,11 @@ import { Pagination } from "swiper/modules";
 
 const Sustainability = () => {
   return (
-    <section className="relative overflow-hidden bg-[#F6F5F0] py-14 sm:py-16 lg:py-20">
-      <div className="mx-3 flex flex-col rounded-[28px] bg-[#014631] px-2 pb-6 sm:mx-5 sm:px-4 md:mx-7 md:px-5 lg:mx-7 lg:px-6">
+    <section className=" relative overflow-hidden bg-[#F6F5F0] pt-16">
+      <div className="relative z-10 flex flex-col mx-auto  max-w-8xl px-4 sm:px-5 lg:px-10">
+      <div className=" flex flex-col rounded-[28px] bg-[#014631] px-2 pb-6  sm:px-4  md:px-5  lg:px-6">
       {/* HEADING */}
-      <div className="mx-auto max-w-7xl px-4 pt-4 text-center sm:px-6 lg:px-10">
+      <div className="mx-auto max-w-7xl px-4 pt-2 pb-2 text-center sm:px-6 lg:px-10">
         
 
         <h2
@@ -28,7 +29,7 @@ const Sustainability = () => {
 
         
       </div>
-      <div className=" mt-6 w-full max-w-8xl ">
+      <div className="mt-6 w-full max-w-8xl">
         {/* MOBILE SLIDER */}
         <div className="px-1 md:px-2 xl:hidden">
           <Swiper
@@ -43,7 +44,7 @@ const Sustainability = () => {
               768: { slidesPerView: 1.6 },
             }}
           >
-            <SwiperSlide className="flex justify-center pb-12">
+            <SwiperSlide className="flex justify-center pb-2">
               <SustainabilityCard
                 icon="🚚"
                 title="Lower Emissions"
@@ -78,7 +79,7 @@ const Sustainability = () => {
         </div>
 
         {/* DESKTOP / TABLET GRID */}
-        <div className="hidden gap-6 place-items-stretch xl:grid xl:grid-cols-4 xl:gap-4">
+        <div className="hidden relative gap-6 h-30 lg:h-50 place-items-stretch xl:grid xl:grid-cols-4 xl:gap-4">
           <SustainabilityCard
             icon="🚚"
             title="Lower Emissions"
@@ -103,6 +104,7 @@ const Sustainability = () => {
             description="Logistics designed with long-term sustainability at its core."
           />
         </div>
+      </div>
       </div>
       </div>
     </section>

@@ -19,7 +19,7 @@ const weightSurcharge = (kg) => {
 export default function GetQuote() {
   const [vehicle, setVehicle] = useState("Car");
   const [distance, setDistance] = useState(5);
-  const [weight, setWeight] = useState(10);
+  const [weight, setWeight] = useState();
   const [stops, setStops] = useState(1);
   const [email, setEmail] = useState("");
   const [showEmailBox, setShowEmailBox] = useState(false);
@@ -77,12 +77,12 @@ export default function GetQuote() {
   };
 
   return (
-    <div className="bg-[#F6F5F0]">
+    <div className="bg-[#F6F5F0] relative z-10 flex flex-col mx-auto  max-w-8xl px-4 sm:px-5 lg:px-10 pt-16">
       <Navbar />
 
       {/* Header */}
       <section  id="quote" className="pt-10 pb-0 px-8 scroll-mt-24">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="flex flex-col items-center mx-auto">
           <h2
             className="serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold  leading-tight"
             style={{ color: "var(--navy)" }}
@@ -96,10 +96,10 @@ export default function GetQuote() {
       </section>
 
       {/* Main */}
-      <section className="py-10 px-6">
-        <div className="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+      <section className="pt-10">
+        <div className=" mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           {/* Left — Form */}
-          <div className="bg-white h-[590px] lg:h-[621px] rounded-3xl p-4 pl-6 border border-black/8 shadow-sm">
+          <div className="bg-white h-[440px] lg:h-[525px] xl:h-[495px] rounded-3xl p-4 pl-6 border border-black/8 shadow-sm">
             <h2
               className="font-bold text-lg mb-6"
               style={{ color: "var(--navy)" }}
@@ -144,12 +144,13 @@ export default function GetQuote() {
                 >
                   Parcel Weight (kg)
                 </label>
-                <div className="grid grid-cols-4 gap-2">
+                <div className="flex items-center justify-between gap-6">
+                  <div className="w-2/3 lg:w-1/2 grid grid-cols-4 gap-1">
                   {[5, 15, 30, 50].map((w) => (
                     <button
                       key={w}
                       onClick={() => setWeight(w)}
-                      className="py-2.5 rounded-xl text-sm font-semibold border-2 transition-all"
+                      className="py-2.5 px-auto w-12 lg:w-18 rounded-xl text-sm font-semibold border-2 transition-all"
                       style={{
                         background:
                           weight === w ? "var(--yellow)" : "transparent",
@@ -168,16 +169,18 @@ export default function GetQuote() {
                   type="number"
                   value={weight}
                   onChange={(e) => setWeight(Number(e.target.value) || 0)}
-                  placeholder="Or enter custom weight"
-                  className="w-full mt-3 px-4 py-3 rounded-xl border text-sm outline-none focus:border-[#FFD600] transition-all"
+                  placeholder="custom weight"
+                  className="w-1/3 lg:w-1/2 px-auto py-3 rounded-xl border text-xs lg:text-sm outline-none focus:border-[#FFD600] transition-all"
                   style={{
                     borderColor: "rgba(10,31,68,0.15)",
                     color: "var(--navy)",
                   }}
                 />
+                </div>
               </div>
 
-              {/* Distance */}
+              {/* Distance and Additional Stops */}
+              <div className="flex justify-between">
               <div>
                 <label
                   className="text-sm font-bold lg:my-2 block"
@@ -218,7 +221,7 @@ export default function GetQuote() {
                 </div>
               </div>
 
-              {/* Additional Stops */}
+              
               <div>
                 <label
                   className="text-sm font-bold mb-2 lg:my-2 block"
@@ -258,6 +261,8 @@ export default function GetQuote() {
                   </span>
                 </div>
               </div>
+            </div>
+
               {/* Pickup & Dropoff Time */}
               <div className="grid grid-cols-2 gap-4">
                 <div>
@@ -331,7 +336,7 @@ export default function GetQuote() {
           </div>
 
           {/* Right — Estimated Bill */}
-          <div className="flex flex-col h-[700px] lg:h-[672px] gap-5 sticky top-24 bg-[#F6F5F0] ">
+          <div className="flex flex-col justify-between h-[600px] lg:h-[535px]  gap-5 sticky top-24 bg-[#F6F5F0] ">
             {/* Bill Card */}
             <div className="rounded-3xl overflow-hidden border border-black/8 shadow-sm">
               {/* Top */}
@@ -357,7 +362,7 @@ export default function GetQuote() {
               </div>
 
               {/* Breakdown */}
-              <div className="bg-white px-8 py-5">
+              <div className="bg-white grid grid-cols-2 gap-6 px-8 py-0">
                 {breakdown.map((item, i) => (
                   <div
                     key={i}
@@ -412,7 +417,7 @@ export default function GetQuote() {
             {/* Vehicle info */}
             <div className="bg-white rounded-2xl p-3 border border-black/8">
               <p
-                className="text-xs font-bold uppercase tracking-widest mb-4"
+                className="text-xs font-bold uppercase tracking-widest"
                 style={{ color: "var(--slate)" }}
               >
                 Selected Vehicle

@@ -2,8 +2,8 @@ import React from "react";
 import news from '../assets/news.png'
 const Blog = () => {
   return (
-    <section id="blog" className="bg-[#F5F3EE]  pt-8 pb-16 sm:pt-12 sm:pb-24 lg:pt-16 lg:pb-28">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="blog" className="scroll-mt-14 relative overflow-hidden bg-[#F6F5F0] pt-16">
+      <div className="relative z-10 flex flex-col mx-auto  max-w-8xl px-4 sm:px-5 lg:px-10">
         <div className="text-center">
           <p className="inline-block text-sm sm:text-xl text-amber-300 bg-[#0A1F44] tracking-[0.03em] mt-4 px-4 sm:px-5 py-2 rounded-md font-bold uppercase
         ">
@@ -17,15 +17,15 @@ const Blog = () => {
           </p>
         </div>
 
-        <div className="mt-6 flex justify-center md:mt-10">
-          <div className="max-w-4xl overflow-hidden rounded-2xl bg-white shadow-xl transition-all duration-300 hover:translate-y-2 sm:rounded-3xl">
+        <div className="mt-6   md:mt-10">
+          <div className=" overflow-hidden rounded-2xl bg-white lg:flex transition-all duration-300 hover:-translate-y-2 sm:rounded-3xl">
             <img
               src={news}
               alt="Blog"
-              className="w-full h-[250px] sm:h-[350px] lg:h-[500px] object-cover object-center"/>
+              className="w-full h-[250px] sm:h-[350px] lg:h-[400px] object-center"/>
 
-            <div className="p-5 sm:p-8">
-              <span className="bg-[#0A1F44] text-yellow-400 px-4 py-2 rounded-lg text-sm font-semibold uppercase tracking-wider">
+            <div className="p-5 sm:p-8 flex flex-col justify-between">
+              <span className="bg-[#0A1F44] w-fit text-yellow-400 px-4 py-2 rounded-lg text-sm font-semibold uppercase tracking-wider">
                 News
               </span>
               <h3 className="mt-6 text-2xl font-bold leading-tight text-[#0A1F44] sm:text-3xl">

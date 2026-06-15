@@ -8,9 +8,9 @@ const ContactForm = () => {
   return (
     <section
       id="contact-form"
-      className="bg-[#F5F1E6] py-4 pt-10 sm:py-24 sm:pb-8"
+      className="bg-[#F5F1E6] relative overflow-hidden pt-16"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+      <div className="relative z-10 flex flex-col mx-auto  max-w-8xl px-4 sm:px-5 lg:px-10">
         <div className="text-center">
           <p className="inline-block text-sm sm:text-xl text-amber-300 bg-[#0A1F44] tracking-[0.03em] mt-4 px-4 sm:px-5 py-2 rounded-md font-bold uppercase
         ">
@@ -22,7 +22,7 @@ const ContactForm = () => {
 
           
         </div>
-        <div className="mx-auto mt-10 grid max-w-7xl grid-cols-1 gap-8 px-5 py-6 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:py-10">
+        <div className="mx-auto mt-2 grid w-full grid-cols-1 gap-8  py-6 lg:grid-cols-2 lg:py-10">
           <article className="rounded-3xl h-[505px] md:h-[420px] lg:h-[520px] bg-white/90 p-6 shadow-sm ring-1 ring-black/5 sm:p-8 lg:sticky lg:top-6">
             <div className="flex items-center gap-3">
               <a href="https://maps.google.com" target="_blank" rel="noreferrer" className="shrink-0">
