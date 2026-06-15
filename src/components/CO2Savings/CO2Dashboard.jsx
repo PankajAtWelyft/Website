@@ -45,7 +45,7 @@ export default function CO2Dashboard() {
     <section
       id="sustainability"
       className="scroll-mt-24">
-    <div className=" w-full bg-[#F6F5F0] rounded-2xl shadow-sm  p-4 sm:p-6 md:p-8">
+    <div className=" w-full bg-[#F6F5F0] rounded-2xl shadow-sm lg:pt-16 p-4 sm:p-6 md:p-8">
       <ChartHeader />
 
       <div className="w-full px-1 sm:px-2 lg:px-0">

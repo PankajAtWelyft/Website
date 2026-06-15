@@ -23,7 +23,7 @@ const ContactForm = () => {
           
         </div>
         <div className="mx-auto mt-10 grid max-w-7xl grid-cols-1 gap-8 px-5 py-6 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:py-10">
-          <article className="rounded-3xl h-[520px] sm:h-[520px] bg-white/90 p-6 shadow-sm ring-1 ring-black/5 sm:p-8 lg:sticky lg:top-6">
+          <article className="rounded-3xl h-[480px] md:h-[420px] lg:h-[520px] bg-white/90 p-6 shadow-sm ring-1 ring-black/5 sm:p-8 lg:sticky lg:top-6">
             <div className="flex items-center gap-3">
               <a href="https://maps.google.com" target="_blank" rel="noreferrer" className="shrink-0">
                 <FaMapMarkerAlt className="text-3xl text-yellow-500 transition-all duration-300 hover:scale-110 hover:text-red-500" />
@@ -94,7 +94,7 @@ const ContactForm = () => {
           </article>
 
           <form
-            className="rounded-3xl h-[450px] sm:h-[520px] bg-white/90 p-6 shadow-sm ring-1 ring-black/5 sm:p-8"
+            className="rounded-3xl h-[450px] md:h-[520px] bg-white/90 p-3 shadow-sm ring-1 ring-black/5 "
             onSubmit={async (e) => {
               e.preventDefault();
 
@@ -121,30 +121,62 @@ const ContactForm = () => {
               setLoading(false);
             }}
           >
-            <div className="grid gap-5 sm:gap-6">
-              <input
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                required
-                className="w-full rounded-xl border border-gray-300 bg-white p-4 text-base text-gray-900 outline-none transition focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 sm:text-lg"
-              />
+            <div className="grid gap-2 lg:gap-3 ">
+              <div className="grid gap-1">
+                <label htmlFor="name" className="text-sm font-semibold text-gray-700 sm:text-base">
+                  Name <span className="text-red-500">*</span>
+                </label>
+                <input
+                  id="name"
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                  className="w-full rounded-xl border border-gray-300 bg-white p-1 text-base text-gray-900 outline-none transition focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 sm:text-lg"
+                />
+              </div>
 
-              <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                required
-                className="w-full rounded-xl border border-gray-300 bg-white p-4 text-base text-gray-900 outline-none transition focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 sm:text-lg"
-              />
+              <div className="grid gap-1">
+                <label htmlFor="email" className="text-sm font-semibold text-gray-700 sm:text-base">
+                  Email <span className="text-red-500">*</span>
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                  className="w-full rounded-xl border border-gray-300 bg-white p-1 text-base text-gray-900 outline-none transition focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 sm:text-lg"
+                />
+              </div>
 
-              <textarea
-                name="message"
-                placeholder="Your Message"
-                rows="6"
-                required
-                className="w-full rounded-xl border border-gray-300 bg-white p-4 text-base text-gray-900 outline-none transition focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 sm:text-lg"
-              ></textarea>
+              <div className="grid gap-1">
+                <label htmlFor="phone" className="text-sm font-semibold text-gray-700 sm:text-base">
+                  Phone Number <span className="text-red-500">*</span>
+                </label>
+                <input
+                  id="phone"
+                  type="tel"
+                  name="phone"
+                  placeholder="Your Phone Number"
+                  required
+                  className="w-full rounded-xl border border-gray-300 bg-white p-1 text-base text-gray-900 outline-none transition focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 sm:text-lg"
+                />
+              </div>
+
+              <div className="grid gap-1">
+                <label htmlFor="message" className="text-sm font-semibold text-gray-700 sm:text-base">
+                  Message <span className="text-red-500">*</span>
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Your Message"
+                  rows="5"
+                  required
+                  className="w-full rounded-xl border border-gray-300 bg-white p-1 text-base text-gray-900 outline-none transition focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 sm:text-lg"
+                ></textarea>
+              </div>
 
               <button
                 type="submit"
