@@ -12,7 +12,7 @@ const servicesData = {
     features: [
       { title: 'B2B & bulk delivery runs', desc: 'Scheduled, SLA-bound, enterprise-ready capacity' },
       { title: 'Real-time GPS tracking', desc: 'Know exactly where your cargo is live' },
-      { title: 'Electronic Proof of Delivery (ePOD)', desc: 'Digital signatures + photos, auto-synced' },
+      { title: 'Electronic Proof of Delivery', desc: 'Digital signatures + photos, auto-synced' },
       { title: 'Auto-invoicing', desc: 'No more billing delays or disputed PODs' },
       { title: 'Live CO₂ ledger per booking', desc: 'Scope-3 evidence your procurement team will love' },
       { title: 'Enterprise dashboard', desc: 'SLA enforcement, capacity visibility, full audit trail' },
@@ -30,7 +30,7 @@ const servicesData = {
     features: [
       { title: 'Last-mile & multi-stop delivery', desc: 'Optimised routes, fewer failed attempts' },
       { title: 'AI route optimisation', desc: '12–20% cost reduction vs manual routing' },
-      { title: 'Customer SMS/email notifications', desc: 'Delivery ETAs auto-sent — fewer missed deliveries' },
+      { title: 'SMS/email notifications', desc: 'Delivery ETAs auto-sent — fewer missed deliveries' },
       { title: 'ePOD with photos & signatures', desc: 'Dispute resolution made instant' },
       { title: 'Live order tracking for customers', desc: 'End-to-end visibility for you and your buyers' },
       { title: 'Auto-billing & reporting', desc: 'Clean invoicing tied directly to delivery completion' },
@@ -64,7 +64,7 @@ const servicesData = {
     tagline: 'Stop managing your fleet on WhatsApp.',
     desc: 'Built for fleet operators, 3PLs, and enterprise shippers who are done with spreadsheets, missed PODs, and late invoices. The Welyft OS is one unified intelligence layer — fleet management, dispatch automation, route optimisation, ePOD, procurement, and a live CO₂ ledger — all in a single dashboard. It\'s the software layer that turns fragmented logistics capacity into an organised, profitable operation.',
     features: [
-      { title: 'GPS telematics & real-time tracking', desc: 'Full fleet visibility at all times' },
+      { title: 'Real-time tracking', desc: 'Full fleet visibility at all times' },
       { title: 'AI route sequencing', desc: '12–20% cost savings guaranteed' },
       { title: 'Driver app with KPI dashboards', desc: 'Attendance, performance, all in one place' },
       { title: 'ePOD with photos/signatures', desc: 'Auto-synced, dispute-proof' },
