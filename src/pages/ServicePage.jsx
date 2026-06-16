@@ -314,7 +314,7 @@ export default function ServicePage() {
 
             {/* Features */}
             <div
-              className="bg-white rounded-3xl p-8 border border-black/6 min-h-[420px] flex flex-col"
+              className="bg-white rounded-3xl p-8 border border-black/6 min-h-[500px] flex flex-col"
               style={{ boxShadow: "0 4px 24px rgba(0,0,0,0.06)" }}
             >
               <h2 className="text-2xl font-black text-[#0A1F44] mb-6">
