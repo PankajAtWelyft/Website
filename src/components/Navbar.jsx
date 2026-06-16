@@ -124,7 +124,7 @@ const Navbar = () => {
           <span className="w-0 h-0.5 bg-yellow-400 mt-1 transition-all duration-300 group-hover:w-full" />
         </Link>
 
-        <a href="/#contact" className="group flex flex-col items-center">
+        <a href="/#contact-form" className="group flex flex-col items-center">
           Contact Us
           <span className="w-0 h-0.5 bg-yellow-400 mt-1 transition-all duration-300 group-hover:w-full" />
         </a>
