@@ -8,7 +8,7 @@ const ContactForm = () => {
   return (
     <section
       id="contact-form"
-      className="bg-[#F5F1E6] relative overflow-hidden pt-16"
+      className="bg-[#F6F5F0] relative overflow-hidden pt-16"
     >
       <div className="relative z-10 flex flex-col mx-auto  max-w-8xl px-4 sm:px-5 lg:px-10">
         <div className="text-center">

@@ -99,7 +99,7 @@ const About = () => {
           <div className="mt-8  sm:mt-10 lg:mt-12">
             <div
               className={`relative flex h-[400px] flex-col justify-start overflow-hidden rounded-4xl bg-linear-to-br p-6 pt-8 transition-opacity duration-300  sm:p-8  lg:p-10 ${card.bg} ${animating ? "opacity-0" : "opacity-100"}`}
-              style={{ boxShadow: "0 20px 60px rgba(0,0,0,0.12)" }}>
+              style={{ boxShadow: "0 20px 10px rgba(0,0,0,0.12)" }}>
 
               {/* Decorative circle */}
               <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full opacity-10"
@@ -156,7 +156,7 @@ const About = () => {
           {/* RIGHT — VIDEO ONLY */}
           <div className="mt-8 sm:mt-10 lg:mt-12">
             <div className="relative flex h-[400px] flex-col justify-center overflow-hidden rounded-4xl p-4  sm:p-6  lg:p-6"
-              style={{ background: "#0A1F44", boxShadow: "0 20px 60px rgba(10,31,68,0.18)" }}>
+              style={{ background: "#0A1F44", boxShadow: "0 20px 10px rgba(10,31,68,0.18)" }}>
               <div className="p-2 sm:p-3 lg:p-4 mb-3">
                 <h4 className="text-white text-xl font-black leading-tight tracking-tight mb-2">
                   Transforming Urban Logistics Across Singapore
