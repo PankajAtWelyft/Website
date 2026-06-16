@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/welyft_logo.png";
+import logo from "../assets/footer_logo.jpeg";
 import { Link } from "react-router-dom";
 import { FaInstagram, FaLinkedinIn, FaFacebook } from "react-icons/fa";
 
@@ -15,7 +15,7 @@ const Footer = () => {
             className="w-[150px] h-auto -ml-2 object-contain"
           />
 
-          <div className="mt-3">
+          <div>
             <p className="text-sm text-gray-300 leading-6">Smart logistics.</p>
 
             <p className="text-sm text-gray-300 leading-6">

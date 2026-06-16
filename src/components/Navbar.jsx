@@ -130,7 +130,7 @@ const Navbar = () => {
         </a>
       </div>
 
-      <a href="#quote">
+      <a href="/#quote">
         <button className="hidden lg:block bg-yellow-400 font-bold cursor-pointer px-7 py-3 rounded-2xl shadow-lg shadow-yellow-400/50 mr-10 hover:shadow-yellow-300 transition-all duration-300">
           Get Quote
         </button>
@@ -191,7 +191,7 @@ const Navbar = () => {
             <a href="/#contact" onClick={() => setOpen(false)}>Contact Us</a>
           </div>
 
-          <a href="#quote">
+          <a href="/#quote">
             <button className="mt-6 bg-yellow-400 py-3 rounded-2xl text-lg font-bold shadow-lg w-full">
               Get Quote
             </button>

@@ -7,7 +7,7 @@ import { Pagination } from "swiper/modules";
 
 const Sustainability = () => {
   return (
-    <section className=" relative overflow-hidden bg-[#F6F5F0] pt-16">
+    <section  id="sustainability" className=" relative overflow-hidden bg-[#F6F5F0] pt-16">
       <div className="relative z-10 flex flex-col mx-auto  max-w-8xl px-4 sm:px-5 lg:px-10">
       <div className=" flex flex-col rounded-[28px]  bg-gradient-to-br from-[#0A1F44] to-[#163B7A] px-2 pb-6  sm:px-4  md:px-5  lg:px-6">
       {/* HEADING */}
