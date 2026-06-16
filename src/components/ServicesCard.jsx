@@ -16,13 +16,8 @@ const ServicesCard = ({
     <article className="group flex h-full min-h-[420px] flex-col rounded-[28px] border border-slate-200 bg-gradient-to-b from-[#0A1F44] to-[#14315F] p-6 shadow-[0_18px_45px_-25px_rgba(10,31,68,0.25)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_-18px_rgba(10,31,68,0.45)] sm:min-h-[450px] sm:p-7 lg:min-h-[500px]">
 
       {/* Top row: tag + icon */}
-      <div className="flex items-start justify-between">
-        <span className="rounded-md bg-blue-50 px-3 py-1 text-xs font-semibold text-[#0A1F44]">
-          {tag}
-        </span>
-        <div className="flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200 bg-white shadow-sm">
-          {Icon && <Icon className="h-5 w-5 text-[#0A1F44]" />}
-        </div>
+      <div className="rounded-md bg-blue-50 w-fit mb-1 px-3 py-1 text-xs font-semibold text-[#0A1F44]">
+        {tag}
       </div>
 
       {/* Title */}
