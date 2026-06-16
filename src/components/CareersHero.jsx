@@ -1,5 +1,5 @@
 import React from "react";
-import careerBg from "../assets/electric-vehicle-hero.png";
+import careerBg from "../assets/caree_page.png";
 
 const CareersHero = () => {
   return (
