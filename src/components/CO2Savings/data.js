@@ -18,7 +18,7 @@ const defaultPalette = {
   co2Emission: "#0a1f44",
   evDeliveries: "#014631",
   text: "#0A1F44",
-  pie: ["#014631", "#18345E"],
+  pie: ["#ffd600", "#0a1f44"],
 };
 
 const normalizeMonthlyData = (items = defaultMonthlyData) =>

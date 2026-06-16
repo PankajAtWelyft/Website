@@ -25,7 +25,7 @@ export default function DeliveriesReplaced({ data: dashboardData = DEFAULT_CO2_S
       {
         label: "Deliveries Replaced",
         data: deliveriesReplaced.monthly.map((d) => d.replaced),
-        backgroundColor: palette.evDeliveries,
+        backgroundColor: palette.co2Emission,
         borderRadius: 4,
         barPercentage: 0.8,
         categoryPercentage: 0.75,
@@ -49,7 +49,7 @@ export default function DeliveriesReplaced({ data: dashboardData = DEFAULT_CO2_S
       x: { grid: { display: false }, ticks: { color: palette.text, font: { size: 10 } } },
       y: {
         beginAtZero: true,
-        ticks: { color: palette.evDeliveries, font: { size: 10 } },
+        ticks: { color: palette.co2Emission, font: { size: 10 } },
         grid: { color: "#E5E7EB" },
       },
     },
@@ -77,7 +77,7 @@ export default function DeliveriesReplaced({ data: dashboardData = DEFAULT_CO2_S
   ];
 
   return (
-    <section className="w-full h-full rounded-2xl  bg-[#F6F5F0] p-4 shadow-sm sm:p-5 md:p-6 lg:p-8" style={{ borderColor: palette.evDeliveries }}>
+    <section className="w-full h-full rounded-2xl  bg-[#F6F5F0] p-4 shadow-sm sm:p-5 md:p-6 lg:p-8" style={{ borderColor: palette.co2Emission }}>
       <div className="text-center mb-6">
         <h2 className="text-lg sm:text-xl md:text-2xl font-bold" style={{ color: palette.text }}>
           Deliveries Replaced — Diesel to EV
@@ -94,11 +94,11 @@ export default function DeliveriesReplaced({ data: dashboardData = DEFAULT_CO2_S
             <div
               key={i}
               className="flex items-center h-15 sm:h-25 gap-3 border-2 rounded-2xl p-3 sm:p-4"
-              style={{ borderColor: `${palette.evDeliveries}` }}
+              style={{ borderColor: `${palette.co2Emission}` }}
             >
               <div className="w-8 h-8 sm:w-11 sm:h-11 rounded-full  flex items-center justify-center shrink-0"
-                style={{ background: `${palette.evDeliveries}33` }}>
-                <Icon className="w-5 h-5" style={{ color: palette.evDeliveries }} strokeWidth={2} />
+                style={{ background: `${palette.co2Emission}33` }}>
+                <Icon className="w-5 h-5" style={{ color: palette.co2Emission }} strokeWidth={2} />
               </div>
               <div className="min-w-0">
                 <div className="text-[9px] sm:text-xs leading-tight" style={{ color: palette.text }}>

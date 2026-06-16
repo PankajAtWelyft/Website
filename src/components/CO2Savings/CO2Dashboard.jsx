@@ -105,7 +105,7 @@ export default function CO2Dashboard() {
                 className={`h-3 rounded-full transition-all duration-300 ${
                   isActive ? "w-14 shadow-sm" : "w-3 opacity-35"
                 }`}
-                style={{ backgroundColor: dashboardData.palette.evDeliveries }}
+                style={{ backgroundColor: dashboardData.palette.co2Emission }}
               />
             );
           })}
