@@ -1,7 +1,10 @@
 import { useParams, Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-
+import b2c from "../assets/b2c.png";
+import c2c from "../assets/c2c.png";
+import platform from "../assets/platform.png";
+import rental from "../assets/rental.png";
 const servicesData = {
   b2b: {
     badge: "B2B",
@@ -48,8 +51,7 @@ const servicesData = {
   },
   b2c: {
     badge: "B2C",
-    image:
-      "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=1800&auto=format&fit=crop&q=80",
+    image: b2c,
     headline: "Last-Mile That Doesn't Drop the Ball",
     tagline: "Your brand, delivered right.",
     desc: "Your customer placed an order. Now the most visible part of your brand is a delivery van and a driver. Welyft handles B2C last-mile and e-commerce fulfilment with multi-stop route optimization, automated customer notifications, and proof of delivery — so you're not fielding \"where's my order?\" calls all day. On a 100% EV fleet, your sustainability claims aren't just words; they're backed by real emissions data per delivery.",
@@ -91,8 +93,7 @@ const servicesData = {
   },
   c2c: {
     badge: "C2C",
-    image:
-      "https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=1800&auto=format&fit=crop&q=80",
+    image:c2c,
     headline: "Ship It Green. Right Now.",
     tagline: "Parcel booking that's actually instant.",
     desc: "Need to send a parcel across town? Welyft's C2C app lets consumers and SMEs book instant green deliveries — no fleet, no contracts, no complexity. Book, track, get proof, done. Every booking is matched to our EV fleet, meaning your parcel moves without adding to Singapore's carbon footprint. And because we measure emissions at the point of every booking, you'll know exactly how much CO₂ you saved by choosing us over a diesel courier.",
@@ -134,8 +135,7 @@ const servicesData = {
   },
   platform: {
     badge: "Platform",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1800&auto=format&fit=crop&q=80",
+    image:platform,
     headline: "The Operating System Your Fleet Has Been Missing",
     tagline: "Stop managing your fleet on WhatsApp.",
     desc: "Built for fleet operators, 3PLs, and enterprise shippers who are done with spreadsheets, missed PODs, and late invoices. The Welyft OS is one unified intelligence layer — fleet management, dispatch automation, route optimisation, ePOD, procurement, and a live CO₂ ledger — all in a single dashboard. It's the software layer that turns fragmented logistics capacity into an organised, profitable operation.",
@@ -174,8 +174,7 @@ const servicesData = {
   },
   rental: {
     badge: "Rental",
-    image:
-      "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=1800&auto=format&fit=crop&q=80",
+    image:rental,
     headline: "Need a Van? We've Got You. Green.",
     tagline: "Half-day, full-day, or monthly — on your terms.",
     desc: "Whether you need a van for a one-time move or want an EV on-call for your growing team, Welyft offers flexible EV van rental. Half-day, full-day, and monthly hire options — all electric, all tracked, all with optional driver support. A smarter, greener alternative to maintaining your own fleet.",
@@ -249,6 +248,14 @@ export default function ServicePage() {
             src={service.image}
             alt={service.headline}
             className="w-full h-full object-cover"
+           style={{
+    objectPosition:
+      service.badge === "B2C" ? "center 30%" :
+      service.badge === "RENTAL" ? "center 25%" :
+      service.badge === "PLATFORM" ? "center 30%" :
+      service.badge === "C2C" ? "center 20%" :
+      "center center",
+  }}
           />
           {/* Dark overlay */}
           <div
