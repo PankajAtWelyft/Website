@@ -14,7 +14,7 @@ const CareersHero = () => {
       <div className="absolute inset-0 bg-[linear-gradient(rgba(5,18,35,0.82),rgba(5,18,35,0.72))]" />
 
       <div className="relative z-10 mx-auto max-w-6xl px-6 text-center">
-        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mt-8 leading-tight">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mt-8 leading-tight">
           Build the Future of
           <br />
           Sustainable Logistics
