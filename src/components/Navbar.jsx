@@ -37,7 +37,7 @@ const Navbar = () => {
       </div>
 
       {/* DESKTOP LINKS */}
-      <div className="hidden lg:flex font-bold mr-4 text-xl gap-6 items-center">
+      <div className="hidden xl:flex font-bold mr-4 text-xl gap-6 items-center">
         <Link to="/"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="group flex flex-col items-center">
@@ -131,20 +131,20 @@ const Navbar = () => {
       </div>
 
       <a href="/#quote">
-        <button className="hidden lg:block bg-yellow-400 font-bold cursor-pointer px-7 py-3 rounded-2xl shadow-lg shadow-yellow-400/50 mr-10 hover:shadow-yellow-300 transition-all duration-300">
+        <button className="hidden xl:block bg-yellow-400 font-bold cursor-pointer px-7 py-3 rounded-2xl shadow-base shadow-yellow-400/50 mr-10 hover:shadow-yellow-300 transition-all duration-300">
           Get Quote
         </button>
       </a>
 
       {/* MOBILE ICON */}
       <div onClick={() => setOpen(!open)}
-        className="lg:hidden text-2xl sm:text-3xl cursor-pointer text-[#021B44]">
+        className="xl:hidden text-2xl sm:text-3xl cursor-pointer text-[#021B44]">
         {open ? <FaTimes /> : <FaBars />}
       </div>
 
       {/* MOBILE MENU */}
       {open && (
-        <div className="fixed top-0 left-0 h-auto min-h-[60vh] w-full bg-white z-[999] px-8 py-6 lg:hidden flex flex-col animate-slideIn rounded-b-3xl shadow-xl overflow-y-auto">
+        <div className="fixed top-0 left-0 h-auto min-h-[60vh] w-full bg-white z-[999] px-8 py-6 xl:hidden flex flex-col animate-slideIn rounded-b-3xl shadow-xl overflow-y-auto">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <img src={logo} className="h-12 w-auto object-contain" alt="" />
