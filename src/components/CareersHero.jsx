@@ -4,17 +4,20 @@ import careerBg from "../assets/caree_page.png";
 const CareersHero = () => {
   return (
     <section
-     id="careers"
-     className="relative pt-20 flex min-h-screen sm:min-h-[85vh] items-center justify-center overflow-hidden bg-[#051223]">
+      id="careers"
+      className="relative pt-20 flex min-h-screen sm:min-h-[85vh] items-center justify-center overflow-hidden bg-[#051223]"
+    >
       <img
         src={careerBg}
         alt=""
-        className="absolute inset-0 h-full w-full object-cover object-center"
+        className=" absolute inset-0 h-full w-full
+    object-cover
+    object-center"
       />
       <div className="absolute inset-0 bg-[linear-gradient(rgba(5,18,35,0.82),rgba(5,18,35,0.72))]" />
 
       <div className="relative z-10 mx-auto max-w-6xl px-6 text-center">
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mt-8 leading-tight">
+        <h1 className="text-2xl sm:text-4xl lg:text-6xl font-bold text-white mt-6 leading-tight">
           Build the Future of
           <br />
           Sustainable Logistics
@@ -42,7 +45,6 @@ const CareersHero = () => {
         {/* Stats */}
 
         <div className="grid grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-6 mt-14 sm:mt-20">
-
           <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 sm:p-6 border border-white/10">
             <h2 className="text-4xl font-bold text-yellow-300">20+</h2>
             <p className="text-gray-300 mt-2">Team Members</p>
