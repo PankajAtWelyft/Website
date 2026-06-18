@@ -93,7 +93,7 @@ const servicesData = {
   },
   c2c: {
     badge: "C2C",
-    image:c2c,
+    image: c2c,
     headline: "Ship It Green, Right Now",
     tagline: "Parcel booking that's actually instant",
     desc: "Need to send a parcel across town? Welyft's C2C app lets consumers and SMEs book instant green deliveries — no fleet, no contracts, no complexity. Book, track, get proof, done. Every booking is matched to our EV fleet, meaning your parcel moves without adding to Singapore's carbon footprint. And because we measure emissions at the point of every booking, you'll know exactly how much CO₂ you saved by choosing us over a diesel courier.",
@@ -135,7 +135,7 @@ const servicesData = {
   },
   platform: {
     badge: "Platform",
-    image:platform,
+    image: platform,
     headline: "The Operating System Your Fleet Has Been Missing",
     tagline: "Stop managing your fleet on WhatsApp",
     desc: "Built for fleet operators, 3PLs, and enterprise shippers who are done with spreadsheets, missed PODs, and late invoices. The Welyft OS is one unified intelligence layer — fleet management, dispatch automation, route optimisation, ePOD, procurement, and a live CO₂ ledger — all in a single dashboard. It's the software layer that turns fragmented logistics capacity into an organised, profitable operation.",
@@ -174,7 +174,7 @@ const servicesData = {
   },
   rental: {
     badge: "Rental",
-    image:rental,
+    image: rental,
     headline: "Need a Van? We've Got You Green",
     tagline: "Half-day, full-day, or monthly — on your terms",
     desc: "Whether you need a van for a one-time move or want an EV on-call for your growing team, Welyft offers flexible EV van rental. Half-day, full-day, and monthly hire options — all electric, all tracked, all with optional driver support. A smarter, greener alternative to maintaining your own fleet.",
@@ -248,14 +248,18 @@ export default function ServicePage() {
             src={service.image}
             alt={service.headline}
             className="w-full h-full object-cover"
-           style={{
-    objectPosition:
-      service.badge === "B2C" ? "center 30%" :
-      service.badge === "RENTAL" ? "center 25%" :
-      service.badge === "PLATFORM" ? "center 30%" :
-      service.badge === "C2C" ? "center 20%" :
-      "center center",
-  }}
+            style={{
+              objectPosition:
+                service.badge === "B2C"
+                  ? "center 30%"
+                  : service.badge === "RENTAL"
+                    ? "center 25%"
+                    : service.badge === "PLATFORM"
+                      ? "center 30%"
+                      : service.badge === "C2C"
+                        ? "center 20%"
+                        : "center center",
+            }}
           />
           {/* Dark overlay */}
           <div
@@ -302,13 +306,15 @@ export default function ServicePage() {
       </section>
 
       {/* CONTENT */}
+
+      {/* CONTENT */}
+      {/* CONTENT */}
       <section className="py-16 px-6 lg:px-10">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10">
-          {/* Left — Description + Features */}
-          <div className="lg:col-span-2 flex flex-col gap-8">
-            {/* Description */}
+        <div className="max-w-5xl mx-auto">
+          {/* TOP ROW — About + Who It's For */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mb-8">
             <div
-              className="bg-white rounded-3xl p-8 border border-black/6"
+              className="lg:col-span-2 bg-white rounded-3xl p-8 border border-black/6 flex flex-col justify-center"
               style={{ boxShadow: "0 4px 24px rgba(0,0,0,0.06)" }}
             >
               <h2 className="text-2xl font-black text-[#0A1F44] mb-4">
@@ -319,9 +325,34 @@ export default function ServicePage() {
               </p>
             </div>
 
-            {/* Features */}
             <div
-              className="bg-white rounded-3xl p-8 border border-black/6 min-h-[500px] flex flex-col"
+              className="bg-white rounded-3xl p-7 border border-black/6 flex flex-col justify-center"
+              style={{ boxShadow: "0 4px 24px rgba(0,0,0,0.06)" }}
+            >
+              <h3 className="text-lg font-black text-[#0A1F44] mb-4">
+                Who It's For
+              </h3>
+              <div className="flex flex-col gap-3">
+                {service.customers.map((c, i) => (
+                  <div
+                    key={i}
+                    className="flex items-center gap-2 text-sm text-gray-600"
+                  >
+                    <span
+                      className="w-2 h-2 rounded-full shrink-0"
+                      style={{ background: service.color }}
+                    />
+                    {c}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* BOTTOM ROW — What's Included + CTA/Other Services */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+            <div
+              className="lg:col-span-2 bg-white rounded-3xl p-8 border border-black/6"
               style={{ boxShadow: "0 4px 24px rgba(0,0,0,0.06)" }}
             >
               <h2 className="text-2xl font-black text-[#0A1F44] mb-6">
@@ -352,88 +383,61 @@ export default function ServicePage() {
                 ))}
               </div>
             </div>
-          </div>
 
-          {/* Right — Sidebar */}
-          <div className="flex flex-col h-full gap-6">
-            {/* Who it's for */}
-            <div
-              className="bg-white rounded-3xl p-7 border border-black/6"
-              style={{ boxShadow: "0 4px 24px rgba(0,0,0,0.06)" }}
-            >
-              <h3 className="text-lg font-black text-[#0A1F44] mb-4">
-                Who It's For
-              </h3>
-              <div className="flex flex-col gap-3">
-                {service.customers.map((c, i) => (
-                  <div
-                    key={i}
-                    className="flex items-center gap-2 text-sm text-gray-600"
-                  >
-                    <span
-                      className="w-2 h-2 rounded-full shrink-0"
-                      style={{ background: service.color }}
-                    />
-                    {c}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* CTA Card */}
-            <div
-              className="rounded-3xl p-6 text-center mt-auto"
-              style={{ background: service.color }}
-            >
-              <h3 className="text-lg font-black text-white mb-1.5">
-                Ready to get started?
-              </h3>
-              <p
-                className="text-sm mb-4"
-                style={{ color: "rgba(255,255,255,0.7)" }}
+            <div className="flex flex-col gap-6">
+              <div
+                className="rounded-3xl p-6 text-center"
+                style={{ background: service.color }}
               >
-                Talk to our team today.
-              </p>
-              <a href="/#contact">
-                <button
-                  className="px-6 py-2 rounded-xl font-black text-sm transition-all hover:-translate-y-0.5"
-                  style={{ background: "#FFD600", color: "#0A1F44" }}
+                <h3 className="text-lg font-black text-white mb-1.5">
+                  Ready to get started?
+                </h3>
+                <p
+                  className="text-sm mb-4"
+                  style={{ color: "rgba(255,255,255,0.7)" }}
                 >
-                  {service.cta} →
-                </button>
-              </a>
-            </div>
+                  Talk to our team today.
+                </p>
+                <a href="/#contact">
+                  <button
+                    className="px-6 py-2 rounded-xl font-black text-sm transition-all hover:-translate-y-0.5"
+                    style={{ background: "#FFD600", color: "#0A1F44" }}
+                  >
+                    {service.cta} →
+                  </button>
+                </a>
+              </div>
 
-            {/* Other services */}
-            <div
-              className="bg-white rounded-3xl p-7 border border-black/6"
-              style={{ boxShadow: "0 4px 24px rgba(0,0,0,0.06)" }}
-            >
-              <h3 className="text-sm font-black uppercase tracking-widest text-gray-400 mb-4">
-                Other Services
-              </h3>
-              <div className="flex flex-col gap-1">
-                {Object.entries(servicesData)
-                  .filter(([key]) => key !== slug)
-                  .map(([key, s]) => (
-                    <Link
-                      key={key}
-                      to={`/services/${key}`}
-                      className="flex items-center gap-2 text-sm font-semibold text-[#0A1F44] hover:text-yellow-600 transition-colors py-2 border-b border-gray-50 last:border-0"
-                    >
-                      <span
-                        className="text-[9px] font-black px-2 py-0.5 rounded-full shrink-0"
-                        style={{ background: "#0A1F44", color: "#FFD600" }}
+              <div
+                className="bg-white rounded-3xl p-7 border border-black/6 flex-1"
+                style={{ boxShadow: "0 4px 24px rgba(0,0,0,0.06)" }}
+              >
+                <h3 className="text-sm font-black uppercase tracking-widest text-gray-400 mb-4">
+                  Other Services
+                </h3>
+                <div className="flex flex-col gap-1">
+                  {Object.entries(servicesData)
+                    .filter(([key]) => key !== slug)
+                    .map(([key, s]) => (
+                      <Link
+                        key={key}
+                        to={`/services/${key}`}
+                        className="flex items-center gap-2 text-sm font-semibold text-[#0A1F44] hover:text-yellow-600 transition-colors py-2 border-b border-gray-50 last:border-0"
                       >
-                        {s.badge}
-                      </span>
-                      <span className="truncate">
-                        {s.badge === "Platform"
-                          ? "Welyft OS"
-                          : s.headline.split(" ").slice(0, 2).join(" ")}
-                      </span>
-                    </Link>
-                  ))}
+                        <span
+                          className="text-[9px] font-black px-2 py-0.5 rounded-full shrink-0"
+                          style={{ background: "#0A1F44", color: "#FFD600" }}
+                        >
+                          {s.badge}
+                        </span>
+                        <span className="truncate">
+                          {s.badge === "Platform"
+                            ? "Welyft OS"
+                            : s.headline.split(" ").slice(0, 2).join(" ")}
+                        </span>
+                      </Link>
+                    ))}
+                </div>
               </div>
             </div>
           </div>
