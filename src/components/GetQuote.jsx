@@ -99,7 +99,7 @@ export default function GetQuote() {
       <section className="pt-10">
         <div className=" mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           {/* Left — Form */}
-          <div className="bg-white h-[440px] lg:h-[525px] xl:h-[495px] rounded-3xl p-4 pl-6 border border-black/8 shadow-sm">
+          <div className="bg-white h-[490px] sm:h-[520px] lg:h-[550px] xl:h-[495px] rounded-3xl p-4 pl-6 border border-black/8 shadow-sm">
             <h2
               className="font-bold text-lg mb-6"
               style={{ color: "var(--navy)" }}
@@ -144,13 +144,13 @@ export default function GetQuote() {
                 >
                   Parcel Weight (kg)
                 </label>
-                <div className="flex items-center justify-between gap-6">
-                  <div className="w-2/3 lg:w-1/2 grid grid-cols-4 gap-1">
+                <div className="flex flex-col xl:flex-row gap-2 sm:gap-6 lg:gap-4 xl:gap-8">
+                  <div className="w-1/2 grid grid-cols-4 gap-8 sm:gap-14 lg:gap-20 xl:gap-8">
                   {[5, 15, 30, 50].map((w) => (
                     <button
                       key={w}
                       onClick={() => setWeight(w)}
-                      className="py-2.5 px-auto w-12 lg:w-18 rounded-xl text-sm font-semibold border-2 transition-all"
+                      className="py-2.5 w-12 lg:w-18 rounded-xl text-sm font-semibold border-2 transition-all"
                       style={{
                         background:
                           weight === w ? "var(--yellow)" : "transparent",
@@ -170,7 +170,7 @@ export default function GetQuote() {
                   value={weight}
                   onChange={(e) => setWeight(Number(e.target.value) || 0)}
                   placeholder="custom weight"
-                  className="w-1/3 lg:w-1/2 px-auto py-3 rounded-xl border text-xs lg:text-sm outline-none focus:border-[#FFD600] transition-all"
+                  className=" w-1/2 py-3   px-4 rounded-xl  text-xs lg:text-sm border-2 outline-none focus:border-[#FFD600] transition-all"
                   style={{
                     borderColor: "rgba(10,31,68,0.15)",
                     color: "var(--navy)",
@@ -180,15 +180,15 @@ export default function GetQuote() {
               </div>
 
               {/* Distance and Additional Stops */}
-              <div className="flex justify-between">
-              <div>
+              <div className="flex justify-between gap-16 sm:gap-8 lg:gap-8">
+              <div className="w-1/2">
                 <label
                   className="text-sm font-bold lg:my-2 block"
                   style={{ color: "var(--navy)" }}
                 >
                   Distance (km)
                 </label>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center mt-1 ">
                   <input
                     type="number"
                     min="1"
@@ -203,7 +203,7 @@ export default function GetQuote() {
                       setDistance(parseInt(val.replace(/^0+/, "")) || 0);
                     }}
                     placeholder="Enter distance"
-                    className="w-full px-4 py-3 rounded-xl border text-sm outline-none focus:border-[#FFD600] transition-all"
+                    className="w-fit px-4 py-3 rounded-xl border-2 text-sm outline-none focus:border-[#FFD600] transition-all"
                     style={{
                       borderColor: "rgba(10,31,68,0.15)",
                       color: "var(--navy)",
@@ -222,7 +222,7 @@ export default function GetQuote() {
               </div>
 
               
-              <div>
+              <div className="w-1/2">
                 <label
                   className="text-sm font-bold mb-2 lg:my-2 block"
                   style={{ color: "var(--navy)" }}
@@ -267,7 +267,7 @@ export default function GetQuote() {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label
-                    className="text-sm font-bold lg:my-2 block"
+                    className="text-sm font-bold px-1 lg:my-2 block"
                     style={{ color: "var(--navy)" }}
                   >
                     Pick Up Time
@@ -275,7 +275,7 @@ export default function GetQuote() {
                   <select
                     value={pickupTime}
                     onChange={(e) => setPickupTime(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl border text-sm outline-none focus:border-[#FFD600] transition-all"
+                    className="w-full px-4 py-3 mt-2 rounded-xl border text-sm outline-none focus:border-[#FFD600] transition-all"
                     style={{
                       borderColor: "rgba(10,31,68,0.15)",
                       color: "var(--navy)",
@@ -300,7 +300,7 @@ export default function GetQuote() {
                 </div>
                 <div>
                   <label
-                    className="text-sm font-bold lg:my-2 block"
+                    className="text-sm px-2 font-bold lg:my-2 block"
                     style={{ color: "var(--navy)" }}
                   >
                     Drop Off Time
@@ -308,7 +308,7 @@ export default function GetQuote() {
                   <select
                     value={dropoffTime}
                     onChange={(e) => setDropoffTime(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl border text-sm outline-none focus:border-[#FFD600] transition-all"
+                    className="w-full px-4 py-3 mt-2 rounded-xl border text-sm outline-none focus:border-[#FFD600] transition-all"
                     style={{
                       borderColor: "rgba(10,31,68,0.15)",
                       color: "var(--navy)",

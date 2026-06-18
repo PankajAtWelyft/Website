@@ -131,12 +131,7 @@ const About = () => {
 
             {/* DOTS + ARROWS */}
             <div className="mt-5 flex flex-wrap justify-center items-center gap-4 px-2">
-              <button
-                onClick={() => handleDot((active - 1 + cards.length) % cards.length)}
-                className="w-9 h-9 rounded-full border-2 flex items-center justify-center transition-all hover:bg-[#0A1F44] hover:border-[#0A1F44] hover:text-white font-bold"
-                style={{ borderColor: "rgba(10,31,68,0.2)"}}>
-                ←
-              </button>
+              
               <div className="flex items-center gap-2">
                 {cards.map((_, i) => (
                   <button key={i} onClick={() => handleDot(i)}
@@ -144,12 +139,7 @@ const About = () => {
                   />
                 ))}
               </div>
-              <button
-                onClick={() => handleDot((active + 1) % cards.length)}
-                className="w-9 h-9 rounded-full border-2 flex items-center justify-center transition-all hover:bg-[#0A1F44] hover:border-[#0A1F44] hover:text-white font-bold"
-                style={{ borderColor: "rgba(10,31,68,0.2)"}}>
-                →
-              </button>
+              
             </div>
           </div>
 

@@ -23,7 +23,7 @@ const ContactForm = () => {
           
         </div>
         <div className="mx-auto mt-2 grid w-full grid-cols-1 gap-8  py-6 lg:grid-cols-2 lg:py-10">
-          <article className="rounded-3xl h-[505px] md:h-[420px] lg:h-[520px] bg-white/90 p-6 shadow-sm ring-1 ring-black/5 sm:p-8 lg:sticky lg:top-6">
+          <article className="rounded-3xl h-[505px] md:h-[420px] lg:h-[500px] bg-white/90 p-6 shadow-sm ring-1 ring-black/5 sm:p-8 lg:sticky lg:top-6">
             <div className="flex items-center gap-3">
               <a href="https://maps.google.com" target="_blank" rel="noreferrer" className="shrink-0">
                 <FaMapMarkerAlt className="text-3xl text-yellow-500 transition-all duration-300 hover:scale-110 hover:text-red-500" />
@@ -94,7 +94,7 @@ const ContactForm = () => {
           </article>
 
           <form
-            className="rounded-3xl h-[450px] md:h-[520px] bg-white/90 p-3 shadow-sm ring-1 ring-black/5 "
+            className="rounded-3xl h-[440px] md:h-[480px] lg:h-[500px] bg-white/90 p-3 shadow-sm ring-1 ring-black/5 "
             onSubmit={async (e) => {
               e.preventDefault();
 
@@ -181,7 +181,7 @@ const ContactForm = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full rounded-xl bg-yellow-400 py-4 text-lg font-semibold text-black transition hover:bg-[#021B44] hover:text-yellow-400 disabled:cursor-not-allowed disabled:opacity-70 sm:py-5 sm:text-xl"
+                className="w-fit mx-auto px-6 rounded-xl bg-yellow-400 py-4 text-lg font-semibold text-black transition hover:bg-[#021B44] hover:text-yellow-400 disabled:cursor-not-allowed disabled:opacity-70 sm:py-3 sm:text-xl"
               >
                 {loading
                   ? "Sending..."
