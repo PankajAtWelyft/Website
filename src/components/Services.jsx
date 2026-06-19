@@ -98,7 +98,7 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="scroll-mt-26 relative overflow-hidden bg-[#F6F5F0] pt-16"
+      className="scroll-mt-16 relative overflow-hidden bg-[#F6F5F0] pt-16"
     >
       <div className="relative z-10 flex flex-col mx-auto  max-w-8xl px-4 sm:px-5 lg:px-10 ">
       <div className="absolute inset-x-0 top-0 h-32 bg-linear-to-b from-[#F6F5F0] to-transparent" />

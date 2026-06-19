@@ -10,7 +10,7 @@ const servicesData = {
     badge: "B2B",
     image:
       "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1800&auto=format&fit=crop&q=80",
-    headline: "Enterprise Deliveries That Actually Perform",
+    headline: "Enterprise Deliveries That Perform",
     tagline: "Bulk moves, zero excuses",
     desc: 'From healthcare equipment to FMCG distribution, Welyft runs enterprise-grade B2B deliveries on a 100% electric fleet. You get dedicated capacity, SLA-backed reliability, and real-time CO₂ evidence for your Scope-3 ESG reporting — not estimates, not "we\'ll send a report at quarter-end." Every delivery generates a verifiable carbon savings record the moment your shipment is booked.',
     features: [
@@ -409,7 +409,7 @@ export default function ServicePage() {
               </div>
 
               <div
-                className="bg-white rounded-3xl p-7 border border-black/6 flex-1"
+                className="bg-white rounded-3xl p-3 border border-black/6 flex-1"
                 style={{ boxShadow: "0 4px 24px rgba(0,0,0,0.06)" }}
               >
                 <h3 className="text-sm font-black uppercase tracking-widest text-gray-400 mb-4">
@@ -433,7 +433,7 @@ export default function ServicePage() {
                         <span className="truncate">
                           {s.badge === "Platform"
                             ? "Welyft OS"
-                            : s.headline.split(" ").slice(0, 2).join(" ")}
+                            : s.headline.split(" ").slice(0, 10).join(" ")}
                         </span>
                       </Link>
                     ))}
