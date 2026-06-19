@@ -64,107 +64,107 @@ const CareersSection = () => {
           />
 
           <div className="relative">
-            <select
-              className="appearance-none bg-white px-4 py-4 pr-12 rounded-2xl border border-gray-300 text-md shadow-sm focus:outline-none"
-            >
-              <option>All Types</option>
-              <option>Full Time</option>
-              <option>Part Time</option>
-              <option>Remote</option>
-            </select>
+  <select
+    className="appearance-none bg-white px-5 py-4 pr-12 rounded-2xl border border-gray-300 text-lg shadow-sm focus:outline-none"
+  >
+    <option>All Types</option>
+    <option>Full Time</option>
+    <option>Part Time</option>
+    <option>Remote</option>
+  </select>
 
-            <div className="pointer-events-none absolute inset-y-0 right-4 flex items-center">
-              <svg
-                className="w-5 h-5 text-gray-500"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </div>
-          </div>
+  <div className="pointer-events-none absolute inset-y-0 right-4 flex items-center">
+    <svg
+      className="w-5 h-5 text-gray-500"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M19 9l-7 7-7-7"
+      />
+    </svg>
+  </div>
+</div>
 
           <div className="relative">
-            <select
-              className="appearance-none bg-white px-4 py-4  rounded-2xl border border-gray-300 text-md shadow-sm focus:outline-none"
-            >
-              <option>All</option>
-              <option>India</option>
-              <option>Singapore</option>
-            </select>
+  <select
+    className="appearance-none bg-white px-5 py-4 pr-12 rounded-2xl border border-gray-300 text-lg shadow-sm focus:outline-none"
+  >
+    <option>All</option>
+            <option>India</option>
+            <option>Singapore</option>
+  </select>
 
-            <div className="pointer-events-none absolute inset-y-0 right-4 flex items-center">
-              <svg
-                className="w-5 h-5 text-gray-500"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </div>
-          </div>
+  <div className="pointer-events-none absolute inset-y-0 right-4 flex items-center">
+    <svg
+      className="w-5 h-5 text-gray-500"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M19 9l-7 7-7-7"
+      />
+    </svg>
+  </div>
+</div>
         </div>
 
         <div className="mt-16 space-y-6 max-h-[700px] overflow-y-auto pr-3">
 
-          {jobsLoading ? (
-            <div className="text-center py-16 text-gray-500">
-              Loading jobs...
-            </div>
-          ) : filteredJobs.length === 0 ? (
-            <div className="text-center py-16 text-gray-500">
-              No jobs found.
-            </div>
-          ) : (
-            filteredJobs.map((job, index) => (
-              <div
-                key={index}
-                className="bg-white border-l-4 border-yellow-400 rounded-xl p-5 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-              >
-                <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
-                  <div>
-                    <h2 className="text-2xl font-bold text-[#0A1F44]">
-                      {job.title}
-                    </h2>
+  {jobsLoading ? (
+    <div className="text-center py-16 text-gray-500">
+      Loading jobs...
+    </div>
+  ) : filteredJobs.length === 0 ? (
+    <div className="text-center py-16 text-gray-500">
+      No jobs found.
+    </div>
+  ) : (
+    filteredJobs.map((job, index) => (
+      <div
+        key={index}
+        className="bg-white border-l-4 border-yellow-400 rounded-xl p-5 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+      >
+        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
+          <div>
+            <h2 className="text-2xl font-bold text-[#0A1F44]">
+              {job.title}
+            </h2>
 
-                    <p className="text-gray-500 text-lg mt-3">
-                      {job.type} • {job.location}
-                    </p>
+            <p className="text-gray-500 text-lg mt-3">
+              {job.type} • {job.location}
+            </p>
 
-                    <p className="text-gray-600 text-lg mt-2 leading-relaxed">
-                      {job.desc}
-                    </p>
-                  </div>
+            <p className="text-gray-600 text-lg mt-2 leading-relaxed">
+              {job.desc}
+            </p>
+          </div>
 
-                  <button
-                    type="button"
-                    className="mt-6 bg-[#0A1F44] flex items-center gap-2 text-yellow-400 px-5 py-2 rounded-xl font-semibold hover:bg-yellow-400 hover:text-black transition-all duration-300"
-                    onClick={() => {
-                      setSelectedJob(job);
-                      setShowModal(true);
-                    }}
-                  >
-                    Apply Now
-                    <FaArrowRight className="text-sm" />
-                  </button>
-                </div>
-              </div>
-            ))
-          )}
-
+          <button
+            type="button"
+            className="mt-6 bg-[#0A1F44] flex items-center gap-2 text-yellow-400 px-5 py-2 rounded-xl font-semibold hover:bg-yellow-400 hover:text-black transition-all duration-300"
+            onClick={() => {
+              setSelectedJob(job);
+              setShowModal(true);
+            }}
+          >
+            Apply Now
+            <FaArrowRight className="text-sm" />
+          </button>
         </div>
+      </div>
+    ))
+  )}
+
+</div>
       </div>
       {showModal && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex justify-center pt-24 items-start sm:items-center z-50 px-4 py-6 overflow-y-auto">
