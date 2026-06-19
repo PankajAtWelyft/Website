@@ -406,7 +406,7 @@ export default function GetQuote() {
                   </p>
                 </div>
                 <span
-                  className="text-4xl font-medium"
+                  className="text-3xl font-medium"
                   style={{ color: "var(--yellow)" }}
                 >
                   ${total.toFixed(2)}
