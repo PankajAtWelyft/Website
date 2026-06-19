@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import b2c from "../assets/b2c.png";
 import c2c from "../assets/c2c.png";
-import platform from "../assets/platform.png";
+import platform from "../assets/plate.png";
 import rental from "../assets/rental.png";
 const servicesData = {
   b2b: {
@@ -255,7 +255,7 @@ export default function ServicePage() {
                   : service.badge === "RENTAL"
                     ? "center 25%"
                     : service.badge === "PLATFORM"
-                      ? "center 30%"
+                      ? "top center"
                       : service.badge === "C2C"
                         ? "center 20%"
                         : "center center",
