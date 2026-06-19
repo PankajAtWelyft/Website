@@ -99,7 +99,7 @@ export default function GetQuote() {
       <section className="pt-10">
         <div className=" mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           {/* Left — Form */}
-          <div className="bg-white h-[490px] sm:h-[520px] lg:h-[550px] xl:h-[495px] rounded-3xl p-4 pl-6 border border-black/8 shadow-sm">
+          <div className="bg-white rounded-3xl p-4 pl-6 pb-10 border border-black/8 shadow-sm">
             <h2
               className="font-bold text-lg mb-6"
               style={{ color: "var(--navy)" }}
@@ -107,7 +107,7 @@ export default function GetQuote() {
               Delivery Details
             </h2>
 
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-6">
               {/* Vehicle Type */}
               <div>
                 <label
@@ -144,8 +144,8 @@ export default function GetQuote() {
                 >
                   Parcel Weight (kg)
                 </label>
-                <div className="flex flex-col xl:flex-row gap-2 sm:gap-6 lg:gap-4 xl:gap-8">
-                  <div className="w-1/2 grid grid-cols-4 gap-8 sm:gap-14 lg:gap-20 xl:gap-8">
+                <div className="flex flex-col gap-4 xl:flex-row xl:items-center">
+                  <div className="grid grid-cols-4 gap-2 sm:gap-3 lg:gap-4">
                   {[5, 15, 30, 50].map((w) => (
                     <button
                       key={w}
@@ -170,7 +170,7 @@ export default function GetQuote() {
                   value={weight}
                   onChange={(e) => setWeight(Number(e.target.value) || 0)}
                   placeholder="custom weight"
-                  className=" w-1/2 py-3   px-4 rounded-xl  text-xs lg:text-sm border-2 outline-none focus:border-[#FFD600] transition-all"
+                  className=" w-full sm:w-1/2 py-3 px-4 rounded-xl text-xs lg:text-sm border-2 outline-none focus:border-[#FFD600] transition-all"
                   style={{
                     borderColor: "rgba(10,31,68,0.15)",
                     color: "var(--navy)",
@@ -180,8 +180,8 @@ export default function GetQuote() {
               </div>
 
               {/* Distance and Additional Stops */}
-              <div className="flex justify-between gap-16 sm:gap-8 lg:gap-8">
-              <div className="w-1/2">
+              <div className="flex flex-col md:flex-row gap-6">
+              <div className="w-full md:w-1/2">
                 <label
                   className="text-sm font-bold lg:my-2 block"
                   style={{ color: "var(--navy)" }}
@@ -229,7 +229,7 @@ export default function GetQuote() {
                 >
                   Additional Stops
                 </label>
-                <div className="flex items-center gap-4">
+                <div className="flex flex-wrap items-center gap-3">
                   <button
                     onClick={() => setStops(Math.max(1, stops - 1))}
                     className="w-10 h-10 rounded-xl border-2 text-lg font-bold flex items-center justify-center transition-all hover:border-[#FFD600]"
@@ -256,7 +256,7 @@ export default function GetQuote() {
                   >
                     +
                   </button>
-                  <span className="text-xs" style={{ color: "var(--slate)" }}>
+                  <span className="text-sm  block w-full md:w-auto" style={{ color: "var(--slate)" }}>
                     First stop free
                   </span>
                 </div>
@@ -264,7 +264,7 @@ export default function GetQuote() {
             </div>
 
               {/* Pickup & Dropoff Time */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label
                     className="text-sm font-bold px-1 lg:my-2 block"
@@ -336,9 +336,9 @@ export default function GetQuote() {
           </div>
 
           {/* Right — Estimated Bill */}
-          <div className="flex flex-col justify-between h-[600px] lg:h-[535px]  gap-5 sticky top-24 bg-[#F6F5F0] ">
+          <div className="flex flex-col justify-between  gap-5 sticky top-24 bg-[#F6F5F0] ">
             {/* Bill Card */}
-            <div className="rounded-3xl overflow-hidden border border-black/8 shadow-sm">
+            <div className="rounded-3xl  border border-black/8 shadow-sm">
               {/* Top */}
               <div
                 className="px-8 py-5 flex justify-between items-center bg-white"
@@ -388,7 +388,7 @@ export default function GetQuote() {
 
               {/* Total */}
               <div
-                className="px-8 py-6 flex justify-between items-center bg-white"
+                className="px-8 py-8 flex justify-between items-center bg-white"
                 
               >
                 <div>
@@ -406,7 +406,7 @@ export default function GetQuote() {
                   </p>
                 </div>
                 <span
-                  className="text-3xl font-medium"
+                  className="text-2xl lg:text-3xl font-medium"
                   style={{ color: "var(--yellow)" }}
                 >
                   ${total.toFixed(2)}
