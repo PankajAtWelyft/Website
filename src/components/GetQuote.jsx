@@ -101,7 +101,7 @@ export default function GetQuote() {
           {/* Left — Form */}
           <div className="bg-white rounded-3xl p-4 pl-6 pb-10 border border-black/8 shadow-sm">
             <h2
-              className="font-bold text-lg mb-6"
+              className="font-bold text-lg my-4"
               style={{ color: "var(--navy)" }}
             >
               Delivery Details
@@ -338,7 +338,7 @@ export default function GetQuote() {
           {/* Right — Estimated Bill */}
           <div className="flex flex-col justify-between  gap-5 sticky top-24 bg-[#F6F5F0] ">
             {/* Bill Card */}
-            <div className="rounded-3xl  border border-black/8 shadow-sm">
+            <div className="bg-white rounded-3xl p-4  border border-black/8 shadow-sm">
               {/* Top */}
               <div
                 className="px-8 py-5 flex justify-between items-center bg-white"
@@ -423,16 +423,19 @@ export default function GetQuote() {
                 Selected Vehicle
               </p>
               <div className="flex items-center gap-4">
-                <span className="text-4xl">
+                <span className="text-3xl">
                   {vehicle === "Bike" ? "🏍️" : vehicle === "Car" ? "🚗" : "🚐"}
                 </span>
-                <div>
+                <div className="w-full flex justify-between items-center">
+                  <div>
                   <p
-                    className="text-xl font-bold mb-1"
+                    className="text-xl font-bold "
                     style={{ color: "var(--navy)" }}
                   >
                     {vehicle}
                   </p>
+                  </div>
+                  <div>
                   <p
                     className="text-sm font-medium"
                     style={{ color: "var(--slate)" }}
@@ -453,6 +456,7 @@ export default function GetQuote() {
                     </strong>
                     /extra stop
                   </p>
+                  </div>
                 </div>
               </div>
             </div>
