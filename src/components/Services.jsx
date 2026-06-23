@@ -56,6 +56,7 @@ const services = [
       "Live parcel tracking",
       "Transparent pricing",
       "Digital security proof",
+      "Real-time Delivery Notifications",
     ],
     highlight: "Every Booking Carbon Savings View",
     ctaLabel: "Explore WeMove",
