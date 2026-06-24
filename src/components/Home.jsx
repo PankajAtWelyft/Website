@@ -104,7 +104,7 @@ const Home = () => {
                     {slide.stats.map((stat, statIndex) => (
                       <div
                         key={statIndex}
-                        className="flex min-w-17.5 items-center justify-center rounded-xl  bg-yellow-400 px-3 py-2 sm:py-4 text-black backdrop-blur-md transition-all duration-300 hover:bg-[#0a1f44] hover:text-white sm:min-w-29.5 lg:w-fit lg:rounded-2xl lg:py-4 xl:py-5 xl:px-5"
+                        className="flex min-w-17.5 items-center justify-center rounded-xl  bg-yellow-400 px-3 py-2 sm:py-4 text-black backdrop-blur-md transition-all duration-300 hover:bg-[#0a1f44] hover:text-white sm:min-w-29.5 lg:w-fit lg:rounded-2xl  xl:px-5"
                       >
                         <h2 className="text-xs font-semibold sm:text-md lg:text-lg">
                           {stat.value}
