@@ -48,7 +48,7 @@ const Sustainability = () => {
               <SustainabilityCard
                 icon="🚚"
                 title="Lower Emissions"
-                description="EV fleet solutions for greener, more sustainable transport."
+                description="EV fleet solutions for greener, more sustainable transport"
               />
             </SwiperSlide>
 
@@ -56,7 +56,7 @@ const Sustainability = () => {
               <SustainabilityCard
                 icon="💡"
                 title="Smart Innovation"
-                description="Technology that powers delivery visibility and dispatch control."
+                description="Technology that powers delivery visibility and dispatch control"
               />
             </SwiperSlide>
 
@@ -64,7 +64,7 @@ const Sustainability = () => {
               <SustainabilityCard
                 icon="📈"
                 title="CO₂ Reporting"
-                description="Estimated carbon savings tracked for every single delivery."
+                description="Estimated carbon savings tracked for every single delivery"
               />
             </SwiperSlide>
 
@@ -72,7 +72,7 @@ const Sustainability = () => {
               <SustainabilityCard
                 icon="🌏"
                 title="Better Planet"
-                description="Logistics designed with long-term sustainability at its core."
+                description="Logistics designed with long-term sustainability at its core"
               />
             </SwiperSlide>
           </Swiper>
@@ -83,25 +83,25 @@ const Sustainability = () => {
           <SustainabilityCard
             icon="🚚"
             title="Lower Emissions"
-            description="EV fleet solutions for greener, more sustainable transport."
+            description="EV fleet solutions for greener, more sustainable transport"
           />
 
           <SustainabilityCard
             icon="💡"
             title="Smart Innovation"
-            description="Technology that powers delivery visibility and dispatch control."
+            description="Technology that powers delivery visibility and dispatch control"
           />
 
           <SustainabilityCard
             icon="📈"
             title="CO₂ Reporting"
-            description="Estimated carbon savings tracked for every single delivery."
+            description="Estimated carbon savings tracked for every single delivery"
           />
 
           <SustainabilityCard
             icon="🌏"
             title="Better Planet"
-            description="Logistics designed with long-term sustainability at its core."
+            description="Logistics designed with long-term sustainability at its core"
           />
         </div>
       </div>

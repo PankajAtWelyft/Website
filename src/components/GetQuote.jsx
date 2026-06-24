@@ -81,7 +81,7 @@ export default function GetQuote() {
       <Navbar />
 
       {/* Header */}
-      <section  id="quote" className="pt-10 pb-0 px-8 scroll-mt-24">
+      <section  id="quote" className="pt-10 pb-0 px-8 scroll-mt-20">
         <div className="flex flex-col items-center mx-auto">
           <h2
             className="serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold  leading-tight"

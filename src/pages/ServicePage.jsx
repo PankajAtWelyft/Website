@@ -131,7 +131,7 @@ const servicesData = {
       "Small retail businesses",
     ],
     color: "#0A1F44",
-    cta: "Download the App",
+    cta: "Coming Soon — WeMove App",
   },
   platform: {
     badge: "Platform",
@@ -291,23 +291,37 @@ export default function ServicePage() {
                 <p className="text-xl italic font-medium mb-6 text-white/70">
                   "{service.tagline}"
                 </p>
-                <a href="/#contact">
-                  <button
-                    className="px-8 py-4 rounded-2xl font-black text-base transition-all hover:-translate-y-0.5 hover:shadow-xl"
-                    style={{ background: "#FFD600", color: "#0A1F44" }}
+                {service.badge === "C2C" ? (
+                  <a href="#" onClick={(e) => e.preventDefault()}>
+                    <button
+                      className="px-6 py-2 rounded-xl font-black text-sm opacity-70 cursor-not-allowed"
+                      style={{ background: "#FFD600", color: "#0A1F44" }}
+                    >
+                      {service.cta}
+                    </button>
+                  </a>
+                ) : (
+                  <a
+                    href={
+                      service.badge === "B2B" || service.badge === "B2C"
+                        ? "/#quote"
+                        : "/#contact"
+                    }
                   >
-                    {service.cta} →
-                  </button>
-                </a>
+                    <button
+                      className="px-6 py-2 rounded-xl font-black text-sm transition-all hover:-translate-y-0.5"
+                      style={{ background: "#FFD600", color: "#0A1F44" }}
+                    >
+                      {service.cta} →
+                    </button>
+                  </a>
+                )}
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CONTENT */}
-
-      {/* CONTENT */}
       {/* CONTENT */}
       <section className="py-16 px-6 lg:px-10">
         <div className="max-w-5xl mx-auto">
@@ -398,14 +412,31 @@ export default function ServicePage() {
                 >
                   Talk to our team today.
                 </p>
-                <a href="/#contact">
-                  <button
-                    className="px-6 py-2 rounded-xl font-black text-sm transition-all hover:-translate-y-0.5"
-                    style={{ background: "#FFD600", color: "#0A1F44" }}
+                {service.badge === "C2C" ? (
+                  <a href="#" onClick={(e) => e.preventDefault()}>
+                    <button
+                      className="px-6 py-2 rounded-xl font-black text-sm opacity-70 cursor-not-allowed"
+                      style={{ background: "#FFD600", color: "#0A1F44" }}
+                    >
+                      {service.cta}
+                    </button>
+                  </a>
+                ) : (
+                  <a
+                    href={
+                      service.badge === "B2B" || service.badge === "B2C"
+                        ? "/#quote"
+                        : "/#contact"
+                    }
                   >
-                    {service.cta} →
-                  </button>
-                </a>
+                    <button
+                      className="px-6 py-2 rounded-xl font-black text-sm transition-all hover:-translate-y-0.5"
+                      style={{ background: "#FFD600", color: "#0A1F44" }}
+                    >
+                      {service.cta} →
+                    </button>
+                  </a>
+                )}
               </div>
 
               <div

@@ -1,5 +1,5 @@
 import React from "react";
-import careerBg from "../assets/caree_page.png";
+import careerBg from "../assets/careeer_img.png";
 
 const CareersHero = () => {
   return (
@@ -21,9 +21,9 @@ const CareersHero = () => {
           Sustainable Logistics
         </h1>
 
-        <p className="text-gray-300 text-base sm:text-lg mt-6 max-w-3xl mx-auto leading-8">
+        <p className="text-gray-300 text-base sm:text-lg mt-6 max-w-3xl mx-auto font-bold leading-8">
           Join Welyft and help transform delivery operations through EV-powered
-          logistics, technology, and sustainability innovation.
+          logistics, technology, and sustainability innovation
         </p>
 
         <div className="mt-12 flex flex-col sm:flex-row justify-center gap-5">
