@@ -13,16 +13,34 @@ import MobileB2B_banner from "../assets/welyft-mobile-B2B-banner.png";
 import MobileC2C_banner from "../assets/Welyft-mobile-C2C-banner.png";
 import MobileLogistics_Technology from "../assets/welyft-mobile-logistics+technology.png";
 
+import {
+  RiShieldCheckLine,
+  RiMapPinLine,
+  RiTimeLine,
+  RiCustomerService2Line,
+  RiTruckLine,
+  RiRoadMapLine,
+  RiRadarLine,
+  RiFileList3Line,
+  RiFlashlightLine,
+  RiMoneyDollarCircleLine,
+  RiLeafLine,
+  RiCpuLine,
+  RiRouteLine,
+  RiNotification3Line,
+  RiBuilding2Line,
+} from "@remixicon/react";
+
 const homeSlides = [
   {
     image: Hero_page,
     mobileImage: MobileHero_page,
     alt: "Welyft hero banner",
     stats: [
-      { value: "Secure Delivery" },
-      { value: "Live Tracking" },
-      { value: "On-Time Service" },
-      { value: "Instant Support" },
+      { value: "Secure Delivery", icon: RiShieldCheckLine },
+      { value: "Live Tracking", icon: RiMapPinLine },
+      { value: "On-Time Service", icon: RiTimeLine },
+      { value: "Instant Support", icon: RiCustomerService2Line },
     ],
   },
   {
@@ -30,10 +48,10 @@ const homeSlides = [
     mobileImage: MobileB2B_banner,
     alt: "Welyft B2B banner",
     stats: [
-      { value: "Bulk Shipping" },
-      { value: "Dedicated Fleet" },
-      { value: "Real-Time Tracking" },
-      { value: "Enterprise Billing" },
+      { value: "Bulk Shipping", icon: RiTruckLine },
+      { value: "Dedicated Fleet", icon: RiRoadMapLine },
+      { value: "Real-Time Tracking", icon: RiRadarLine },
+      { value: "Enterprise Billing", icon: RiFileList3Line },
     ],
   },
   {
@@ -41,10 +59,10 @@ const homeSlides = [
     mobileImage: MobileC2C_banner,
     alt: "Welyft C2C banner",
     stats: [
-      { value: "Instant Booking" },
-      { value: "Live Tracking" },
-      { value: "Price Estimate" },
-      { value: "Eco-Friendly Delivery" },
+      { value: "Instant Booking", icon: RiFlashlightLine },
+      { value: "Live Tracking", icon: RiMapPinLine },
+      { value: "Price Estimate", icon: RiMoneyDollarCircleLine },
+      { value: "Eco-Friendly Delivery", icon: RiLeafLine },
     ],
   },
   {
@@ -52,10 +70,10 @@ const homeSlides = [
     mobileImage: MobileLogistics_Technology,
     alt: "Logistics and technology image",
     stats: [
-      { value: "Smart Dispatch" },
-      { value: "Route Optimization" },
-      { value: "Real-Time Updates" },
-      { value: "Business Solutions" },
+      { value: "Smart Dispatch", icon: RiCpuLine },
+      { value: "Route Optimization", icon: RiRouteLine },
+      { value: "Real-Time Updates", icon: RiNotification3Line },
+      { value: "Business Solutions", icon: RiBuilding2Line },
     ],
   },
 ];
@@ -100,17 +118,26 @@ const Home = () => {
                   />
 
                   {/* Stats */}
-                  <div className="absolute bottom-8 sm:bottom-20 md:bottom-8 lg:bottom-3 left-1/2 z-10 flex w-full -translate-x-1/2  justify-center gap-2 px-4 sm:gap-3 lg:gap-6">
-                    {slide.stats.map((stat, statIndex) => (
-                      <div
-                        key={statIndex}
-                        className="flex min-w-17.5 items-center justify-center rounded-xl  bg-yellow-400 px-3 py-2 sm:py-4 text-black backdrop-blur-md transition-all duration-300 hover:bg-[#0a1f44] hover:text-white sm:min-w-29.5 lg:w-fit lg:rounded-2xl  xl:px-5"
-                      >
-                        <h2 className="text-xs font-semibold sm:text-md lg:text-lg">
-                          {stat.value}
-                        </h2>
-                      </div>
-                    ))}
+                  <div className="absolute bottom-8  md:bottom-14 lg:bottom-3 left-1/2 z-10 flex w-full -translate-x-1/2  justify-center gap-2 px-4 sm:gap-3 lg:gap-6">
+                    {slide.stats.map((stat, statIndex) => {
+                      const Icon = stat.icon;
+
+                      return (
+                        <div
+                          key={statIndex}
+                          className="flex min-w-17.5 items-center justify-center gap-0.5 lg:gap-2 rounded-xl bg-yellow-400 px-1 py-1  sm:py-4 text-black backdrop-blur-md transition-all duration-300 hover:bg-[#0a1f44] hover:text-white sm:min-w-29.5 lg:w-fit lg:rounded-2xl xl:px-5"
+                        >
+                          <Icon
+                            size={18}
+                            className="shrink-0 sm:size-5 lg:size-6"
+                          />
+
+                          <h2 className="text-xs md:font-bold sm:text-md lg:text-lg capitalize">
+                            {stat.value}
+                          </h2>
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               </div>

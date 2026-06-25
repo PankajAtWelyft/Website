@@ -18,11 +18,11 @@ const Blog = () => {
         </div>
 
         <div className="mt-6   md:mt-10">
-          <div className=" overflow-hidden rounded-2xl bg-white lg:flex transition-all duration-300 hover:-translate-y-2 sm:rounded-3xl">
+          <div className=" overflow-hidden rounded-2xl bg-white xl:flex transition-all duration-300 hover:-translate-y-2 sm:rounded-3xl">
             <img
               src={news}
               alt="Blog"
-              className="w-full h-[250px] sm:h-[350px] lg:h-[400px] object-center"/>
+              className="w-full xl:w-fit h-[267px] sm:h-[486px] md:h-[520px] lg:h-[630px] xl:h-[480px] object-contain "/>
 
             <div className="p-5 sm:p-8 flex flex-col justify-between">
               <span className="bg-[#0A1F44] w-fit text-yellow-400 px-4 py-2 rounded-lg text-sm font-semibold uppercase tracking-wider">
