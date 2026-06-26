@@ -82,7 +82,10 @@ const Home = () => {
   const swiperRef = React.useRef(null);
 
   return (
-    <section id="home" className="relative w-full pt-14 sm:pt-8 lg:pt-16">
+    <section
+      id="home"
+      className="relative w-full pt-14 sm:pt-16 lg:pt-17"
+    >
       <div className="relative w-full overflow-hidden rounded-none bg-[#F5F3EE]">
         <Swiper
           onSwiper={(swiper) => {
@@ -99,13 +102,13 @@ const Home = () => {
         >
           {homeSlides.map((slide) => (
             <SwiperSlide key={slide.alt} className="bg-transparent">
-              <div className="relative flex min-h-[670px] items-center justify-center overflow-hidden bg-transparent sm:min-h-[750px] md:min-h-[1230px] lg:min-h-[55vw] xl:min-h-[92vh]">
+              <div className="relative flex h-[67vh] min-h-[320px] items-center justify-center overflow-hidden bg-transparent sm:h-[75vh] md:h-[95vh] lg:h-[48vw] xl:h-[75vh] 2xl:h-[660px]">
                 <div className="block h-full w-full">
                   {/* Desktop Banner */}
                   <img
                     src={slide.image}
                     alt={slide.alt}
-                    className="absolute inset-0 hidden lg:block h-full w-full object-fill"
+                    className="absolute inset-0 hidden h-full w-full lg:block object-cover object-center"
                     loading="eager"
                   />
 
@@ -113,26 +116,23 @@ const Home = () => {
                   <img
                     src={slide.mobileImage}
                     alt={slide.alt}
-                    className="absolute inset-0 block lg:hidden h-full w-full object-contain"
+                    className="absolute inset-0 block h-full w-full lg:hidden object-cover object-center"
                     loading="eager"
                   />
 
                   {/* Stats */}
-                  <div className="absolute bottom-8  md:bottom-14 lg:bottom-3 left-1/2 z-10 flex w-full -translate-x-1/2  justify-center gap-2 px-4 sm:gap-3 lg:gap-6">
+                  <div className="absolute bottom-4 left-1/2 z-10 flex w-full -translate-x-1/2 justify-center gap-2 px-2 sm:bottom-6 sm:gap-3 sm:px-4 md:bottom-8 lg:bottom-6 lg:gap-5 xl:bottom-8">
                     {slide.stats.map((stat, statIndex) => {
                       const Icon = stat.icon;
 
                       return (
                         <div
                           key={statIndex}
-                          className="flex min-w-17.5 items-center justify-center gap-0.5 lg:gap-2 rounded-xl bg-yellow-400 px-1 py-1  sm:py-4 text-black backdrop-blur-md transition-all duration-300 hover:bg-[#0a1f44] hover:text-white sm:min-w-29.5 lg:w-fit lg:rounded-2xl xl:px-5"
+                          className="flex items-center justify-center gap-1 rounded-lg bg-yellow-400 px-2 py-2 text-black transition-all duration-300 hover:bg-[#0a1f44] hover:text-white min-w-[70px] sm:min-w-[110px] md:min-w-[150px] lg:min-w-fit lg:gap-2 lg:rounded-2xl lg:px-4 lg:py-3 xl:px-5"
                         >
-                          <Icon
-                            size={18}
-                            className="shrink-0 sm:size-5 lg:size-6"
-                          />
+                          <Icon className="size-4 shrink-0 sm:size-5 lg:size-6 xl:size-7" />
 
-                          <h2 className="text-xs md:font-bold sm:text-md lg:text-lg capitalize">
+                          <h2 className="text-[10px] font-medium capitalize leading-tight sm:text-xs md:text-sm md:font-semibold lg:text-lg">
                             {stat.value}
                           </h2>
                         </div>
@@ -148,7 +148,7 @@ const Home = () => {
         <button
           type="button"
           onClick={() => swiperRef.current?.slidePrev()}
-          className="absolute left-3 top-1/2 z-20 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white shadow-md transition hover:bg-black/70 sm:left-4"
+          className="absolute left-2 top-1/2 z-20 -translate-y-1/2 rounded-full bg-black/50 p-2 text-sm text-white shadow-md transition hover:bg-black/70 sm:left-4 sm:p-3 sm:text-base lg:left-6"
           aria-label="Previous slide"
         >
           ←
@@ -157,7 +157,7 @@ const Home = () => {
         <button
           type="button"
           onClick={() => swiperRef.current?.slideNext()}
-          className="absolute right-3 top-1/2 z-20 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white shadow-md transition hover:bg-black/70 sm:right-4"
+          className="absolute right-2 top-1/2 z-20 -translate-y-1/2 rounded-full bg-black/50 p-2 text-sm text-white shadow-md transition hover:bg-black/70 sm:right-4 sm:p-3 sm:text-base lg:right-6"
           aria-label="Next slide"
         >
           →
